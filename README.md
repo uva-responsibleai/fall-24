@@ -1,4 +1,4 @@
-# fall-24
+# Responsible AI blog - Fall-24
 
 This repository is intedned to contain a collection of notes and paper summaries for each class of the Reponsible AI course tought at UVA in the Fall-24. 
 The course is organized around six topics:
