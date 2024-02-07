@@ -47,6 +47,31 @@ distribution in various professions based on U.S. labor statistics. This method 
 distinguish between biases that reflect real-world distributions and those that are purely
 stereotypical.
 
+The details of the WEAT are as follows. Borrowing terminology from the IAT literature, 
+consider two sets of target words (e.g., programmer, engineer, scientist; and nurse, teacher, 
+librarian) and two sets of attribute words (e.g., man, male; and woman, female). The null 
+hypothesis is that there is no difference between the two sets of target words in terms of their 
+relative similarity to the two sets of attribute words. The permutation test measures the 
+(un)likelihood of the null hypothesis by computing the probability that a random permutation of 
+the attribute words would produce the observed (or greater) difference in sample means. \
+\
+Implicit Association Test(IAT): \
+\
+In formal terms, let X and Y be two sets of target words of equal size, and A, and B the two sets of 
+attribute words. Let cos(𝑎⃗,𝑏⃗⃗)denote the cosine of the angle between vectors 𝑎⃗ and 𝑏⃗⃗. The test 
+statistic is \
+$$s(X, Y, A, B) = \sum_{x \in X} s(x, A, B) - \sum_{y \in Y} s(y, A, B)$$ \
+where $$s(w, A, B) - mean_{a \in A} cos(\vec(w), \vec(a)) - mean_{b \in B}cos(\vec(w), \vec(b))$$ \
+In other words, s(w,A,B) measures the association of w with the attribute, and 
+s(X,Y, A,B)measures the differential association of the two sets of target words with the attribute. 
+Let {(Xi, Yi)}i denote all the partitions of X∪Y into two sets of equal size. The one-sided P 
+value of the permutation test is 
+$$Pr_{i}[s(X_{i}, Y_{i}, A, B)] > s(X, Y, A, B)$$ \
+The effect size is $$\frac{mean_{x \in X} s(x, A, B) - mean_{y \in Y}s(y, A, B)}{std - dev_{x \in X \bigcup Y} s(w, A, B)}$$ 
+This is a normalized measure of how separated the two distributions (of associations between the 
+target and attribute) are. \
+
+
 # Key Findings
 1. How input data introduces bias:
 - **Employment**: In hiring, biases emerge when algorithms process data reflecting societal prejudices or lacking diversity, such as unemployment duration or educational background. This can lead algorithms to unfairly favor or penalize candidates, perpetuating "like me" biases despite efforts to enhance efficiency.
