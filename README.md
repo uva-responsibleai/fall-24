@@ -20,12 +20,12 @@ This is a tentative calendar and it is subject to change.
 
 | Date       | Topic                          | Subtopic                           | Blog         |
 |------------|--------------------------------|------------------------------------|--------------|
-| [Wed Jan 31](fairness/jan-31.md) | Fairness                       | Intro and bias sources             | Group 1      |
-| [Mon Feb 5](fairness/feb-5.md)  | Fairness                       | Statistical measures               | Group 2      |
-| [Wed Feb 7](fairness/feb-7.md)  | Fairness                       | Tradeoffs                          | Group 3      |
-| [Mon Feb 12](fairness/feb-12.md) | Fairness                       | LLMs: Toxicy and Bias              | Group 4      |
-| [Wed Feb 14](fairness/feb-14.md) | Fairness                       | LLMs: Fairness                     | Group 5      |
-| [Mon Feb 19](fairness/feb-19.md) | Fairness                       | Policy aspects                     | Group 6      |
+| [Wed Feb 5](fairness/feb-5.md) | Fairness   | Intro and bias sources             | Group 1      |
+| [Mon Feb 7](fairness/feb-7.md)  | Fairness  | Statistical measures               | Group 2      |
+| [Wed Feb 12](fairness/feb-12.md)  | Fairness|Tradeoffs                           | Group 3      |
+| [Mon Feb 14](fairness/feb-14.md) | Fairness | LLMs: Toxicy and Bias              | Group 4      |
+| [Wed Feb 19](fairness/feb-19.md) | Fairness | LLMs: Fairness                     | Group 5      |
+| [Mon Feb 21](fairness/feb-21.md) | Fairness | Policy aspects                     | Group 6      |
 | Wed Feb 21 | Safety                         | Distribution shift                 | Group 1      |
 | Mon Feb 26 | Safety                         | Poisoning                          | Group 2      |
 | Wed Feb 28 | No class (AAAI)                |                                    |              |
