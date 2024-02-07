@@ -67,7 +67,7 @@ veridicality of associations in word embeddings. It measures the correlation bet
 distribution of occupations in the word embedding space and the actual gender
 distribution in various professions based on U.S. labor statistics. This method helps to
 distinguish between biases that reflect real-world distributions and those that are purely
-stereotypical. WEFAT allows us to further examine how empirical information about the knowledge embedded in the text corpus. 
+stereotypical. It also allows us to further examine how empirical information about the knowledge embedded in the text corpus by regressing over a particular property associated with a word, and the association of that words with the attributes to verify the factual connection.
 
 
 # Key Findings
