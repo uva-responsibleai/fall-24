@@ -64,7 +64,7 @@ In other words, s(w,A,B) measures the association of w with the attribute, and
 s(X,Y, A,B)measures the differential association of the two sets of target words with the attribute. 
 Let {(Xi, Yi)}i denote all the partitions of X∪Y into two sets of equal size. The one-sided P 
 value of the permutation test is 
-$$Pr_{i}[s(X_{i}, Y_{i}, A, B)] > s(X, Y, A, B)$$ \
+$$Pr_{i}[s(X_{i}, Y_{i}, A, B) > s(X, Y, A, B)]$$ \
 The effect size is $$\frac{mean_{x \in X} s(x, A, B) - mean_{y \in Y}s(y, A, B)}{std - dev_{x \in X \bigcup Y} s(w, A, B)}$$ 
 This is a normalized measure of how separated the two distributions (of associations between the 
 target and attribute) are. \
