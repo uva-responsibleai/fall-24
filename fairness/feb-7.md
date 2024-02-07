@@ -12,7 +12,7 @@ among all possible real-valued risk scores $r(X)$.
 
 Here are the common classification criteria based on the conditional probability $P\{\text{event} | \text{condition}\}$.
 
-| Event | Condition | Resulting notion $P\{\text{event} | \text{condition}\}$ |
+| Event | Condition | Resulting notion $P\{\text{event} \mid \text{condition}\}$ |
 | :--- | :---: | :--- |
 | $\widehat{Y}=1$ | $Y=1$ | True positive rate, recall |
 | $\widehat{Y}=0$ | $Y=1$ | False negative rate |
