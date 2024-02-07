@@ -33,19 +33,42 @@ The underlying motivation for this focus is the recognition of how cultural ster
 
 Within the typical machine learning pipeline, creating a usable model from scratch usually follows the given structure seen in the image above. We begin with the natural state of the world which we must attempt to quantify before we can process any data. Reducing the state of the world to representative values in a dataset involves taking measurements. This process of measurement is not always easy, but this will be discussed in the following section. Once a dataset is available, it can be used to train a model that attempts to summarize underlying patterns to make generalizations. This can be done in many different fashions based on the nature of the data and task at hand where some instances might call for supervised learning among an array of other possible schemas. The model can then be used to create predictions based on previously unseen inputs to carry out classification tasks, for example. These predictions sometimes involve user feedback that is used to help refine the model as it progresses. To complete the loop, the outputs from the model are used to ultimately shape the outside world in some way or another that has the potential to influence future models.
 
-Word-Embedding Association Test (WEAT): This novel method is designed to
+**Word-Embedding Association Test (WEAT):** This novel method is designed to
 measure biases in word embeddings. WEAT compares the relative similarity of two sets
 of target words (e.g., words related to art and science) to two sets of attribute words (e.g.,
 words related to male and female) using cosine similarity in the word embedding space.
 The test quantifies the strength of association between target and attribute sets, allowing
-the researchers to detect biases in the word embeddings.
+the researchers to detect biases in the word embeddings. Using the implicit association test (IAT) literature terminology, we can consider two target word sets X and Y of equal size, and A and B the two attribute word sets.
 
-Word-Embedding Factual Association Test (WEFAT): WEFAT is used to assess the
+The test statistic can be formulated as follows,
+$$ s(X, Y, A, B) = \sum_{x \in X} s(x,A,B) - \sum_{y \in Y} s(y,A,B)\ $$
+where,
+$$s(w,A,B) = \mu_{a\in A} cos(\overrightarrow{w}, \overrightarrow{a}) - \mu_{b \in B}cos(\overrightarrow{w}, \overrightarrow{b})$$
+where,
+- $cos(\overrightarrow{a}, \overrightarrow{b})$ represents the cosine of the angle between vectors $\overrightarrow{a}$ and $\overrightarrow{b}$
+- $\mu$ represents the mean
+
+In other words, $s(w,A,B)$ represents the association of $w$ with the attributes $a$ and $b$. Therefore, $s(X,Y,A,B)$ represents the differential association between the two sets of target words with the attributes.
+
+In order to commute the one-sided P value for the permutation test, let $\{(X_i, Y_i)\}_i$ denote all partitions of $X \cup Y$ into two sets of equal size. 
+
+Then, P-value of permutation test as follows,
+\[Pr[s(X_i, Y_i, A, B) > s(X, Y, A, B)]\]
+
+Concurrently, the effect size can be calculated as follows,
+
+$$\frac{\mu_{x \in X} s(x, A, B) - \mu_{y \in Y} s(y, A, B)}{\sigma_{w \in X\cup Y} s(w, A, B)}$$
+
+where $\sigma$ represents the standard deviation. However, the effect size is a normalized measure of how separated the two distributions of association between the target and attribute are. Furthermore, the P-values and effect sizes cannot be interepreted in the same way as IAT because the subjects of the experiments are words.
+
+
+**Word-Embedding Factual Association Test (WEFAT):** WEFAT is used to assess the
 veridicality of associations in word embeddings. It measures the correlation between the
 distribution of occupations in the word embedding space and the actual gender
 distribution in various professions based on U.S. labor statistics. This method helps to
 distinguish between biases that reflect real-world distributions and those that are purely
-stereotypical.
+stereotypical. WEFAT allows us to further examine how empirical information about the knowledge embedded in the text corpus. 
+
 
 # Key Findings
 1. How input data introduces bias:
@@ -64,7 +87,16 @@ stereotypical.
 - Models are only as good as the data on which they are based; models built on biased data propagate bias
 - Measurement is fraught with subjective decisions and technical difficulties. It can be difficult to deal with ambiguity in trying to quantify the unquantifiable.
 - It’s difficult to distinguish between truly underlying patterns and patterns introduced by stereotypes or bias
-- ML only reveals correlations, but we often use its predictions as if they reveal causation. ![Spurious Correlations](https://miro.medium.com/v2/resize:fit:1200/1*LMH2Z_KaYMCLZ9690br8AA.png) In the image above, the factors “Age of Miss America” and “Murders by Steam, Hot Vapors, and Hot Objects” appear to be highly correlated. However, any reasonable person would probably come to the conclusion that this is by chance and there is no causal relationship between these two factors seen though they appear to have been highly correlated in some capacity over the span of a decade. Using one of these dimensions to predict the other using a ML model would be feasible during this time period with a seemingly high degree of accuracy, but we should not automatically assume that causation is involved.
+- ML only reveals correlations, but we often use its predictions as if they reveal causation. 
+  <!-- ![Spurious Correlations](https://miro.medium.com/v2/resize:fit:1200/1*LMH2Z_KaYMCLZ9690br8AA.png) -->
+
+    <figure>
+        <center>
+            <img src="https://miro.medium.com/v2/resize:fit:1200/1*LMH2Z_KaYMCLZ9690br8AA.png" width="600" height="400" />
+        </center>
+    </figure>
+  
+  In the image above, the factors “Age of Miss America” and “Murders by Steam, Hot Vapors, and Hot Objects” appear to be highly correlated. However, any reasonable person would probably come to the conclusion that this is by chance and there is no causal relationship between these two factors seen though they appear to have been highly correlated in some capacity over the span of a decade. Using one of these dimensions to predict the other using a ML model would be feasible during this time period with a seemingly high degree of accuracy, but we should not automatically assume that causation is involved.
 - Ethical obligations don’t end with addressing group disparities in decision-making
 - We need to change the conditions under which decisions are made rather than just changing the decisions themselves
 
