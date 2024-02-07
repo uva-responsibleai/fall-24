@@ -38,15 +38,8 @@ measure biases in word embeddings. WEAT compares the relative similarity of two 
 of target words (e.g., words related to art and science) to two sets of attribute words (e.g.,
 words related to male and female) using cosine similarity in the word embedding space.
 The test quantifies the strength of association between target and attribute sets, allowing
-the researchers to detect biases in the word embeddings.
-
-Word-Embedding Factual Association Test (WEFAT): WEFAT is used to assess the
-veridicality of associations in word embeddings. It measures the correlation between the
-distribution of occupations in the word embedding space and the actual gender
-distribution in various professions based on U.S. labor statistics. This method helps to
-distinguish between biases that reflect real-world distributions and those that are purely
-stereotypical.
-
+the researchers to detect biases in the word embeddings.\
+\
 The details of the WEAT are as follows. Borrowing terminology from the IAT literature, 
 consider two sets of target words (e.g., programmer, engineer, scientist; and nurse, teacher, 
 librarian) and two sets of attribute words (e.g., man, male; and woman, female). The null 
@@ -68,6 +61,14 @@ $$Pr_{i}[s(X_{i}, Y_{i}, A, B) > s(X, Y, A, B)]$$ \
 The effect size is $$\frac{mean_{x \in X} s(x, A, B) - mean_{y \in Y}s(y, A, B)}{std - dev_{x \in X \bigcup Y} s(w, A, B)}$$ 
 This is a normalized measure of how separated the two distributions (of associations between the 
 target and attribute) are. \
+
+Word-Embedding Factual Association Test (WEFAT): WEFAT is used to assess the
+veridicality of associations in word embeddings. It measures the correlation between the
+distribution of occupations in the word embedding space and the actual gender
+distribution in various professions based on U.S. labor statistics. This method helps to
+distinguish between biases that reflect real-world distributions and those that are purely
+stereotypical.
+
 
 
 # Key Findings
