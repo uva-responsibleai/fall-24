@@ -53,7 +53,7 @@ In other words, $s(w,A,B)$ represents the association of $w$ with the attributes
 In order to commute the one-sided P value for the permutation test, let $\{(X_i, Y_i)\}_i$ denote all partitions of $X \cup Y$ into two sets of equal size. 
 
 Then, P-value of permutation test as follows,
-\[Pr[s(X_i, Y_i, A, B) > s(X, Y, A, B)]\]
+$$Pr[s(X_i, Y_i, A, B) > s(X, Y, A, B)]$$
 
 Concurrently, the effect size can be calculated as follows,
 
