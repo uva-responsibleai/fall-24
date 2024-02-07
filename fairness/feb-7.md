@@ -12,7 +12,7 @@ among all possible real-valued risk scores $r(X)$.
 
 Here are the common classification criteria based on the conditional probability $P\{\text{event} | \text{condition}\}$.
 
-| Event | Condition | Resulting notion $(P\{$ event $\mid$ condition $\})$ |
+| Event | Condition | Resulting notion $P\{\text{event} | \text{condition}\}$ |
 | :--- | :---: | :--- |
 | $\widehat{Y}=1$ | $Y=1$ | True positive rate, recall |
 | $\widehat{Y}=0$ | $Y=1$ | False negative rate |
@@ -100,7 +100,7 @@ Equalized odds enforces that the accuracy is equally high in all demographics, p
 Reading [8] provides a possible relaxation of equalized odds, which require non-discrimination only within the “advantaged” outcome group. 
 That is, to require that people who pay back their loan, have an equal opportunity of getting the loan in the ﬁrst place (without specifying any requirement for those that will ultimately default).
 
-**Definition (Equal oppotunity).** We say that a binary predictor $\widehat{Y}$ satisfies equal opportunity with respect to $A$ and $Y$ if $\operatorname{Pr}\{\widehat{Y}=1 \mid A=0, Y=1\}=\operatorname{Pr}\{\widehat{Y}=1 \mid A=1, Y=1\}$.
+**Definition (Equal oppotunity).** We say that a binary predictor $\widehat{Y}$ satisfies equal opportunity with respect to $A$ and $Y$ if $\operatorname{Pr}\{\widehat{Y}=1 \mid A=0, Y=1\}= P \{\widehat{Y}=1 \mid A=1, Y=1\}$.
 
 ### Predictive Parity
 
