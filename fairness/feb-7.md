@@ -129,23 +129,21 @@ It captures fairness by the principle that any two individuals who are similar w
 It is inadequate to use as a notion of fairness as it does not guarantee individual fairness
 Lipschitz condition implies statistical parity between two groups only if the Earthmover distance between them is small.
 
-
-# Key Findings
+ Key Findings
 
 - We can only apply one non-discrimination criteria to maintain a valid model. Applying more than one criteria will result in degenerate solutions and these criteria conflicts with each other as we claimed above.
 - Independence is inadequate to capture fairness, as it does not guarantee that the score is independent of the sensitive attribute given the target variable.
 - Observational criteria can not give satisfactory answers to the root cause of discrimination; whether or not discrimination is due to decision maker action or inherent inequality in society is unclear.
 - There is concern that higher error rates coincide with historically marginalized and disadvantaged groups, thus inflicting additional harm on these groups.
 - The classifier must be able to detect group membership. If detecting group membership is impossible, then group calibration generally fails.
+- LFR (Learned Fair Representations) [7] seems to be the closest to achieving a well-defined statistical non-discrimination criteria.
 
 # Critical Analysis
 
-- Solutions to minimize discrimination does not cover intersectionality. there are disadvantages that members of multiple protected categories face. In most cases, if one criterion holds, another is violated. Therefore, constraining using more than one criterion may yield degenerate solutions.
-- Reading [5] categorized approches by by site of fairness imposition, where In-training approach is for statistical parity and post-processing approach is for separation.
--  LFR (Learned Fair Representations) [7] seems to be the closest to achieving a well-defined statistical non-discrimination criteria.
-It provides combination of individual fairness and group fairness along with good model accuracy.
-- Lipschitzness might not be enough to ensure fairness. When two groups are significantly different, the Lipschitz condition does not imply statistical parity between them. From [6], Lipschitzness implies statistical parity for two distributions $S$ and $T$ if $S$ and $T$ are close enough/exhibit low bias. Bias is the maximum difference in probabilities over all $(D,d)$-Lipschitz mappings $M$ for any individual over distributions $S$ and $T$. 
-- The namings of criteria are unintuitive and sometimes confusing. We might need to more intuitive names for the criteria based on how it was constructed. 
+- Solutions to minimize discrimination does not cover intersectionality. there are disadvantages that members of multiple protected categories face. In most cases, if one criterion holds, another is violated. Indeed, this poses questions about being able to come up with a gold standard for fairness, much like differential privacy for privacy, that satisfies all key desirable properties. This remains a hard problem.
+- Lipschitzness might not be enough to ensure fairness. When two groups are significantly different, the Lipschitz condition does not imply statistical parity between them. From [6], Lipschitzness implies statistical parity for two distributions $S$ and $T$ if $S$ and $T$ are close enough/exhibit low bias. Bias is the maximum difference in probabilities over all $(D,d)$-Lipschitz mappings $M$ for any individual over distributions $S$ and $T$.
+- In reading [5], we think Lipschitzness might not be enough to ensure fairness. When two groups are significantly different, the Lipschitz condition does not imply statistical parity between them. From [6], Lipschitzness implies statistical parity for two distributions $S$ and $T$ if $S$ and $T$ are close enough/exhibit low bias. Bias is the maximum difference in probabilities over all $(D,d)$-Lipschitz mappings $M$ for any individual over distributions $S$ and $T$.  Lipschitzness is an analytic definition of continuity, and while it may make some sense for fairness intuitively, it feels a bit out of place: why use Lipschitz continuity right off-the-shelf? Why not with a multiplier on the Lipschitz upper bound? There is a chance we can come up with a better variant of this Lipschitz condition that is tailored better to parity condition.
+- The namings of criteria in [5] are at times unintuitive and confusing. We might need to have more intuitive names for the criteria based on how it was constructed. 
 
 
 
