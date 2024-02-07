@@ -59,12 +59,12 @@ stereotypical.
 - Machine learning models can replicate a spectrum of known human biases when trained on ordinary human language data
 - These biases range from morally neutral (e.g., towards insects or flowers) to problematic (e.g., biases related to race or gender) and veridical (reflecting real-world distributions of gender in occupations).
 
-- Tradeoffs exist between human intelligence and AI/ML in decision-making, such as emotional morality
-- Bias is arguably inescapable and permeates all facets of society
+- Tradeoffs exist between human intelligence and AI/ML in decision-making, such as emotional morality that exists in humans for better or worse. Humans are unlikely to make absurd decisions whereas artificial intelligence has the potential to uncover factors that humans might overlook. However, there is great potential for bias in both human and artificial intelligence.
+- Bias is arguably inescapable and permeates all facets of society; it is practically impossible to be completely fair in every dimension
 - Models are only as good as the data on which they are based; models built on biased data propagate bias
-- Measurement is fraught with subjective decisions and technical difficulties
+- Measurement is fraught with subjective decisions and technical difficulties. It can be difficult to deal with ambiguity in trying to quantify the unquantifiable.
 - It’s difficult to distinguish between truly underlying patterns and patterns introduced by stereotypes or bias
-- ML only reveals correlations, but we often use its predictions as if they reveal causation
+- ML only reveals correlations, but we often use its predictions as if they reveal causation. ![Spurious Correlations](https://miro.medium.com/v2/resize:fit:1200/1*LMH2Z_KaYMCLZ9690br8AA.png) In the image above, the factors “Age of Miss America” and “Murders by Steam, Hot Vapors, and Hot Objects” appear to be highly correlated. However, any reasonable person would probably come to the conclusion that this is by chance and there is no causal relationship between these two factors seen though they appear to have been highly correlated in some capacity over the span of a decade. Using one of these dimensions to predict the other using a ML model would be feasible during this time period with a seemingly high degree of accuracy, but we should not automatically assume that causation is involved.
 - Ethical obligations don’t end with addressing group disparities in decision-making
 - We need to change the conditions under which decisions are made rather than just changing the decisions themselves
 
@@ -73,19 +73,19 @@ stereotypical.
 
 # Critical Analysis
 
-### <span style="color:grey">Semantics derived automatically from language corpora contain human-like biases</span>
+### <span style="color:grey">[Semantics derived automatically from language corpora contain human-like biases](https://www.science.org/doi/10.1126/science.aal4230)</span>
 The thesis provides critical insights into the unintended consequences of machine learning and
 AI. It highlights the need for careful consideration and intervention in the design and deployment
 of these technologies to prevent the perpetuation of cultural stereotypes and biases. The study
 underscores the importance of ethical considerations in AI development and the potential need
 for frameworks to ensure fairness and non-discrimination in AI-driven systems.
 
-### <span style="color:grey">Fairness and Machine Learning (Chapter 1) </span>
+### <span style="color:grey">[Fairness and Machine Learning](https://fairmlbook.org/introduction.html) (Chapter 1) </span>
 The first chapter of the aptly named Fairness and Machine Learning text provides an excellent introduction to the concepts of equity and bias within the machine learning discipline. Underlying concepts are introduced within the overarching umbrella of fairness and concrete case-study examples are provided in tandem to reinforce the lessons on how machine learning can perpetuate biases. Although the extensive examples are relevant and insightful, much of the information is more surface-level than one might expect in an introductory chapter. The call to action and promising outlook they pose at the end of the chapter provide a refreshing point of reflection on the topic of the propagation of bias.
 
-### <span style="color:grey">Big Data’s Disparate Impact</span>
+### <span style="color:grey">[Big Data’s Disparate Impact](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899)</span>
 In Big Data’s Disparate Impact, the paper does well to analyze the way big data can perpetuate employment-based discrimination which is so pernicious as it is difficult to individually detect. The paper somewhat over-relies its theoretical examples when more real-world examples would have better served the argument. The authors may lean toward legalistic solutions to these problems as one is a professor of Law. They consider the ethical concerns of both employers and legislators to ensure fairness in hiring.
 
-### <span style="color:grey">Big Data: A Report on Algorithmic Systems, Opportunity, and Civil Rights</span>
+### <span style="color:grey">[Big Data: A Report on Algorithmic Systems, Opportunity, and Civil Rights](https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/2016_0504_data_discrimination.pdf)</span>
 It would be better to add more specific data analysis, such as the data distribution of different input data, corresponding to the decision data distribution obtained in a big data system/machine learning, to demonstrate the specific impact of different input data on the big data system. And different decisions are made for the same data in different models.
 	
