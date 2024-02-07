@@ -10,9 +10,9 @@ Under the standard supervised learning setting there are a couple of statistical
 - **Risk score:**: the risk score is sometimes called Bayes optimal. It minimizes the squared loss  $E (Y − r ( X ))^2$ 
 among all possible real-valued risk scores $r(X)$.
 
-Here are the common classification criteria based on the conditional probability $P\{\text{event} | \text{condition}\}$.
+Here are the common classification criteria based on the conditional probability $P(\text{event} | \text{condition})$.
 
-| Event | Condition | Resulting notion $P\{\text{event} \mid \text{condition}\}$ |
+| Event | Condition | Resulting notion $P(\text{event} \mid \text{condition})$ |
 | :--- | :---: | :--- |
 | $\widehat{Y}=1$ | $Y=1$ | True positive rate, recall |
 | $\widehat{Y}=0$ | $Y=1$ | False negative rate |
@@ -23,7 +23,7 @@ Here are the common classification criteria based on the conditional probability
 
 **ROC Curve:** a curve in a two-dimensional space where the axes correspond to true positive rate and false positive rate. The ROC curve is often used to see how predictive our score is of the target variable. A common measure of predictiveness is the area under the curve (AUROC), which equals the probability that a random positive instance gets a score higher than a random negative instance.
 
-![ROC Curve](https://fairmlbook.org/assets/3-3-roc_curve_1.svg))
+![ROC Curve](https://fairmlbook.org/assets/3-3-roc_curve_1.svg)
 
 **Group Membership:** Group membership refers to the assignment of an individual into a particular group based on characteristics that are specific to that group, in accordance with widely held intersubjective definitions.
 
@@ -69,9 +69,7 @@ In this section, we dive into these basic fairness criteria and discuss the limi
 ### Demographic Parity / Statistical Parity
 
 The condition for demographic parity is, for all $a, b \in A$
-$$
-P(\widehat{Y}=1 \mid A=a)=P(\widehat{Y}=1 \mid A=b) .
-$$
+$$P(\widehat{Y}=1 \mid A=a)=P(\widehat{Y}=1 \mid A=b)$$
 - Demographic parity requires equal proportion of positive predictions in each group ("No Disparate Impact").
 - The evaluation metric requiring parity in this case is the prevalence.
 
@@ -100,22 +98,18 @@ Equalized odds enforces that the accuracy is equally high in all demographics, p
 Reading [8] provides a possible relaxation of equalized odds, which require non-discrimination only within the “advantaged” outcome group. 
 That is, to require that people who pay back their loan, have an equal opportunity of getting the loan in the ﬁrst place (without specifying any requirement for those that will ultimately default).
 
-**Definition (Equal oppotunity).** We say that a binary predictor $\widehat{Y}$ satisfies equal opportunity with respect to $A$ and $Y$ if $\operatorname{Pr}\{\widehat{Y}=1 \mid A=0, Y=1\}= P \{\widehat{Y}=1 \mid A=1, Y=1\}$.
+**Definition (Equal oppotunity).** We say that a binary predictor $\widehat{Y}$ satisfies equal opportunity with respect to $A$ and $Y$ if $P \{\widehat{Y}=1 \mid A=0, Y=1\}= P \{\widehat{Y}=1 \mid A=1, Y=1\}$.
 
 ### Predictive Parity
 
 Predictive value parity is satisfied when both PPV-parity and NPV-parity are satisfied.
 
 The condition for PPV-parity is, for all $a, b \in A$
-$$
-P(Y=1 \mid \widehat{Y}=1, A=a)=P(Y=1 \mid \widehat{Y}=1, A=b)
-$$
+$$P(Y=1 \mid \widehat{Y}=1, A=a)=P(Y=1 \mid \widehat{Y}=1, A=b)$$
 
 ### Calibration
 Sufficiency is closely related to an important notion called calibration. In some applications it is desirable to be able to interpret the values of the score functions as if they were probabilities. The notion of calibration allows us to move in this direction. Restricting our attention to binary outcome variables, we say that a score $R$ is calibrated with respect to an outcome variable $Y$ if for all score values $r \in[0,1]$, we have
-$$
-P\{Y=1 \mid R=r\}=r.
-$$
+$$P\{Y=1 \mid R=r\}=r$$
 Calibration by group implies sufficiency. The converse is necessarily not true.
 
 ### These metrics cannot hold simultaneously!
