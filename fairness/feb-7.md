@@ -7,7 +7,7 @@ Under the standard supervised learning setting there are a couple of statistical
 
 - **Accuracy:** the probability of correctly predicting the target variable $P(Y = \widehat{Y})$
 - **Optimal Classfier\:** any classiﬁer that minimizes the expected loss $E(\ell (Y, \widehat{Y}))$ where $\ell (Y, \widehat{Y})$ is the loss function. This objective is called classiﬁcation risk and risk minimization refers to the optimization problem of ﬁnding a classiﬁer that minimizes risk.
-- **Risk score:**: the risk score is sometimes called Bayes optimal. It minimizes the squared loss  $E (Y − r ( X ))^2$ 
+- **Risk score:** the risk score is sometimes called Bayes optimal. It minimizes the squared loss  $E (Y − r ( X ))^2$ 
 among all possible real-valued risk scores $r(X)$.
 
 Here are the common classification criteria based on the conditional probability $P(\text{event} | \text{condition})$.
@@ -113,7 +113,7 @@ If the prevalence of $Y$ across $A$ is not equal, then:
 
 1. If $A$ and $Y$ are not independent, then Demographic Parity and Predictive Parity cannot simultaneously hold.
 2. If $A$ and $\widehat{Y}$ are not independent of $Y$, then Demographic Parity and Equalized Odds Parity cannot simultaneously hold.
-3. If $A$ and $Y$ are not independent, then Equalized Odds and Predictive Value Parity cannot simultaneously hold.
+3. If $A$ and $Y$ are not independent, then Equalized Odds and Predictive Parity cannot simultaneously hold.
 
 
 ## Individual Fairness and Group Fairness
@@ -131,21 +131,22 @@ Lipschitz condition implies statistical parity between two groups only if the Ea
 
 
 # Key Findings
-- LFR (Learned Fair Representations) [7] seems to be the closest to achieving a well-defined statistical non-discrimination criteria.
-It provides combination of individual fairness and group fairness along with good model accuracy.
-- We can only apply one non-discrimination criteria to maintain a valid model. Applying more than one criteria will result in degenerate solutions and these criteria conflicts with each other as we claimed above.
-- Independence inadequate to capture fairness, as it does not guarantee that the score is independent of the sensitive attribute given the target variable.
-- Observational criteria can not give satisfactory answers to the root cause of discrimination; whether or not discrimination is due to decision maker action or inherent inequality in society is unclear
 
+- We can only apply one non-discrimination criteria to maintain a valid model. Applying more than one criteria will result in degenerate solutions and these criteria conflicts with each other as we claimed above.
+- Independence is inadequate to capture fairness, as it does not guarantee that the score is independent of the sensitive attribute given the target variable.
+- Observational criteria can not give satisfactory answers to the root cause of discrimination; whether or not discrimination is due to decision maker action or inherent inequality in society is unclear.
+- There is concern that higher error rates coincide with historically marginalized and disadvantaged groups, thus inflicting additional harm on these groups.
+- The classifier must be able to detect group membership. If detecting group membership is impossible, then group calibration generally fails.
 
 # Critical Analysis
 
-- The namings of criteria are unintuitive. We might need to more intuitive names for the criteria based on how it was constructed. 
-- Critical analysis of the some arguments about bias when motivating stuff (especially in reading [5]).
-- There is concern that higher error rates coincide with historically marginalized and disadvantaged groups, thus inflicting additional harm on these groups.
-- Similarly for “Note, however, that for this to be true the classifier must be able to detect group membership. If detecting group membership is impossible, then group calibration generally fails.”
-- Solutions to minimize discrimination does not cover intersectionality, disadvantage that members of multiple protected categories face.
-- Lipschitzness might not be enough to ensure fairness. When two groups are significantly different, the Lipschitz condition does not imply statistical parity between them.
+- Solutions to minimize discrimination does not cover intersectionality. there are disadvantages that members of multiple protected categories face. In most cases, if one criterion holds, another is violated. Therefore, constraining using more than one criterion may yield degenerate solutions.
+- Reading [5] categorized approches by by site of fairness imposition, where In-training approach is for statistical parity and post-processing approach is for separation.
+-  LFR (Learned Fair Representations) [7] seems to be the closest to achieving a well-defined statistical non-discrimination criteria.
+It provides combination of individual fairness and group fairness along with good model accuracy.
+- Lipschitzness might not be enough to ensure fairness. When two groups are significantly different, the Lipschitz condition does not imply statistical parity between them. From [6], Lipschitzness implies statistical parity for two distributions $S$ and $T$ if $S$ and $T$ are close enough/exhibit low bias. Bias is the maximum difference in probabilities over all $(D,d)$-Lipschitz mappings $M$ for any individual over distributions $S$ and $T$. 
+- The namings of criteria are unintuitive and sometimes confusing. We might need to more intuitive names for the criteria based on how it was constructed. 
+
 
 
 ## References
