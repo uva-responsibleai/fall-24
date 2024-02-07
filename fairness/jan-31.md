@@ -4,8 +4,21 @@
 - Bias within big data systems manifests through discrimination based on race, gender, age, or socioeconomic status, stemming from skewed datasets, algorithmic prejudice, or historical biases embedded in data analysis. This bias results in unfair discrimination, reinforcing societal inequalities and undermining the potential benefits of big data. The opaque nature of many machine learning models, often described as "black boxes," exacerbates the challenge by hindering the identification and correction of biases. Consequently, despite their potential for progress, big data systems face significant hurdles in achieving fairness and avoiding the perpetuation of existing disparities.
 	
 ### <span style="color:grey">Sources of Bias</span>
-- Input data: Bias in big data systems can be introduced via the data inputs selected for analysis. Discriminatory outcomes can arise from the choice of data to include or exclude in applications like navigation and predictive analytics. This issue is magnified by the use of poorly selected, incomplete, or outdated data, selection bias, and the unintentional perpetuation of historical prejudices. Ensuring that data inputs are accurate, up-to-date, and representative is crucial for developing systems that equitably serve varied purposes, highlighting the need for careful data curation to mitigate bias.
-- Algorithms: Bias can also stem from the algorithmic frameworks of big data systems, particularly when the data does not fully represent all segments of society. This lack of comprehensive representation can lead algorithms to perpetuate biases and injustices, especially affecting underrepresented groups. Such biases in algorithmic decision-making are particularly problematic in sectors where outcomes significantly affect individuals' lives, like credit eligibility, educational admissions, criminal justice, and employment. The challenge is further complicated by the complex nature of machine learning models, which may not easily reveal how biases are embedded within their decision-making processes, necessitating a focus on algorithmic fairness and inclusivity.
+- Input data: Bias in big data systems can be introduced via the data inputs selected for analysis. Discriminatory outcomes can arise from the choice of data to include or exclude in applications like navigation and predictive analytics. This issue is magnified by the use of poorly selected, incomplete, or outdated data, selection bias, and the unintentional perpetuation of historical prejudices. Ensuring that data inputs are accurate, up-to-date, and representative is crucial for developing systems that equitably serve varied purposes, highlighting the need for careful data curation to mitigate bias. In the figure below, a gender bias is observed in the google translate application which stems from the inattentiveness in preprocessing imbalanced data.
+
+<figure>
+    <center>
+        <img src="bias_example.png" width="350" height="200" />
+    </center>
+</figure>
+
+- Algorithms: Bias can also stem from the algorithmic frameworks of big data systems, particularly when the data does not fully represent all segments of society. This lack of comprehensive representation can lead algorithms to perpetuate biases and injustices, especially affecting underrepresented groups. Such biases in algorithmic decision-making are particularly problematic in sectors where outcomes significantly affect individuals' lives, like credit eligibility, educational admissions, criminal justice, and employment. The challenge is further complicated by the complex nature of machine learning models, which may not easily reveal how biases are embedded within their decision-making processes, necessitating a focus on algorithmic fairness and inclusivity. An example of data induced bias can be shown through a toy problem of an employment decision measured based on two attributes: college GPA and interview score. The figure below shows two groups of people, denoted by triangles and squares, on whose data a linear regression model is trained to make the employment decision. It can be observed that the classifier will favour the triangles over the squares, thereby inducing a bias in the hiring process.
+
+<figure>
+    <center>
+        <img src="ml_example.png" width="320" height="250" />
+    </center>
+</figure>
 
 
 ## Motivations
