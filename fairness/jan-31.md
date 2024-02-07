@@ -55,8 +55,6 @@ relative similarity to the two sets of attribute words. The permutation test mea
 (un)likelihood of the null hypothesis by computing the probability that a random permutation of 
 the attribute words would produce the observed (or greater) difference in sample means. \
 \
-Implicit Association Test(IAT): \
-\
 In formal terms, let X and Y be two sets of target words of equal size, and A, and B the two sets of 
 attribute words. Let cos(𝑎⃗,𝑏⃗⃗)denote the cosine of the angle between vectors 𝑎⃗ and 𝑏⃗⃗. The test 
 statistic is \
