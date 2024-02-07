@@ -33,12 +33,14 @@ The underlying motivation for this focus is the recognition of how cultural ster
 
 Within the typical machine learning pipeline, creating a usable model from scratch usually follows the given structure seen in the image above. We begin with the natural state of the world which we must attempt to quantify before we can process any data. Reducing the state of the world to representative values in a dataset involves taking measurements. This process of measurement is not always easy, but this will be discussed in the following section. Once a dataset is available, it can be used to train a model that attempts to summarize underlying patterns to make generalizations. This can be done in many different fashions based on the nature of the data and task at hand where some instances might call for supervised learning among an array of other possible schemas. The model can then be used to create predictions based on previously unseen inputs to carry out classification tasks, for example. These predictions sometimes involve user feedback that is used to help refine the model as it progresses. To complete the loop, the outputs from the model are used to ultimately shape the outside world in some way or another that has the potential to influence future models.
 
-**Word-Embedding Association Test (WEAT):** This novel method is designed to
+**Implicit association test (IAT):** It is a test that measures the attitudes and beliefs that people are unable or unwilling to report. In this setting, we will considering IAT test in terms of a subject's response time to discern a pair of similar concepts and a pair of different concepts.
+
+**Word-Embedding Association Test (WEAT):** This novel method, analogous to IAT, designed to
 measure biases in word embeddings. WEAT compares the relative similarity of two sets
 of target words (e.g., words related to art and science) to two sets of attribute words (e.g.,
 words related to male and female) using cosine similarity in the word embedding space.
 The test quantifies the strength of association between target and attribute sets, allowing
-the researchers to detect biases in the word embeddings. Using the implicit association test (IAT) literature terminology, we can consider two target word sets X and Y of equal size, and A and B the two attribute word sets.
+the researchers to detect biases in the word embeddings. Using the IAT literature terminology, we can consider two target word sets X and Y of equal size, and A and B the two attribute word sets.
 
 The test statistic can be formulated as follows,
 $$s(X, Y, A, B) = \sum_{x \in X} s(x,A,B) - \sum_{y \in Y} s(y,A,B)$$
@@ -52,14 +54,14 @@ In other words, $s(w,A,B)$ represents the association of $w$ with the attributes
 
 In order to commute the one-sided P value for the permutation test, let $\{(X_i, Y_i)\}_i$ denote all partitions of $X \cup Y$ into two sets of equal size. 
 
-Then, P-value of permutation test as follows,
+Then, P-value of permutation test is as follows,
 $$Pr[s(X_i, Y_i, A, B) > s(X, Y, A, B)]$$
 
 Concurrently, the effect size can be calculated as follows,
 
 $$\frac{\mu_{x \in X} s(x, A, B) - \mu_{y \in Y} s(y, A, B)}{\sigma_{w \in X\cup Y} s(w, A, B)}$$
 
-where $\sigma$ represents the standard deviation. However, the effect size is a normalized measure of how separated the two distributions of association between the target and attribute are. Furthermore, the P-values and effect sizes cannot be interepreted in the same way as IAT because the subjects of the experiments are words.
+where $\sigma$ represents the standard deviation. However, the effect size is a normalized measure of how separated the two distributions of association between the target and attribute are. Furthermore, the P-values and effect sizes cannot be interepreted in the same way as IAT because the subjects of the experiments are words, instead of people.
 
 
 **Word-Embedding Factual Association Test (WEFAT):** WEFAT is used to assess the
