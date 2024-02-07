@@ -79,9 +79,7 @@ When the ﬁrm performs poorly during their tenure, they are likely to be replac
 
 ### Accuracy Parity
 The condition for accuracy parity is, for all $a, b \in A$
-$$
-P(\widehat{Y} =Y \mid A=a)=P(\widehat{Y}=Y \mid A=b) .
-$$
+$$P(\widehat{Y} =Y \mid A=a)=P(\widehat{Y}=Y \mid A=b) .$$
 - Accuracy parity requires equal accuracy across groups.
 - The evaluation metric require parity in this case is the accuracy.
 
@@ -90,15 +88,13 @@ $$
 Equality of Odds is satisfied when both True Positive Parity and False Positive Parity are satisfied.
 
 The condition for True Positive parity is, for all $a, b \in A$
-$$
-P(\widehat{Y}=1 \mid Y=1, A=a)=P(\widehat{Y}=1 \mid Y=1, A=b) .
-$$
+$$P(\widehat{Y}=1 \mid Y=1, A=a)=P(\widehat{Y}=1 \mid Y=1, A=b) .$$
 
 Equalized odds enforces that the accuracy is equally high in all demographics, punishing models that perform well only on the majority. 
 Reading [8] provides a possible relaxation of equalized odds, which require non-discrimination only within the “advantaged” outcome group. 
 That is, to require that people who pay back their loan, have an equal opportunity of getting the loan in the ﬁrst place (without specifying any requirement for those that will ultimately default).
 
-**Definition (Equal oppotunity).** We say that a binary predictor $\widehat{Y}$ satisfies equal opportunity with respect to $A$ and $Y$ if $P \{\widehat{Y}=1 \mid A=0, Y=1\}= P \{\widehat{Y}=1 \mid A=1, Y=1\}$.
+**Definition (Equal oppotunity).** We say that a binary predictor $\widehat{Y}$ satisfies equal opportunity with respect to $A$ and $Y$ if $P(\widehat{Y}=1 \mid A=0, Y=1)= P(\widehat{Y}=1 \mid A=1, Y=1)$.
 
 ### Predictive Parity
 
@@ -109,7 +105,7 @@ $$P(Y=1 \mid \widehat{Y}=1, A=a)=P(Y=1 \mid \widehat{Y}=1, A=b)$$
 
 ### Calibration
 Sufficiency is closely related to an important notion called calibration. In some applications it is desirable to be able to interpret the values of the score functions as if they were probabilities. The notion of calibration allows us to move in this direction. Restricting our attention to binary outcome variables, we say that a score $R$ is calibrated with respect to an outcome variable $Y$ if for all score values $r \in[0,1]$, we have
-$$P\{Y=1 \mid R=r\}=r$$
+$$(Y=1 \mid R=r)=r$$
 Calibration by group implies sufficiency. The converse is necessarily not true.
 
 ### These metrics cannot hold simultaneously!
@@ -124,7 +120,7 @@ If the prevalence of $Y$ across $A$ is not equal, then:
 
 **Individual Fairness:** concept that requires that similar individuals should be treated similarly.
 Mathematically, this concept is formalized as a Lipschitz condition on the classifier [6]. A mapping $M: V \rightarrow \delta(A)$ satisfies the $(D, d)$-Lipschitz property if for every $x, y \in V$ we have
- $$D(Mx, My) \lneq d(x,y)$$
+ $$D(Mx, My) \leq d(x,y)$$
 This condition will ensure that individuals who are similar according to the metric are treated similarly by the classifier. 
 Fairness through Awareness [6] is a method that uses this concept to achieve fairness. 
 It captures fairness by the principle that any two individuals who are similar with respect to a particular task should be classiﬁed similarly with a distance metric that deﬁnes the similarity between the individuals..
