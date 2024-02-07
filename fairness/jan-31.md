@@ -41,7 +41,7 @@ The test quantifies the strength of association between target and attribute set
 the researchers to detect biases in the word embeddings. Using the implicit association test (IAT) literature terminology, we can consider two target word sets X and Y of equal size, and A and B the two attribute word sets.
 
 The test statistic can be formulated as follows,
-$$ s(X, Y, A, B) = \sum_{x \in X} s(x,A,B) - \sum_{y \in Y} s(y,A,B)\ $$
+$$s(X, Y, A, B) = \sum_{x \in X} s(x,A,B) - \sum_{y \in Y} s(y,A,B)$$
 where,
 $$s(w,A,B) = \mu_{a\in A} cos(\overrightarrow{w}, \overrightarrow{a}) - \mu_{b \in B}cos(\overrightarrow{w}, \overrightarrow{b})$$
 where,
