@@ -5,6 +5,8 @@
 ## Motivations
 
 <!-- Background information -->
+“How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and 
+abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”
 
 ### Traditional Copyright Law
 ##### Definition of copy
