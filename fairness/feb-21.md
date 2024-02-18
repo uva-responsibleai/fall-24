@@ -116,3 +116,20 @@ encouraging fair use, the interest of the copyright owners will be harmed. Howev
 in an environemnt where the resources are opener to everyone, there would be more accountability, more competition and less
 black boxes, and I believe the society as a whole will benefit from it and it would open up more doors for the
 researchers and parties with smaller resources to contribute to the research.
+
+
+2. **Big Data's Disparate Impact**
+# Introduction and Motivation
+## Data Mining Is A Double Edged Sword
+When considering society and stakeholders, data mining is a double-edged sword. From one angle, big data has revolutionized many industries through enabling activities such as optimizing delivery routes, mining prescription side effects, and studying human interactions. Additional  advocates of data mining suggest that it can result in a reduction of discrimination by limiting the opportunity for individual bias to impact important assessments and requiring reliable empirical foundations on which decisions must be based. From the other angle, the outcomes of data mining are dependent on the quality of the data the algorithms are training on, or as the common adage goes, “garbage in, garbage out.” However, in the context of data mining, an often insidious result is discriminatory outcomes, whether reflective of historically prejudiced patterns in society and its institutions, prejudices of prior decision makers, or more nefarious (but much less prevalent) intent such as developer use of proxy variables for protected classes. 
+
+# Methods
+## Discrimination Resulting From Data Mining Poses New Challenges for Historical Areas of  Antidiscrimination Law 
+While discrimination in data mining is in and of itself difficult to root out, it poses additional challenges when viewed from a legal lens of trying to reduce discriminatory outcomes. In this work, they specifically look at Title VII, which prohibits discrimination in employment. 
+
+# Findings
+## Limited Liability Under Title VII In Most Cases
+Title VII poses several challenges with respect to trying to reduce discriminatory outcomes from data mining. Most notably, liability for discrimination from data mining would be difficult due to  the common situation of not having discriminatory intent, or “disparate intent”. For example, if the data reflects historical patterns of prejudice, if there is no intention to harm, Title VII may hold that data mining is a justifiable business necessity if the outcome is predictive of future employment outcomes. From a technical aspect as well, every step in the data mining process (defining target variable, labeling and collecting training data, using feature selection, making decisions on the basis of the resulting model) could potentially result in discriminatory outcomes for protected classes, so identifying intent somewhere in the pipeline would be a formidable challenge. Rather, under Title VII, potential triggers of liability would include “disparate impact” (discriminatory effects without intent), or “disparate treatment” (data mining systems treat everyone differently). Another solution, however, rather than relying solely on the letter of the law and enforcement agencies, rests on the employers themselves through means such as education. For example, employers may not be aware of the technological underpinnings of data mining and the potential for discrimination.
+
+# Critical Analysis
+TODO
