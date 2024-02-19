@@ -4,7 +4,8 @@
 
 ```mermaid
 flowchart TD;
-    A(Papers) -->B(Anti-Discrimination);
+    A -->B;
+```
     A-->C(Copyright);
     A-->D(Big Data);
     B-->E[- Title VII Disparate Treatment/Impact
@@ -15,7 +16,6 @@ flowchart TD;
     - Copyright vs AI];
     D-->G[- Garbage In/Garbage Out
     - Laws are hard to change];
-```
 
 <ol>
     <li>Introduction
