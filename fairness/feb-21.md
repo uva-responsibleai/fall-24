@@ -2,7 +2,49 @@
 
 <!-- Summarize the main idea of the blog here - write this part last -->
 
+```mermaid
+graph TB
+A(Papers) -->B(Anti-Discrimination)
+A-->C(Copyright)
+A-->D(Big Data)
+B-->E[- Title VII Disparate Treatment/Impact
+- History of Anti-discrimination
+- Reaction of law to ML]
+C-->F[- What is copyright?
+- Fair Use Garbage In
+- Copyright vs AI]
+D-->G[- Garbage In/Garbage Out
+- Laws are hard to change]
+```
 
+<ol>
+    <li>Introduction
+        <ol>
+            <li>History of Anti-Discrimination</li>
+            <li>Related Law (Title 7)</li>
+            <li>What is Copyright and Fair Use?</li>
+        </ol>
+    </li>
+    <li>Methods
+        <ol>
+            <li>Explainability</li>
+            <li>Copyright vs AI</li>
+            <li>Laws and Data are hard to change</li>
+        </ol>
+    </li>
+    <li>Key Findings
+        <ol>
+            <li>Government Reaction (AIAs)</li>
+            <li>Garbage In/Garbage Out</li>
+            <li>Facebook Targeted Ads (Explainability: Completeness and Correctness)
+                <ol>
+                    <li>https://www.youtube.com/watch?v=f7yQZ6uquDA&ab_channel=NDSSSymposium 10:46-13:00</li>
+                </ol>
+            </li>
+            <li>Impact</li>
+        </ol>
+    </li>
+</ol>
 
 ## Motivations
 
