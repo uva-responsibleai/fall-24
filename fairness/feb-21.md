@@ -90,6 +90,8 @@ CC-license allows the creators to license their “works freely for certain uses
 
 # Key Findings
 
+[<img src="https://i.ytimg.com/vi/f7yQZ6uquDA/hqdefault.jpg" width="250">](https://youtu.be/f7yQZ6uquDA?t=643)
+
 <!-- What? Specific examples -->
 
 ### Encourage fair use
