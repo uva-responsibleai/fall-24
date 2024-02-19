@@ -4,7 +4,7 @@
 
 ```mermaid
 flowchart TD;
-    A -->B;
+    A[test]-->B;
 ```
     A-->C(Copyright);
     A-->D(Big Data);
