@@ -15,13 +15,9 @@ In America discrimination against protected classes (race, gender, religion, dis
 
 [<img src="https://i.ytimg.com/vi/EpXNXyfFS8U/hq720.jpg" width="250">](https://www.youtube.com/watch?v=EpXNXyfFS8U)
 
-#### Disparate Treatment
+#### Disparate Treatment vs Disparate Impact
 
-Under construction
-
-#### Disparate Impact
-
-Under construction
+Disparate Treatment is when you finish the sentence "What action would have been taken if they were not [some protected class]?". This involves all cases where individuals were denied service because of being members of a certain protected group. Disparate Impact is when there is a disproportionate difference between groups of people. This can include unfair compensation, injustice, and more vague concepts. This means that historically disparate treatment is the easier concept to create laws for and prosecute individuals for because it is more "cut and dry" in the law. However, with the emergence of AI and, specifically, dataset related issues disparate impact has become more of a practical tool for fighting discrimination. When datasets have hidden distributions that hurt a certain class, a model causes unfair bias against specific groups, or apps do not explain which attributes are being used to identify users ads they receive this is a call for a disparate impact related discrimination case. The problems in AI are much more subtle in regards to fairness and anti-discrimination and in order to fight it the law needs to be more subtle and nuanced as well.
 
 ### What is Copyright and Fair Use?
 
