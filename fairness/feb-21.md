@@ -3,7 +3,7 @@
 <!-- Summarize the main idea of the blog here - write this part last -->
 
 ```mermaid
-graph TD;
+flowchart TD;
     A(Papers) -->B(Anti-Discrimination);
     A-->C(Copyright);
     A-->D(Big Data);
