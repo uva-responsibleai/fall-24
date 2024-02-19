@@ -86,6 +86,9 @@ Fairer AI may require the use of fair use data due to complications in the copyr
 
 <!-- To create fairer AI, the dataset should be able to include copy-right protected works, so the dataset can be bigger, minimizing the effect of BLFD and researchers can add selected data to balance out the bias. -->
 
+## Data Mining Is A Double Edged Sword
+When considering society and stakeholders, data mining is a double-edged sword. From one angle, big data has revolutionized many industries through enabling activities such as optimizing delivery routes, mining prescription side effects, and studying human interactions. Additional  advocates of data mining suggest that it can result in a reduction of discrimination by limiting the opportunity for individual bias to impact important assessments and requiring reliable empirical foundations on which decisions must be based. From the other angle, the outcomes of data mining are dependent on the quality of the data the algorithms are training on, or as the common adage goes, “garbage in, garbage out.” However, in the context of data mining, an often insidious result is discriminatory outcomes, whether reflective of historically prejudiced patterns in society and its institutions, prejudices of prior decision makers, or more nefarious (but much less prevalent) intent such as developer use of proxy variables for protected classes. 
+
 
 # Methods
 
@@ -109,6 +112,8 @@ Training a big model needs a big pile of data, the data used for build large AI 
 
 To abide by copyright laws, the developers are driven to use public domain works and Creative Commons-licensed works, however these works would embed bias. For Public domain bias most of the datasets are as old as 1923 and, thus, reflect a “wealthier, whiter, and more Western” view on society. They do not include the more inclusive aspect of the society today and will have biases that favor a very specific demographic. This can lead to existing issues being furthered and unresolved because the model is mimicking historical human behavior. The next version is CC-licensed datasets. CC-license allows creators to license their “works freely for certain uses, on certain conditions". That sounds like a good option for a solution to copyrighted datasets, however, a simple example can show otherwise. One of the most significant CC-licensed datasets is wikipedia, however only 8.5% of the editors were women in 2011, showing a clear gender bias in the data. So even with free to use data always seems to have a bias one way or another.
 
+## Discrimination Resulting From Data Mining Poses New Challenges for Historical Areas of  Antidiscrimination Law 
+While discrimination in data mining is in and of itself difficult to root out, it poses additional challenges when viewed from a legal lens of trying to reduce discriminatory outcomes. In this work, they specifically look at Title VII, which prohibits discrimination in employment. 
 
 # Key Findings
 
@@ -145,6 +150,9 @@ To examine the system some part of the work should be available, and the work sh
 It is not fair use if “may serve as a market substitute for the original.”, it is not the case for AI training as 
 the product is not the data itself but a model. Apart from that if fair use is widely adopted, there will not be a licensing market as it would still be favorable to big tech companies.
 
+## Limited Liability Under Title VII In Most Cases
+Title VII poses several challenges with respect to trying to reduce discriminatory outcomes from data mining. Most notably, liability for discrimination from data mining would be difficult due to  the common situation of not having discriminatory intent, or “disparate intent”. For example, if the data reflects historical patterns of prejudice, if there is no intention to harm, Title VII may hold that data mining is a justifiable business necessity if the outcome is predictive of future employment outcomes. From a technical aspect as well, every step in the data mining process (defining target variable, labeling and collecting training data, using feature selection, making decisions on the basis of the resulting model) could potentially result in discriminatory outcomes for protected classes, so identifying intent somewhere in the pipeline would be a formidable challenge. Rather, under Title VII, potential triggers of liability would include “disparate impact” (discriminatory effects without intent), or “disparate treatment” (data mining systems treat everyone differently). Another solution, however, rather than relying solely on the letter of the law and enforcement agencies, rests on the employers themselves through means such as education. For example, employers may not be aware of the technological underpinnings of data mining and the potential for discrimination.
+
 ## Government Reaction
 
 # Critical Analysis
@@ -153,21 +161,6 @@ the product is not the data itself but a model. Apart from that if fair use is w
 
 It is a controversial topic, as the copyright law protects the interest of the copyright owners, and it seems that by encouraging fair use, the interest of the copyright owners will be harmed. However, like open source software, in my opinion, in an environemnt where the resources are opener to everyone, there would be more accountability, more competition and less black boxes, and I believe the society as a whole will benefit from it and it would open up more doors for the researchers and parties with smaller resources to contribute to the research.
 
-
-2. **Big Data's Disparate Impact**
-# Introduction and Motivation
-## Data Mining Is A Double Edged Sword
-When considering society and stakeholders, data mining is a double-edged sword. From one angle, big data has revolutionized many industries through enabling activities such as optimizing delivery routes, mining prescription side effects, and studying human interactions. Additional  advocates of data mining suggest that it can result in a reduction of discrimination by limiting the opportunity for individual bias to impact important assessments and requiring reliable empirical foundations on which decisions must be based. From the other angle, the outcomes of data mining are dependent on the quality of the data the algorithms are training on, or as the common adage goes, “garbage in, garbage out.” However, in the context of data mining, an often insidious result is discriminatory outcomes, whether reflective of historically prejudiced patterns in society and its institutions, prejudices of prior decision makers, or more nefarious (but much less prevalent) intent such as developer use of proxy variables for protected classes. 
-
-# Methods
-## Discrimination Resulting From Data Mining Poses New Challenges for Historical Areas of  Antidiscrimination Law 
-While discrimination in data mining is in and of itself difficult to root out, it poses additional challenges when viewed from a legal lens of trying to reduce discriminatory outcomes. In this work, they specifically look at Title VII, which prohibits discrimination in employment. 
-
-# Findings
-## Limited Liability Under Title VII In Most Cases
-Title VII poses several challenges with respect to trying to reduce discriminatory outcomes from data mining. Most notably, liability for discrimination from data mining would be difficult due to  the common situation of not having discriminatory intent, or “disparate intent”. For example, if the data reflects historical patterns of prejudice, if there is no intention to harm, Title VII may hold that data mining is a justifiable business necessity if the outcome is predictive of future employment outcomes. From a technical aspect as well, every step in the data mining process (defining target variable, labeling and collecting training data, using feature selection, making decisions on the basis of the resulting model) could potentially result in discriminatory outcomes for protected classes, so identifying intent somewhere in the pipeline would be a formidable challenge. Rather, under Title VII, potential triggers of liability would include “disparate impact” (discriminatory effects without intent), or “disparate treatment” (data mining systems treat everyone differently). Another solution, however, rather than relying solely on the letter of the law and enforcement agencies, rests on the employers themselves through means such as education. For example, employers may not be aware of the technological underpinnings of data mining and the potential for discrimination.
-
-# Critical Analysis
 Critique and analysis of Law making in discrimination:
 Much like how the law can lag behind social issues, the same can be true for technologies. This is especially true when it is social issues related to technology. As technologies emerge, policy makers may not have enough expertise to easily evaluate new technology to make or analyze laws based on them. AI is one such field as there have not been many policies made regarding it yet. Not all the blame lies on the policy makers however, as emergent technologies can change rapidly so it may be wise to give some time to “settle” before making policies. Besides that, the issues faced with making policies on AI provide new and complex challenges that have not been handled before. While human discrimination can be more easily defined, it may be more difficult to detect depending on how interpretable the AI is. The issue of who is responsible is also a big one as who is responsible; the creator, the company, maintenance, the AI, or someone else?
 
