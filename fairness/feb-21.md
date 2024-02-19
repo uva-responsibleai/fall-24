@@ -2,52 +2,6 @@
 
 <!-- Summarize the main idea of the blog here - write this part last -->
 
-```mermaid
-flowchart TD;
-    A[Papers] -->B[Fairness and Machine Learning Ch 6];
-    A-->C[How Copyright Law Can Fix Artificial Intelligences Implicit Bias Problem];
-    A-->D[Big Datas Disparate Impact];
-    B-->E[- Title VII Disparate Treatment/Impact <br>- History of Anti-discrimination <br>- Reaction of law to ML];
-    C-->F[- What is copyright? <br>- Fair Use Garbage In<br>- Copyright vs AI];
-    D-->G[- Garbage In/Garbage Out<br>- Laws are hard to change];
-```
-
-**Table of Contents**
-<ol>
-    <li>Introduction
-        <ol>
-            <li>History of Anti-Discrimination and Copyright Laws
-                <ol>
-                    <li>Copyright</li>
-                    <li>Fair Use</li>
-                </ol>
-            </li>
-            <li>Related Law (Title 7)</li>
-            <li>What is Copyright and Fair Use?</li>
-        </ol>
-    </li>
-    <li>Methods
-        <ol>
-            <li>Explainability</li>
-            <li>Copyright vs AI (Garbage In/Garbage Out)</li>
-            <li>Laws and Data are Hard to Change</li>
-        </ol>
-    </li>
-    <li>Key Findings
-        <ol>
-            <li>Importance of Explainability
-                <ol>
-                    <li>https://www.youtube.com/watch?v=f7yQZ6uquDA&ab_channel=NDSSSymposium 10:46-13:00</li>
-                </ol>
-            </li>
-            <li>Encouraging Fair Use (Counteracting Garbage Input)</li>
-            <li>Government Reaction (AIAs)</li>
-        </ol>
-    </li>
-    <li>Critical Analysis</li>
-</ol>
-
-
 Discrimination and proving the existance of discrimination have always been a difficult legal problem throughout American history. From the Civil Rights Movements, to Women's Rights, to LGBTQ rights, and now to complicated issues that are plaguing datasets in Machine Learning, counteracting these biases and unfairness through law has always been and remains to be an extremely important pursuit. This blog will review the History of such laws including Anti-discrimination and copyright, explain what methods have been taken to counteract these issues, key examples of biases and unfairness, and finally a critical analysis of where and how society should progress from here.
 
 ## Motivations
@@ -153,9 +107,20 @@ the product is not the data itself but a model. Apart from that if fair use is w
 ## Limited Liability Under Title VII In Most Cases
 Title VII poses several challenges with respect to trying to reduce discriminatory outcomes from data mining. Most notably, liability for discrimination from data mining would be difficult due to  the common situation of not having discriminatory intent, or “disparate intent”. For example, if the data reflects historical patterns of prejudice, if there is no intention to harm, Title VII may hold that data mining is a justifiable business necessity if the outcome is predictive of future employment outcomes. From a technical aspect as well, every step in the data mining process (defining target variable, labeling and collecting training data, using feature selection, making decisions on the basis of the resulting model) could potentially result in discriminatory outcomes for protected classes, so identifying intent somewhere in the pipeline would be a formidable challenge. Rather, under Title VII, potential triggers of liability would include “disparate impact” (discriminatory effects without intent), or “disparate treatment” (data mining systems treat everyone differently). Another solution, however, rather than relying solely on the letter of the law and enforcement agencies, rests on the employers themselves through means such as education. For example, employers may not be aware of the technological underpinnings of data mining and the potential for discrimination.
 
-## Government Reaction
+## Government Reaction (AIAs)
 
 # Critical Analysis
+
+
+```mermaid
+flowchart TD;
+    A[Papers] -->B[Fairness and Machine Learning Ch 6];
+    A-->C[How Copyright Law Can Fix Artificial Intelligences Implicit Bias Problem];
+    A-->D[Big Datas Disparate Impact];
+    B-->E[- Title VII Disparate Treatment/Impact <br>- History of Anti-discrimination <br>- Reaction of law to ML];
+    C-->F[- What is copyright? <br>- Fair Use Garbage In<br>- Copyright vs AI];
+    D-->G[- Garbage In/Garbage Out<br>- Laws are hard to change];
+```
 
 <!-- What are your opinions? Where do we go from here? -->
 
