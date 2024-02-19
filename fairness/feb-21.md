@@ -25,28 +25,22 @@ Under construction
 
 ### What is Copyright and Fair Use?
 
-#### Copyright
+The historical impact of discrimination is not only a problem in the continuance of historical trauma and pain but can also be perpetuated further due to toxic datasets and institutionalized bias. Datasets are a huge contributor to institutionalized bias and by training models on tainted datasets developers are ignoring the disparate impact that these models could be causing. The use of "good" datasets that are free of historical bias is limited by laws like Copyright Law and Fair Use and according to Levendowski on _How Copyright Law Can Fix Artificial Intelligence's Implicit Bias Problem_, “How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”. 
 
-The historical impact of discrimination is not only a problem in the continuance of historical trauma and pain but can also be perpetuated further due to toxic datasets and institutionalized bias. Datasets are a huge contributor to institutionalized bias and by training models on tainted datasets developers are ignoring the disparate impact that these models could be causing. The use of "good" datasets that are free of historical bias is limited by laws like Copyright Law and Fair Use and according to Levendowski on _How Copyright Law Can Fix Artificial Intelligence's Implicit Bias Problem_, “How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”. To discuss if AI training data is in the conflict of the interest of the copyrighted work owners, “copy” should be defined first. According to Copyright Act, “copies” are “material objects [...] in which a work is fixed by any method now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device". This definition of "copies" in the Copyright law can create complications in the interpretation of the law and will prove to clash with Artificial Intelligence and models needing data to be trained on.
-
-<!-- Training data however, is usually stored in the RAM, which makes them volatile and “fleeting”. So there is still no agreement of if training data is a “copy”. If it is not a “copy” to start with then there is no infringing. -->
-
-#### Fair Use
-
-As stated in the paper on Copyright Law, fair use is decided case by case and a combination of the four factors:
+Levendowski further explains that fair use is decided case by case and a combination of the four factors:
 
 >1. The purpose and character of the use; 
 >1. The nature of the copyrighted work; 
 >1. The amount and substantiality of the portion used in relation to the copyrighted work as a whole; 
 >1. The effect of the use upon the potential market for or value of the copyrighted work.
 
-Fairer AI may require the use of fair use data due to complications in the copyright law dictating who can use what data when. Datasets will need to be balanced out in order to correct for biases and minimize the effects of biases in the model.
+Fairer AI may require the use of fair use data due to complications in the copyright law dictating who can use what data when. Datasets will need to be balanced out in order to correct for biases and minimize the effects of biases in the model. Creating Fairer AI may involve including copyrighted works, so that the dataset is larger and the effects of the bias are smaller.
 
-<!-- To create fairer AI, the dataset should be able to include copy-right protected works, so the dataset can be bigger, minimizing the effect of BLFD and researchers can add selected data to balance out the bias. -->
+To discuss if AI training data is in the conflict of the interest of the copyrighted work owners, “copy” should be defined first. According to Copyright Act, “copies” are “material objects [...] in which a work is fixed by any method now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device". This definition of "copies" in the Copyright law can create complications in the interpretation of the law and will prove to clash with Artificial Intelligence, data mining, and models needing data to be trained on.
 
-## Data Mining Is A Double Edged Sword
-When considering society and stakeholders, data mining is a double-edged sword. From one angle, big data has revolutionized many industries through enabling activities such as optimizing delivery routes, mining prescription side effects, and studying human interactions. Additional  advocates of data mining suggest that it can result in a reduction of discrimination by limiting the opportunity for individual bias to impact important assessments and requiring reliable empirical foundations on which decisions must be based. From the other angle, the outcomes of data mining are dependent on the quality of the data the algorithms are training on, or as the common adage goes, “garbage in, garbage out.” However, in the context of data mining, an often insidious result is discriminatory outcomes, whether reflective of historically prejudiced patterns in society and its institutions, prejudices of prior decision makers, or more nefarious (but much less prevalent) intent such as developer use of proxy variables for protected classes. 
+### Data Mining Is A Double Edged Sword
 
+When considering society and stakeholders, data mining is a double-edged sword. From one angle, big data has revolutionized many industries through enabling activities such as optimizing delivery routes, mining prescription side effects, and studying human interactions. Additional advocates of data mining suggest that it can result in a reduction of discrimination by limiting the opportunity for individual bias to impact important assessments and requiring reliable empirical foundations on which decisions must be based. From the other angle, the outcomes of data mining are dependent on the quality of the data the algorithms are training on, or as the common adage goes, “garbage in, garbage out”. However, in the context of data mining, an often insidious result is discriminatory outcomes, whether reflective of historically prejudiced patterns in society and its institutions, prejudices of prior decision makers, or more nefarious (but much less prevalent) intent such as developer use of proxy variables for protected classes. The methods at which we choose to collect and modify datasets is important in the realm of fair models and responsible AI use.
 
 # Methods
 
@@ -82,6 +76,8 @@ While discrimination in data mining is in and of itself difficult to root out, i
 <!-- ### Explainability: Completeness and Correctness -->
 
 One of the biggest examples of a company that uses AI models to target their users is Facebook. Facebook has counteracted bad publicity of their targetted ads by adding a "Why Am I Seeing This?" button on each of the ads. This button will show a vaguely written explanation that is meant to make the user placated and feel like they are in control. However, it has been shown that if Facebook wanted to, they could give a much better explanation for their ads and specifically what attributes were used to predict the users wants and needs. The following is a Case Study on Facebook's Ad Transparency from the Network and Distributed System Security Symposium in 2018: 
+
+<iframe width="250" src="https://www.youtube.com/embed/f7yQZ6uquDA?t=643" title="NDSS 2018 Investigating Ad Transparency Mechanisms in Social Media: A Case Study" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 [<img src="https://i.ytimg.com/vi/f7yQZ6uquDA/hqdefault.jpg" width="250">](https://youtu.be/f7yQZ6uquDA?t=643)
 
@@ -141,8 +137,12 @@ While the separation of powers into the three branches of government has had the
 
 | Term | Definition |
 |--|--|
+| Copies | “material objects [...] in which a work is fixed by any method now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device" |
+| Fair Use | |
 | Disparate Impact | |
 | Disparate Treatment | |
+| Historical Bias | |
 | Institutionalized Bias | |
+| Stakeholders | |
 
 # References
