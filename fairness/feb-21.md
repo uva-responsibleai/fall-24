@@ -2,17 +2,18 @@
 
 <!-- Summarize the main idea of the blog here - write this part last -->
 
+
+
 ## Motivations
 
 <!-- Background information -->
 “How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and 
-abuse act(CFAA) and trade secret, But the law that has the most influence:
- copyright law”
+abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”
 
 ### Traditional Copyright Law
 ##### Definition of copy
 To discuss if AI training data is in the conflict of the interest of the copyrighted work owners, “copy” should be 
-defined first, according to Copyright Act, “copies” are “material objects . . . in which a work is fixed by any method 
+defined first, according to Copyright Act, “copies” are “material objects ... in which a work is fixed by any method 
 now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either 
 directly or with the aid of a machine or device”. Training data however, is usually stored in the RAM, which makes them 
 volatile and “fleeting”. So there is still no agreement of if training data is a “copy”. If it is not a “copy” to 
@@ -49,9 +50,7 @@ Most of them are prior to 1923, thus reflecting a “wealthier, whiter, and more
 They do not include the more inclusive aspect of the society today.
 
 #### CC-licensed dataset (biased)
-CC-license allows the creators to license their “works freely for certain uses, on certain conditions.”, 
-one of CC-licensed dataset most significant example is wikipedia, however there is gender bias, and only 8.5% of 
-the editors were woman in 2011.
+CC-license allows the creators to license their “works freely for certain uses, on certain conditions.”, one of CC-licensed dataset most significant example is wikipedia, however there is gender bias, and only 8.5% of the editors were woman in 2011.
 
 
 # Key Findings
@@ -78,7 +77,7 @@ minimizing the effect of BLFD and researchers can add selected data to balance o
 #### Why using copyright protected works is beneficial and harming the interest of the copyright oweners:
 
 ##### Highly transformative
-Defination of transformative use: "Must be productive and must employ the quoted matter in a different manner or for a different purpose from the original . . . if the quoted matter is used as raw material, transformed in the creation of . . . new insights and understandings—this is the very type of activity that the fair use doctrine intends to protect for the enrichment of society."
+Defination of transformative use: "Must be productive and must employ the quoted matter in a different manner or for a different purpose from the original ... if the quoted matter is used as raw material, transformed in the creation of ... new insights and understandings—this is the very type of activity that the fair use doctrine intends to protect for the enrichment of society."
 
 To use the data for training AI system is transformative, produce new knowledge and contribute to society. Also training is a “nonexpressive use”. So it is fair use to use copyrighted works for training AI systems and it is beneficial to the society.
 
