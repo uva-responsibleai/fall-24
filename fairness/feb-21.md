@@ -77,8 +77,6 @@ While discrimination in data mining is in and of itself difficult to root out, i
 
 One of the biggest examples of a company that uses AI models to target their users is Facebook. Facebook has counteracted bad publicity of their targetted ads by adding a "Why Am I Seeing This?" button on each of the ads. This button will show a vaguely written explanation that is meant to make the user placated and feel like they are in control. However, it has been shown that if Facebook wanted to, they could give a much better explanation for their ads and specifically what attributes were used to predict the users wants and needs. The following is a Case Study on Facebook's Ad Transparency from the Network and Distributed System Security Symposium in 2018: 
 
-<iframe width="250" src="https://www.youtube.com/embed/f7yQZ6uquDA?t=643" title="NDSS 2018 Investigating Ad Transparency Mechanisms in Social Media: A Case Study" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 [<img src="https://i.ytimg.com/vi/f7yQZ6uquDA/hqdefault.jpg" width="250">](https://youtu.be/f7yQZ6uquDA?t=643)
 
 By leaving out key information Facebook is able to shield themselves from users knowing what data is being collected. They are able to stay within legal boundaries, providing just enough of an explanation to their users on what attributes they are using and selling to advertisers. This is a blatant disregard for the explainability of the system and could be fixed through the updating and growing of laws to meet the needs of explainable AI.
