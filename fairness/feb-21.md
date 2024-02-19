@@ -88,9 +88,19 @@ Title VII poses several challenges with respect to trying to reduce discriminato
 
 ## Government Reaction
 
-### AIAs
+There are many ways for the Government to rise to the occation and fight injustices in algorithms. Some options are that they could make new laws, they could change the old laws to better fit the new technological age, and they could create organizations to fight and audit the creation of disruptive and discriminatory AIs. In this section we will show the key findings of how the government has reacted to AI so far.
 
-Under Construction
+### Federal Trade Commission
+
+The Federal Trade Commission (FTC) is meant to be an organization that regulates products and has been used in the past to regulate discrimination in products. Title VII had no power until 1972 when it was enforced by the Department of Labor and the FTC. The power of these organizations has waxed and waned over the years and its impact on society and business as a whole has varied.
+
+There is an argument that the FTC should monitor data because their concern is all about consumer protection. For example, when face lock does not work for certain types of people the FTC should have the power to make the use of products fair for all consumers. The FTC should be able to “[...] look to 'established public policiesp' in determining what is unfair. It has been suggested that the FTC can thus look to antidiscrimination statutes and rules as scaffolding to build a framework for making determinations about algorithmic discrimination”[[20]](#references). The FTC is in charge of making policies for the protection of the consumers they can make it so that there are rules to be followed by the creators of AI models. They are also in change of transparency and protecting against deceptive practices. This means that the FTC could take steps to punish companies that are training models in a certain way that causes to end result to not work for certain users, thus resulting in false advertising of the product and a bad consumer experience.
+
+### Algorithmic Impact Assessments (AIAs)
+
+Similar to the FTC Algorithmic Impact Assessments (AIAs) have been suggested in the US but none have been implemented as of yet. These assessments are meant to assess the impact of the product, how it was created, and how it will be used. This is an analysis of the AI model that will be done by a third party expert who will audit and give a grade on the product's bias or lack there of. These are types of regulatory audits that review the bias, algorithm, and impact of the product. By adding these assessments companies will not only be encouraged to do their due diligence when designing the algorithm but the assessments will also catch any products that are discriminatory before they enter the market.
+
+The argument against AIAs is that they may be ineffective if companies can choose their own auditors or lobby the government to receive breaks on their audits. However, government audits for technology (not spoecifically AI) are performed on DoD contractors and companies today. These standards are strict and when a company does not follow the rules they are at risk of losing current and future contracts if the problem is not solved. When facing strict risks such as these most companies will be sure to follow the laws and create better systems for their users.
 
 ### Evaluating for Copyright
 
