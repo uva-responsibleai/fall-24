@@ -24,7 +24,7 @@ flowchart TD;
         <ol>
             <li>Explainability</li>
             <li>Copyright vs AI</li>
-            <li>Laws and Data are hard to change</li>
+            <li>Laws and Data are Hard to Change</li>
         </ol>
     </li>
     <li>Key Findings
@@ -51,6 +51,8 @@ Discrimination and proving the existance of discrimination have always been a di
 
 Anti-discrimination has a complicated history in American law. It started with the Civil Rights Movement reacting to what were called "Jim Crow Laws" and the disenfranchisement of many recently freed black americans. In order to fight this segregation and gain back their rights black americans did sit ins, practiced Civil Disobedience, and fought to be seen as equal. Anti-discrimination laws grew as a reaction to these protests. Title VII, a law establishing the legality of disparate treatment and disparate impact and how/when individuals can sue because of it, is a crutial law in the fight for equality and fairness. The fight for equal rights continued with Gender Discrimination, LGBTQ+IA Rights and Anti-discrimination, and Disabled Person's Rights, as well, growing the laws and adding more statutes to cover the inclusion of the groups.
 
+<!-- Add an explanation for Disparate Treatment and Disparate Impact -->
+
 In America discrimination based on protected classes (race, gender, religion, disability, sexual orientation, etc...), however, the internet and technology makes these issues even more complicated. The regulation of content online as well as the discrimination of Machine Learning algorithms can cause difficulties in the interpretations of the laws and the need for further development of verbage in the laws, as shown in the following YouTube video:
 
 [<img src="https://i.ytimg.com/vi/EpXNXyfFS8U/hq720.jpg" width="250">](https://www.youtube.com/watch?v=EpXNXyfFS8U)
@@ -64,7 +66,9 @@ The historical impact of discrimination is not only a problem in the continuance
 
 <!-- How? Specific laws -->
 
-## Copyright hinderances
+## Explainable AI
+
+## Copyright vs AI
 Copyright law affects the development of fairer AI systems in three main ways:
 
 1.  Chill Reverse Engineering
@@ -76,23 +80,22 @@ The accountability can usually be held up by three main ways:  journalistic repo
 1. Limit Competition
 Training a big model needs a big pile of data, the data used for build large AI system is gained by building or buying, the resources are more accessible for big tech companies, who either have a long history of being in the Internet playfield or have enough wealth to fund such acts. THis makes the other newer parties to enter the field.
 
-### Biased Data
-To abide by copyright laws, the developers are driven to use public domain works and Creative Commons-licensed works, 
-however these works would embed bias.
+### Laws and Data are Hard to Change
 
-#### Public domain biased (old)
-Most of them are prior to 1923, thus reflecting a “wealthier, whiter, and more Western” view on society. 
-They do not include the more inclusive aspect of the society today.
-
-#### CC-licensed dataset (biased)
-CC-license allows the creators to license their “works freely for certain uses, on certain conditions.”, one of CC-licensed dataset most significant example is wikipedia, however there is gender bias, and only 8.5% of the editors were woman in 2011.
+To abide by copyright laws, the developers are driven to use public domain works and Creative Commons-licensed works, however these works would embed bias. For Public domain bias most of the datasets are as old as 1923 and, thus, reflect a “wealthier, whiter, and more Western” view on society. They do not include the more inclusive aspect of the society today and will have biases that favor a very specific demographic. This can lead to existing issues being furthered and unresolved because the model is mimicking historical human behavior. The next version is CC-licensed datasets. CC-license allows creators to license their “works freely for certain uses, on certain conditions". That sounds like a good option for a solution to copyrighted datasets, however, a simple example can show otherwise. One of the most significant CC-licensed datasets is wikipedia, however only 8.5% of the editors were women in 2011, showing a clear gender bias in the data. So even with free to use data always seems to have a bias one way or another.
 
 
 # Key Findings
 
+<!-- What? Specific examples -->
+
+## Importance of Explainability
+
+One of the biggest examples of a company that uses AI models to target their users is Facebook. Facebook has counteracted bad publicity of their targetted ads by adding a "Why Am I Seeing This?" button on each of the ads. This button will show a vaguely written explanation that is meant to make the user placated and feel like they are in control. However, it has been shown that if Facebook wanted to, they could give a much better explanation for their ads and specifically what attributes were used to predict the users wants and needs. The following is a Case Study on Facebook's Ad Transparency from the Network and Distributed System Security Symposium in 2018: 
+
 [<img src="https://i.ytimg.com/vi/f7yQZ6uquDA/hqdefault.jpg" width="250">](https://youtu.be/f7yQZ6uquDA?t=643)
 
-<!-- What? Specific examples -->
+By leaving out key information Facebook is able to shield themselves from users knowing what data is being collected. They are able to stay within legal boundaries, providing just enough of an explanation to their users on what attributes they are using and selling to advertisers. This is a blatant disregard for the explainability of the system and could be fixed through the updating and growing of laws to meet the needs of explainable AI.
 
 ### Encourage fair use
 Instead of copyright, fair use should be encouraged.
