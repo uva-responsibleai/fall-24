@@ -80,29 +80,25 @@ By leaving out key information Facebook is able to shield themselves from users 
 
 ## Encouraging fair use
 
-Another way to meet the need of counteracting discrimination in models is by fixing the datasets themselves and which datasets are available. Instead of copyright, fair use should be encouraged.
+Counteracting discrimination in models can be done in two ways by fixing the datasets themselves and by having better datasets available. Instead of copyright, fair use should be encouraged.
 
-#### Why using copyright protected works is beneficial and harming the interest of the copyright oweners:
+In order to explore why fair use of data should be considered we must first explore why using copyright protected works is beneficial to the interest of the copyright owners and why it may be harmful. First, AI systems that use the data are inherently highly transformative. This means that they use the data in a different way and for a different reason, meaning it is a new creation. These AI systems produce new knowledge and contribute to society. Additionally, training is a “nonexpressive use”, meaning it is fair use to use copyrighted works for training AI systems and it is beneficial to society. 
 
-##### Highly transformative
-Defination of transformative use: "Must be productive and must employ the quoted matter in a different manner or for a different purpose from the original ... if the quoted matter is used as raw material, transformed in the creation of ... new insights and understandings—this is the very type of activity that the fair use doctrine intends to protect for the enrichment of society."
+Second, AI models are factual in nature. Researchers of this topic argue that AI is learning the concepts and the facts of the works but not the “creative component”. Infringement is when one party uses a part of the originial work to try to connect with the audience dishonestly and it is not the case for AI training. However, some believe that if a model is just using the facts of the data it means it does not infringe on the copyright of the data it used. This means that the data should be fair use. Furthermore, it is not fair use if it "may serve as a market substitute for the original". This is not the case for AI training as the product is not the data itself but a model. Apart from that if fair use is widely adopted, there will not be a licensing market as it would still be favorable to big tech companies.
 
-To use the data for training AI system is transformative, produce new knowledge and contribute to society. Also training is a “nonexpressive use”. So it is fair use to use copyrighted works for training AI systems and it is beneficial to the society.
-
-##### Factual nature
-AI is learning the concept and the fact of the works but not “creative component”. Infringement is when one party use a part of the originial work to try to connect with the audience dishonestly and it is not the case for AI training.
-
-##### Copying Entire Works to Train AI Systems Takes a Reasonable Amount and Substantiality of the Copyrighted Works
-To examine the system some part of the work should be available, and the work should not be perceived as expressive work but only to identify bias. With the strict definition like this, it should be assumed that the parties who are examining the AI system will not be viewing the work as an expressive work but as an informative work.
-
-##### Does Not Harm the Commercial Market for Copyrighted Works
-It is not fair use if “may serve as a market substitute for the original.”, it is not the case for AI training as 
-the product is not the data itself but a model. Apart from that if fair use is widely adopted, there will not be a licensing market as it would still be favorable to big tech companies.
 
 ## Limited Liability Under Title VII In Most Cases
 Title VII poses several challenges with respect to trying to reduce discriminatory outcomes from data mining. Most notably, liability for discrimination from data mining would be difficult due to  the common situation of not having discriminatory intent, or “disparate intent”. For example, if the data reflects historical patterns of prejudice, if there is no intention to harm, Title VII may hold that data mining is a justifiable business necessity if the outcome is predictive of future employment outcomes. From a technical aspect as well, every step in the data mining process (defining target variable, labeling and collecting training data, using feature selection, making decisions on the basis of the resulting model) could potentially result in discriminatory outcomes for protected classes, so identifying intent somewhere in the pipeline would be a formidable challenge. Rather, under Title VII, potential triggers of liability would include “disparate impact” (discriminatory effects without intent), or “disparate treatment” (data mining systems treat everyone differently). Another solution, however, rather than relying solely on the letter of the law and enforcement agencies, rests on the employers themselves through means such as education. For example, employers may not be aware of the technological underpinnings of data mining and the potential for discrimination.
 
-## Government Reaction (AIAs)
+## Government Reaction
+
+### AIAs
+
+Under Construction
+
+### Evaluating for Copyright
+
+To examine the system some part of the work should be available, and the work should not be perceived as expressive work but only to identify bias. With the strict definition like this, it should be assumed that the parties who are examining the AI system will not be viewing the work as an expressive work but as an informative work.
 
 # Critical Analysis
 
@@ -119,9 +115,10 @@ flowchart TD;
 
 <!-- What are your opinions? Where do we go from here? -->
 
+### Critique and analysis of Law making in discrimination:
+
 It is a controversial topic, as the copyright law protects the interest of the copyright owners, and it seems that by encouraging fair use, the interest of the copyright owners will be harmed. However, like open source software, in my opinion, in an environemnt where the resources are opener to everyone, there would be more accountability, more competition and less black boxes, and I believe the society as a whole will benefit from it and it would open up more doors for the researchers and parties with smaller resources to contribute to the research.
 
-Critique and analysis of Law making in discrimination:
 Much like how the law can lag behind social issues, the same can be true for technologies. This is especially true when it is social issues related to technology. As technologies emerge, policy makers may not have enough expertise to easily evaluate new technology to make or analyze laws based on them. AI is one such field as there have not been many policies made regarding it yet. Not all the blame lies on the policy makers however, as emergent technologies can change rapidly so it may be wise to give some time to “settle” before making policies. Besides that, the issues faced with making policies on AI provide new and complex challenges that have not been handled before. While human discrimination can be more easily defined, it may be more difficult to detect depending on how interpretable the AI is. The issue of who is responsible is also a big one as who is responsible; the creator, the company, maintenance, the AI, or someone else?
 
 While it can be difficult to define, here is a possible idea relating to the unique problems of AI. Once standards of required fairness, bias, and discrimination are created, a new agency and or job could be created. The job would be like a pen tester, but for AI. How strict the AI is tested would be based on the risk of the AI. The AI abuse tester would be knowledgeable on AI bias and would be given access to an AI to do comprehensive testing and make a AI responsibility report similar to how a penetration tester makes one after their test. If the AI meets the standards for the level of risk it is assigned, it would be allowed to be put in use. If not the company will have to make some adjustments before rolling the AI out.
@@ -139,5 +136,6 @@ While the separation of powers into the three branches of government has had the
 | Historical Bias | |
 | Institutionalized Bias | |
 | Stakeholders | |
+| Transformative Use | "Must be productive and must employ the quoted matter in a different manner or for a different purpose from the original ... if the quoted matter is used as raw material, transformed in the creation of ... new insights and understandings—this is the very type of activity that the fair use doctrine intends to protect for the enrichment of society" |
 
 # References
