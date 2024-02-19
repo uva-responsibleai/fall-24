@@ -5,17 +5,12 @@
 ```mermaid
 flowchart TD;
     A[Papers] -->B[Anti-Discrimination];
+    A-->C[Copyright];
+    A-->D[Big Data];
+    B-->E[- Title VII Disparate Treatment/Impact <br>- History of Anti-discrimination <br>- Reaction of law to ML];
+    C-->F[- What is copyright? <br>- Fair Use Garbage In<br>- Copyright vs AI];
+    D-->G[- Garbage In/Garbage Out<br>- Laws are hard to change];
 ```
-    A-->C(Copyright);
-    A-->D(Big Data);
-    B-->E[- Title VII Disparate Treatment/Impact
-    - History of Anti-discrimination
-    - Reaction of law to ML];
-    C-->F[- What is copyright?
-    - Fair Use Garbage In
-    - Copyright vs AI];
-    D-->G[- Garbage In/Garbage Out
-    - Laws are hard to change];
 
 <ol>
     <li>Introduction
