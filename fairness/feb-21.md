@@ -16,7 +16,12 @@ flowchart TD;
 <ol>
     <li>Introduction
         <ol>
-            <li>History of Anti-Discrimination</li>
+            <li>History of Anti-Discrimination and Copyright Laws
+                <ol>
+                    <li>Copyright</li>
+                    <li>Fair Use</li>
+                </ol>
+            </li>
             <li>Related Law (Title 7)</li>
             <li>What is Copyright and Fair Use?</li>
         </ol>
@@ -24,14 +29,13 @@ flowchart TD;
     <li>Methods
         <ol>
             <li>Explainability</li>
-            <li>Copyright vs AI</li>
-            <li>Garbage In/Garbage Out</li>
+            <li>Copyright vs AI (Garbage In/Garbage Out)</li>
             <li>Laws and Data are Hard to Change</li>
         </ol>
     </li>
     <li>Key Findings
         <ol>
-            <li>Facebook Targeted Ads (Explainability: Completeness and Correctness)
+            <li>Importance of Explainability
                 <ol>
                     <li>https://www.youtube.com/watch?v=f7yQZ6uquDA&ab_channel=NDSSSymposium 10:46-13:00</li>
                 </ol>
@@ -53,19 +57,23 @@ Discrimination and proving the existance of discrimination have always been a di
 
 Anti-discrimination has a complicated history in American law. It started with the Civil Rights Movement reacting to what were called "Jim Crow Laws" and the disenfranchisement of many recently freed black americans. In order to fight this segregation and gain back their rights black americans did sit ins, practiced Civil Disobedience, and fought to be seen as equal. Anti-discrimination laws grew as a reaction to these protests. Title VII, a law establishing the legality of disparate treatment and disparate impact and how/when individuals can sue because of it, is a crutial law in the fight for equality and fairness. The fight for equal rights continued with Gender Discrimination, LGBTQ+IA Rights and Anti-discrimination, and Disabled Person's Rights, as well, growing the laws and adding more statutes to cover the inclusion of the groups.
 
-<!-- Add an explanation for Disparate Treatment and Disparate Impact -->
+### Related Law (Title 7)
 
 In America discrimination based on protected classes (race, gender, religion, disability, sexual orientation, etc...), however, the internet and technology makes these issues even more complicated. The regulation of content online as well as the discrimination of Machine Learning algorithms can cause difficulties in the interpretations of the laws and the need for further development of verbage in the laws, as shown in the following YouTube video:
 
 [<img src="https://i.ytimg.com/vi/EpXNXyfFS8U/hq720.jpg" width="250">](https://www.youtube.com/watch?v=EpXNXyfFS8U)
 
-### Datasets and Copyright
+<!-- Add an explanation for Disparate Treatment and Disparate Impact -->
+
+### What is Copyright and Fair Use?
+
+#### Copyright
 
 The historical impact of discrimination is not only a problem in the continuance of historical trauma and pain but can also be perpetuated further due to toxic datasets and institutionalized bias. Datasets are a huge contributor to institutionalized bias and by training models on tainted datasets developers are ignoring the disparate impact that these models could be causing. The use of "good" datasets that are free of historical bias is limited by laws like Copyright Law and Fair Use and according to Levendowski on _How Copyright Law Can Fix Artificial Intelligence's Implicit Bias Problem_, “How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”. To discuss if AI training data is in the conflict of the interest of the copyrighted work owners, “copy” should be defined first. According to Copyright Act, “copies” are “material objects [...] in which a work is fixed by any method now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device". This definition of "copies" in the Copyright law can create complications in the interpretation of the law and will prove to clash with Artificial Intelligence and models needing data to be trained on.
 
 <!-- Training data however, is usually stored in the RAM, which makes them volatile and “fleeting”. So there is still no agreement of if training data is a “copy”. If it is not a “copy” to start with then there is no infringing. -->
 
-#### What is fair use
+#### Fair Use
 
 As stated in the paper on Copyright Law, fair use is decided case by case and a combination of the four factors:
 
@@ -83,9 +91,9 @@ Fairer AI may require the use of fair use data due to complications in the copyr
 
 <!-- How? Specific laws -->
 
-## Explainable AI
+## Explainability
 
-## Copyright vs AI
+## Copyright vs AI (Garbage In/Garbage Out)
 Copyright law affects the development of fairer AI systems in three main ways:
 
 1.  Chill Reverse Engineering
@@ -108,13 +116,15 @@ To abide by copyright laws, the developers are driven to use public domain works
 
 ## Importance of Explainability
 
+<!-- ### Explainability: Completeness and Correctness -->
+
 One of the biggest examples of a company that uses AI models to target their users is Facebook. Facebook has counteracted bad publicity of their targetted ads by adding a "Why Am I Seeing This?" button on each of the ads. This button will show a vaguely written explanation that is meant to make the user placated and feel like they are in control. However, it has been shown that if Facebook wanted to, they could give a much better explanation for their ads and specifically what attributes were used to predict the users wants and needs. The following is a Case Study on Facebook's Ad Transparency from the Network and Distributed System Security Symposium in 2018: 
 
 [<img src="https://i.ytimg.com/vi/f7yQZ6uquDA/hqdefault.jpg" width="250">](https://youtu.be/f7yQZ6uquDA?t=643)
 
 By leaving out key information Facebook is able to shield themselves from users knowing what data is being collected. They are able to stay within legal boundaries, providing just enough of an explanation to their users on what attributes they are using and selling to advertisers. This is a blatant disregard for the explainability of the system and could be fixed through the updating and growing of laws to meet the needs of explainable AI.
 
-### Encouraging fair use
+## Encouraging fair use
 
 Another way to meet the need of counteracting discrimination in models is by fixing the datasets themselves and which datasets are available. Instead of copyright, fair use should be encouraged.
 
@@ -135,7 +145,7 @@ To examine the system some part of the work should be available, and the work sh
 It is not fair use if “may serve as a market substitute for the original.”, it is not the case for AI training as 
 the product is not the data itself but a model. Apart from that if fair use is widely adopted, there will not be a licensing market as it would still be favorable to big tech companies.
 
-
+## Government Reaction
 
 # Critical Analysis
 
