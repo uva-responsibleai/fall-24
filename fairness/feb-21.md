@@ -41,20 +41,25 @@ flowchart TD;
     </li>
 </ol>
 
+
+Discrimination and proving the existance of discrimination have always been a difficult legal problem throughout American history. From the Civil Rights Movements, to Women's Rights, to LGBTQ rights, and now to complicated issues that are plaguing datasets in Machine Learning, counteracting these biases and unfairness through law has always been and remains to be an extremely important pursuit. This blog will review the History of such laws including Anti-discrimination and copyright, explain what methods have been taken to counteract these issues, key examples of biases and unfairness, and finally a critical analysis of where and how society should progress from here.
+
 ## Motivations
 
+### History of Anti-Discrimination and Copyright Laws
+
+Anti-discrimination 
+
+<video src="https://www.youtube.com/watch?v=EpXNXyfFS8U" controls="controls" muted="muted" playsinline="playsinline"></video>
+
 <!-- Background information -->
-“How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and 
-abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”
+“How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”
 
 ### Traditional Copyright Law
-##### Definition of copy
-To discuss if AI training data is in the conflict of the interest of the copyrighted work owners, “copy” should be 
-defined first, according to Copyright Act, “copies” are “material objects ... in which a work is fixed by any method 
-now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either 
-directly or with the aid of a machine or device”. Training data however, is usually stored in the RAM, which makes them 
-volatile and “fleeting”. So there is still no agreement of if training data is a “copy”. If it is not a “copy” to 
-start with then there is no infringing.
+
+#### Definition of copy
+
+To discuss if AI training data is in the conflict of the interest of the copyrighted work owners, “copy” should be defined first, according to Copyright Act, “copies” are “material objects [...] in which a work is fixed by any method now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device”. Training data however, is usually stored in the RAM, which makes them volatile and “fleeting”. So there is still no agreement of if training data is a “copy”. If it is not a “copy” to start with then there is no infringing.
 
 
 # Methods
@@ -63,17 +68,12 @@ start with then there is no infringing.
 
 ## Copyright hinderances
 Copyright law affects the development of fairer AI systems in three main ways:
+
 ### Chill Reverse Engineering
-To reverse engineering, normally one needs to understand how the original code works, it would mean that there is a “copy” stored somewhere for the purpose of studying. By doing so the reverse engineer violates the copyright law. 
-Most of the time, this act is pushed by a big company in a monopoly market for the maximization of the interest, 
-the cost of reverse engineering is thus high for an individual or smaller competitors. 
-Consequently this pushes the independent researchers, journalists, etc away.
+To reverse engineering, normally one needs to understand how the original code works, it would mean that there is a “copy” stored somewhere for the purpose of studying. By doing so the reverse engineer violates the copyright law. Most of the time, this act is pushed by a big company in a monopoly market for the maximization of the interest, the cost of reverse engineering is thus high for an individual or smaller competitors. Consequently this pushes the independent researchers, journalists, etc away.
 
 ### Restrict Accountability
-The accountability can usually be held up by three main ways:  journalistic reporting, whistleblowers and crowdsourcing audits.
-Copyright law restrains all three ways. to make a report piece, which is normally published publicly, 
-a part of the dataset will be revealed to the public, which can be considered infringement, similarly, for 
-a whistleblower to report something, they will have to “copy” it first. Thus copyright law actually discourage other parties to hold the AI system developers accountable.
+The accountability can usually be held up by three main ways:  journalistic reporting, whistleblowers and crowdsourcing audits. Copyright law restrains all three ways. to make a report piece, which is normally published publicly, a part of the dataset will be revealed to the public, which can be considered infringement, similarly, for a whistleblower to report something, they will have to “copy” it first. Thus copyright law actually discourage other parties to hold the AI system developers accountable.
 
 ### Limit Competition
 Training a big model needs a big pile of data, the data used for build large AI system is gained by building or buying, the resources are more accessible for big tech companies, who either have a long history of being in the Internet playfield or have enough wealth to fund such acts. THis makes the other newer parties to enter the field.
