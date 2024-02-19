@@ -5,8 +5,8 @@
 ```mermaid
 flowchart TD;
     A[Papers] -->B[Fairness and Machine Learning, Ch 6];
-    A-->C[How Copyright Law Can Fix Artificial Intelligence’s Implicit Bias Problem];
-    A-->D[Big Data’s Disparate Impact];
+    A-->C[How Copyright Law Can Fix Artificial Intelligence\’s Implicit Bias Problem];
+    A-->D[Big Data\’s Disparate Impact];
     B-->E[- Title VII Disparate Treatment/Impact <br>- History of Anti-discrimination <br>- Reaction of law to ML];
     C-->F[- What is copyright? <br>- Fair Use Garbage In<br>- Copyright vs AI];
     D-->G[- Garbage In/Garbage Out<br>- Laws are hard to change];
