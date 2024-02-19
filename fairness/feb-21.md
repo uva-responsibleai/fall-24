@@ -4,17 +4,17 @@
 
 ```mermaid
 graph TD;
-    A(Papers) -->B(Anti-Discrimination)
-    A-->C(Copyright)
-    A-->D(Big Data)
+    A(Papers) -->B(Anti-Discrimination);
+    A-->C(Copyright);
+    A-->D(Big Data);
     B-->E[- Title VII Disparate Treatment/Impact
     - History of Anti-discrimination
-    - Reaction of law to ML]
+    - Reaction of law to ML];
     C-->F[- What is copyright?
     - Fair Use Garbage In
-    - Copyright vs AI]
+    - Copyright vs AI];
     D-->G[- Garbage In/Garbage Out
-    - Laws are hard to change]
+    - Laws are hard to change];
 ```
 
 <ol>
