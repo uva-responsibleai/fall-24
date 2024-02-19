@@ -4,14 +4,15 @@
 
 ```mermaid
 flowchart TD;
-    A[Papers] -->B[Anti-Discrimination];
-    A-->C[Copyright];
-    A-->D[Big Data];
+    A[Papers] -->B[Fairness and Machine Learning, Ch 6];
+    A-->C[How Copyright Law Can Fix Artificial Intelligence’s Implicit Bias Problem];
+    A-->D[Big Data’s Disparate Impact];
     B-->E[- Title VII Disparate Treatment/Impact <br>- History of Anti-discrimination <br>- Reaction of law to ML];
     C-->F[- What is copyright? <br>- Fair Use Garbage In<br>- Copyright vs AI];
     D-->G[- Garbage In/Garbage Out<br>- Laws are hard to change];
 ```
 
+**Table of Contents**
 <ol>
     <li>Introduction
         <ol>
@@ -24,21 +25,22 @@ flowchart TD;
         <ol>
             <li>Explainability</li>
             <li>Copyright vs AI</li>
+            <li>Garbage In/Garbage Out</li>
             <li>Laws and Data are Hard to Change</li>
         </ol>
     </li>
     <li>Key Findings
         <ol>
-            <li>Government Reaction (AIAs)</li>
-            <li>Garbage In/Garbage Out</li>
             <li>Facebook Targeted Ads (Explainability: Completeness and Correctness)
                 <ol>
                     <li>https://www.youtube.com/watch?v=f7yQZ6uquDA&ab_channel=NDSSSymposium 10:46-13:00</li>
                 </ol>
             </li>
-            <li>Impact</li>
+            <li>Encouraging Fair Use (Counteracting Garbage Input)</li>
+            <li>Government Reaction (AIAs)</li>
         </ol>
     </li>
+    <li>Critical Analysis</li>
 </ol>
 
 
@@ -57,9 +59,24 @@ In America discrimination based on protected classes (race, gender, religion, di
 
 [<img src="https://i.ytimg.com/vi/EpXNXyfFS8U/hq720.jpg" width="250">](https://www.youtube.com/watch?v=EpXNXyfFS8U)
 
+### Datasets and Copyright
+
 The historical impact of discrimination is not only a problem in the continuance of historical trauma and pain but can also be perpetuated further due to toxic datasets and institutionalized bias. Datasets are a huge contributor to institutionalized bias and by training models on tainted datasets developers are ignoring the disparate impact that these models could be causing. The use of "good" datasets that are free of historical bias is limited by laws like Copyright Law and Fair Use and according to Levendowski on _How Copyright Law Can Fix Artificial Intelligence's Implicit Bias Problem_, “How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”. To discuss if AI training data is in the conflict of the interest of the copyrighted work owners, “copy” should be defined first. According to Copyright Act, “copies” are “material objects [...] in which a work is fixed by any method now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device". This definition of "copies" in the Copyright law can create complications in the interpretation of the law and will prove to clash with Artificial Intelligence and models needing data to be trained on.
 
 <!-- Training data however, is usually stored in the RAM, which makes them volatile and “fleeting”. So there is still no agreement of if training data is a “copy”. If it is not a “copy” to start with then there is no infringing. -->
+
+#### What is fair use
+
+As stated in the paper on Copyright Law, fair use is decided case by case and a combination of the four factors:
+
+>1. The purpose and character of the use; 
+>1. The nature of the copyrighted work; 
+>1. The amount and substantiality of the portion used in relation to the copyrighted work as a whole; 
+>1. The effect of the use upon the potential market for or value of the copyrighted work.
+
+Fairer AI may require the use of fair use data due to complications in the copyright law dictating who can use what data when. Datasets will need to be balanced out in order to correct for biases and minimize the effects of biases in the model.
+
+<!-- To create fairer AI, the dataset should be able to include copy-right protected works, so the dataset can be bigger, minimizing the effect of BLFD and researchers can add selected data to balance out the bias. -->
 
 
 # Methods
@@ -97,22 +114,9 @@ One of the biggest examples of a company that uses AI models to target their use
 
 By leaving out key information Facebook is able to shield themselves from users knowing what data is being collected. They are able to stay within legal boundaries, providing just enough of an explanation to their users on what attributes they are using and selling to advertisers. This is a blatant disregard for the explainability of the system and could be fixed through the updating and growing of laws to meet the needs of explainable AI.
 
-### Encourage fair use
-Instead of copyright, fair use should be encouraged.
+### Encouraging fair use
 
-#### What is fair use
-Fair use is decided case by case and a combination of the four factors:
-
-1. The purpose and character of the use; 
-
-2. The nature of the copyrighted work; 
-
-3. The amount and substantiality of the portion used in relation to the copyrighted work as a whole; 
-
-4. The effect of the use upon the potential market for or value of the copyrighted work.
-
-To create fairer AI, the dataset should be able to include copy-right protected works, so the dataset can be bigger, 
-minimizing the effect of BLFD and researchers can add selected data to balance out the bias.
+Another way to meet the need of counteracting discrimination in models is by fixing the datasets themselves and which datasets are available. Instead of copyright, fair use should be encouraged.
 
 #### Why using copyright protected works is beneficial and harming the interest of the copyright oweners:
 
