@@ -1,23 +1,27 @@
-# Introduction
+# Introduction (Fairness - Policy Aspects)
 
 <!-- Summarize the main idea of the blog here - write this part last -->
 
-Discrimination and proving the existance of discrimination have always been a difficult legal problem throughout American history. From the Civil Rights Movements, to Women's Rights, to LGBTQ rights, and now to complicated issues that are plaguing datasets in Machine Learning, counteracting these biases and unfairness through law has always been and remains to be an extremely important pursuit. This blog will review the History of such laws including Anti-discrimination and copyright, explain what methods have been taken to counteract these issues, key examples of biases and unfairness, and finally a critical analysis of where and how society should progress from here.
+Discrimination and proving the existence of discrimination have always been a difficult legal problem throughout American history. From the Civil Rights Movements, to Women's Rights, to LGBTQ rights, and now to complicated issues that are plaguing datasets in Machine Learning, counteracting these biases and unfairness through law has always been and remains to be an extremely important pursuit. This blog will review the [History of such laws](#motivations) including Anti-discrimination and copyright, explain what [methods](#methods) have been taken to counteract these issues, [key examples](#key-findings) of biases and unfairness, and finally a [critical analysis](#critical-analysis) of where and how society should progress from here. For definitions of important terms please refer to the [Appendix](#appendix) and for further research see the [References](#references) page.
 
 ## Motivations
 <!-- Background information -->
 
-### History of Anti-Discrimination and Copyright Laws
+Anti-discrimination has a complicated history in American law. It started with the Civil Rights Movement reacting to what were called "Jim Crow Laws" and the disenfranchisement of freed black americans. In order to fight this segregation and gain the rights they deserve, black americans did sit ins, practiced Civil Disobedience, and fought to be seen as equal. Anti-discrimination laws grew as a reaction to these protests. Title VII, a law establishing the legality of disparate treatment and disparate impact and how/when individuals can sue because of it, is a crutial law in the fight for equality and fairness. The fight for equal rights continued with Gender Discrimination, LGBTQ+IA Rights and Anti-discrimination, and Disabled Person's Rights, as well, growing the laws and adding more statutes to cover the inclusion of the groups.
 
-Anti-discrimination has a complicated history in American law. It started with the Civil Rights Movement reacting to what were called "Jim Crow Laws" and the disenfranchisement of many recently freed black americans. In order to fight this segregation and gain back their rights black americans did sit ins, practiced Civil Disobedience, and fought to be seen as equal. Anti-discrimination laws grew as a reaction to these protests. Title VII, a law establishing the legality of disparate treatment and disparate impact and how/when individuals can sue because of it, is a crutial law in the fight for equality and fairness. The fight for equal rights continued with Gender Discrimination, LGBTQ+IA Rights and Anti-discrimination, and Disabled Person's Rights, as well, growing the laws and adding more statutes to cover the inclusion of the groups.
+### What is Title 7?
 
-### Related Law (Title 7)
-
-In America discrimination based on protected classes (race, gender, religion, disability, sexual orientation, etc...), however, the internet and technology makes these issues even more complicated. The regulation of content online as well as the discrimination of Machine Learning algorithms can cause difficulties in the interpretations of the laws and the need for further development of verbage in the laws, as shown in the following YouTube video:
+In America discrimination against protected classes (race, gender, religion, disability, sexual orientation, etc...) and not performing certain tasks because an individual is in those classes is unlawful. However, the internet and technology makes these issues even more complicated. The regulation of content online as well as the discrimination of Machine Learning algorithms can cause difficulties in the interpretations of the laws and the need for further development of verbage in the laws, as shown in the following YouTube video:
 
 [<img src="https://i.ytimg.com/vi/EpXNXyfFS8U/hq720.jpg" width="250">](https://www.youtube.com/watch?v=EpXNXyfFS8U)
 
-<!-- Add an explanation for Disparate Treatment and Disparate Impact -->
+#### Disparate Treatment
+
+Under construction
+
+#### Disparate Impact
+
+Under construction
 
 ### What is Copyright and Fair Use?
 
@@ -132,3 +136,13 @@ Much like how the law can lag behind social issues, the same can be true for tec
 While it can be difficult to define, here is a possible idea relating to the unique problems of AI. Once standards of required fairness, bias, and discrimination are created, a new agency and or job could be created. The job would be like a pen tester, but for AI. How strict the AI is tested would be based on the risk of the AI. The AI abuse tester would be knowledgeable on AI bias and would be given access to an AI to do comprehensive testing and make a AI responsibility report similar to how a penetration tester makes one after their test. If the AI meets the standards for the level of risk it is assigned, it would be allowed to be put in use. If not the company will have to make some adjustments before rolling the AI out.
 
 While the separation of powers into the three branches of government has had the benefit of mitigating one side becoming too powerful, the downside is sometimes a loss of efficiency when creating new laws. This can be due to several reasons. The executive can veto any bill that is passed in the legislative. Partisanship between political parties in which the issue is one that a party does not care for. Parties can also deny bills to strong arm the other party to pass something of theirs. Riders, small laws that are snuck in with bigger ones can prevent a bill from going through, as while the main part may be agreeable, the other side may not want the rider portion to come through. The federal executive does not have the power to line veto, which is removing parts of a bill while passing the rest. Line veto is allowed in ~44 states for governors, but is not allowed for the executive. While it can make it more efficient and prevent undesirable riders, it would make the executive extremely more powerful. A law could be given to the executive and they could butcher it to have none of what it was meant to be. Law tends to lag behind the social issues, but as demonstrated there is a lot of it comes from the overall uncertainty and possible slowdowns of making laws. 
+
+# Appendix
+
+| Term | Definition |
+|--|--|
+| Disparate Impact | |
+| Disparate Treatment | |
+| Institutionalized Bias | |
+
+# References
