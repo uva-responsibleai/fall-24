@@ -50,7 +50,7 @@ Discrimination and proving the existance of discrimination have always been a di
 
 Anti-discrimination 
 
-<video src="https://www.youtube.com/watch?v=EpXNXyfFS8U" controls="controls" muted="muted" playsinline="playsinline"></video>
+[![Watch the video](https://i.ytimg.com/vi/EpXNXyfFS8U/hq720.jpg)](https://www.youtube.com/watch?v=EpXNXyfFS8U)
 
 <!-- Background information -->
 “How to link to other materials: Law affects who can develop AI system and how to develop, including computer fraud and abuse act(CFAA) and trade secret, But the law that has the most influence: copyright law”
