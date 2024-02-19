@@ -3,18 +3,18 @@
 <!-- Summarize the main idea of the blog here - write this part last -->
 
 ```mermaid
-graph TB
-A(Papers) -->B(Anti-Discrimination)
-A-->C(Copyright)
-A-->D(Big Data)
-B-->E[- Title VII Disparate Treatment/Impact
-- History of Anti-discrimination
-- Reaction of law to ML]
-C-->F[- What is copyright?
-- Fair Use Garbage In
-- Copyright vs AI]
-D-->G[- Garbage In/Garbage Out
-- Laws are hard to change]
+graph TD;
+    A(Papers) -->B(Anti-Discrimination)
+    A-->C(Copyright)
+    A-->D(Big Data)
+    B-->E[- Title VII Disparate Treatment/Impact
+    - History of Anti-discrimination
+    - Reaction of law to ML]
+    C-->F[- What is copyright?
+    - Fair Use Garbage In
+    - Copyright vs AI]
+    D-->G[- Garbage In/Garbage Out
+    - Laws are hard to change]
 ```
 
 <ol>
