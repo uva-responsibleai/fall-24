@@ -145,3 +145,8 @@ While the separation of powers into the three branches of government has had the
 | Transformative Use | "Must be productive and must employ the quoted matter in a different manner or for a different purpose from the original ... if the quoted matter is used as raw material, transformed in the creation of ... new insights and understandings—this is the very type of activity that the fair use doctrine intends to protect for the enrichment of society" |
 
 # References
+Barocas, Solon and Selbst, Andrew D., Big Data's Disparate Impact (2016). 104 California Law Review 671 (2016), Available at SSRN: https://ssrn.com/abstract=2477899 or http://dx.doi.org/10.2139/ssrn.2477899
+
+I.O., Gallegos et al. Understanding United States Anti-Discrimination Law, 2023, fairmlbook.org/legal.html. 
+
+Levendowski, Amanda, How Copyright Law Can Fix Artificial Intelligence's Implicit Bias Problem (July 24, 2017). 93 Wash. L. Rev. 579 (2018), Available at SSRN: https://ssrn.com/abstract=3024938
