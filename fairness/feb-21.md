@@ -136,11 +136,11 @@ While the separation of powers into the three branches of government has had the
 | Term | Definition |
 |--|--|
 | Copies | “material objects [...] in which a work is fixed by any method now known or later developed, and from which the work can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device" |
-| Fair Use | | Allows limited usage of copyrighted material without paying for a license 
-| Disparate Impact | | Practices in employment, housing, and other areas that adversely affect one group of people of a protected characteristic more than another 
-| Disparate Treatment | | Practices in typically employment that disproportionately effect one group that is protected. 
-| Institutionalized Bias | | Biases that have become ingrained in either the law itself or in the procedures and culture of an institution 
-| Stakeholders | |An entity that has a vested interest in the outcome of the partcular subject or matter
+| Fair Use | | Allows limited usage of copyrighted material without paying for a license | 
+| Disparate Impact | | Practices in employment, housing, and other areas that adversely affect one group of people of a protected characteristic more than another|
+| Disparate Treatment | | Practices in typically employment that disproportionately effect one group that is protected |
+| Institutionalized Bias | | Biases that have become ingrained in either the law itself or in the procedures and culture of an institution |
+| Stakeholders | |An entity that has a vested interest in the outcome of the partcular subject or matter|
 | Transformative Use | "Must be productive and must employ the quoted matter in a different manner or for a different purpose from the original ... if the quoted matter is used as raw material, transformed in the creation of ... new insights and understandings—this is the very type of activity that the fair use doctrine intends to protect for the enrichment of society" |
 
 # References
