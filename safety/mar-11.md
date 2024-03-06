@@ -48,8 +48,11 @@ However, the results in this paper are rudimentary as compared to those in recen
 
 # References
 [26]. Poisoning attacks against support vector machines. Biggio et al. 2012
+
 [27]. Manipulating machine learning: Poisoning attacks and countermeasures for regression learning. Jagielski et al. 2018
+
 [28]. Certified defenses for data poisoning attacks. Steinhardt et al. 2017
+
 [29]. Poison frogs! Targeted clean-label poisoning attacks on neural networks. Shafahi et al. 2018
 
     
