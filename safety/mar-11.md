@@ -24,7 +24,10 @@ Sparse Vector Machines, or SVMs, are prime targets for poisoning attacks. In cer
 #### Procedure
 * Step 1
 
+
+
 ## Defenses
+### TRIM
 
 # Key Findings
 The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper contributes these findings:
@@ -42,5 +45,11 @@ The [Certified Defenses for Data Poisoning Attacks](https://arxiv.org/abs/1706.0
 # Critical Analysis
 The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper describes a kernelizable method of attacks against SVM models. The authors note that this work "breaks new ground" in the research of data-driven attacks against such models because their attack strategy is kernelizable. Their findings and conclusions are intuitive and easy to follow from the reader's point of view. Their attack strategy description is accompanied by a clear example: an attack on a digit classifier. They clearly show how the attacker is able to use their strategy to modify training input data to produce classification error. These attack modifications are understandable to the user as well: they clearly show how the attacker modifies the data so that the "7 straightens to resemble a 1, the lower segment of the 9 becomes more round thus mimicking an 8," and so on. Overall, the authors of this paper adequately communicate the technical aspects of their attack strategy in a way that even non-technical readers can easily understand, and the conclusions that follow are well-supported by the evidence they gathered in their attack.
 However, the results in this paper are rudimentary as compared to those in recent ML papers. They provide results on synthetic data and subsets of MNIST (by taking two digits and training a binary classifier SVM to distinguish between them). While they illustrated a novel concept well and in depth back then, a more thorough investigation may have been desirable.
+
+# References
+[26]. Poisoning attacks against support vector machines. Biggio et al. 2012
+[27]. Manipulating machine learning: Poisoning attacks and countermeasures for regression learning. Jagielski et al. 2018
+[28]. Certified defenses for data poisoning attacks. Steinhardt et al. 2017
+[29]. Poison frogs! Targeted clean-label poisoning attacks on neural networks. Shafahi et al. 2018
 
     
