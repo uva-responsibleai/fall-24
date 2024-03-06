@@ -1,5 +1,7 @@
 
-# Introduction
+# Introduction and Motivations
+
+# Methods
 
 # Key Findings
 The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper contributes these findings:
