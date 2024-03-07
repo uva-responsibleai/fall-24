@@ -40,12 +40,12 @@ The authors note that their findings emphasize that "resistance against adversar
 
 ### Poison Attack on Linear Regression Models:
 #### Optimization-Based Attack:
-This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss.
+This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss. This is done in a white-box setting.
 
 (Comment: mention combinations of attack loss, regression type, optimization dataset).
 
 #### Statistical-Based Attack (StatP):
-This attack is a fast statistical attack that produces poisoned points similar to that of the training data using a multivariate normal distribution. Then, knowing that the most effective poisoning points are near corners, it rounds the feature values of the generated points towards the corners. 
+This attack is a fast statistical attack that produces poisoned points similar to that of the training data using a multivariate normal distribution. Then, knowing that the most effective poisoning points are near corners, it rounds the feature values of the generated points towards the corners. This is done in a black-box setting.
 
 ### Clean-label Poison Attack on Neural Networks:
 A clean-label attack that does not require control over the labeling function. This attack produced poisoned points that appear to be correctly labeled by the expert observer but are able to control the behavior of the classifier.
