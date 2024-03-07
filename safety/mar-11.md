@@ -40,15 +40,27 @@ The authors note that their findings emphasize that "resistance against adversar
 
 ### Poison Attack on Linear Regression Models:
 #### Optimization-Based Attack:
-This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss. This is done in a white-box setting.
-
-(Comment: mention combinations of attack loss, regression type, optimization dataset).
-
-#### Statistical-Based Attack (StatP):
-This attack is a fast statistical attack that produces poisoned points similar to that of the training data using a multivariate normal distribution. Then, knowing that the most effective poisoning points are near corners, it rounds the feature values of the generated points towards the corners. This is done in a black-box setting.
+This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss
+#### Statistical-Based Attack:
+This attack is a fast statistical attack that produces poisoned points similar to that of the training data using a multivariate normal distribution. Then, knowing that the most effective poisoning points are near corners, it rounds the feature values of the generated points towards the corners. 
 
 ### Clean-label Poison Attack on Neural Networks:
-A clean-label attack that does not require control over the labeling function. This attack produced poisoned points that appear to be correctly labeled by the expert observer but are able to control the behavior of the classifier.
+Clean-label attacks are poisoning attacks on neual nets that are targeted, meaning they aim to control the behavior of a classifier on one specific test instance. This type of attack does not require control over the labeling function. This attack produced poisoned points that appear to be correctly labeled by the expert observer but are able to control the behavior of the classifier. This makes the attack not only difficult to detect, but opens the door for attackers to succeed without any inside access to the data collection and labeling process.
+
+#### Threat Model
+The problem of evasion attacks such as Poisoning Attack against SVMs is that they do not map to certain relistic scenarios in which the attacker cannot control test time data. Unlike Poisoning Attack against SVMs, in Clean-label attack, the attacker has no knowledge of the training data. However, the attacker has knowledge of the model and its parameters, which is a resonable assumption since many classic networks pre-trained on standard datasets. The attacker's goal is to cause the retrained network to misclassify a special test instance from one class as another class of her choice after the network has been retrained on the augmented data set that includes poison instances.
+
+#### Procedure
+1. The attacker first chooses a target instance from the test set.
+2. The attacker samples a base instance from the base class, and makes imperceptible changes to it to craft a poison instance.
+    - Crafting poison data via feature collisions with equation $\mathbf{p}=\underset{\mathbf{x}}{\operatorname{argmin}}\|f(\mathbf{x})-f(\mathbf{t})\|_2^2+\beta\|\mathbf{x}-\mathbf{b}\|_2^2$
+    - The right most term causes the poison instance p to appear like a base class instance to a human labeler. Meanwhile, the first term causes the poison instance to move toward the target instance in feature space and get embedded in the target class distriution.
+3. Inject the poison into the training data with the intent of fooling the model into labelling the target instance with the base label at test time.
+4. Train the model on the poisoned dataset.
+5. If the model mistakes the target instance as being in the base class, the poisoning attack is considered successful.
+
+
+
 
 
 ## Defenses
@@ -78,8 +90,6 @@ The [Poison frogs!](https://arxiv.org/abs/1804.00792) paper discuss poisoning on
 The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper describes a kernelizable method of attacks against SVM models. The authors note that this work "breaks new ground" in the research of data-driven attacks against such models because their attack strategy is kernelizable. Their findings and conclusions are intuitive and easy to follow from the reader's point of view. Their attack strategy description is accompanied by a clear example: an attack on a digit classifier. They clearly show how the attacker is able to use their strategy to modify training input data to produce classification error. These attack modifications are understandable to the user as well: they clearly show how the attacker modifies the data so that the "7 straightens to resemble a 1, the lower segment of the 9 becomes more round thus mimicking an 8," and so on. Overall, the authors of this paper adequately communicate the technical aspects of their attack strategy in a way that even non-technical readers can easily understand, and the conclusions that follow are well-supported by the evidence they gathered in their attack.
 
 However, the results in this paper are rudimentary as compared to those in recent ML papers. They provide results on synthetic data and subsets of MNIST (by taking two digits and training a binary classifier SVM to distinguish between them). While they illustrated a novel concept well and in depth back then, a more thorough investigation may have been desirable. In addition, the attack on SVM is entirely white box, and involves strong assumptions about the knowledge the adversary has that may be too strong in practice: in real life, adversaries may not have access to information such as the training/validation data.
-
-In [27], while the work on producing (then) state-of-the-art attacks is impressive, the rationale for basing the success of their results for OptP was not convincing and might lead to a slight inflation of claimed success. In particular, an adversary would have to mount multiple attacks (combinatorial in the number of choices of loss, label initialization strategy, argument, and attack objective/loss) and then report the best. This is not fairly comparable against baselines that only offer one candidate (apparently). However, discussion on the feasibility of each method (attack or defense) as compared to their baselines was very interesting and provided a practical insight into these methods' feasibility in practice. Also a more tangible quantification of the damage the proposed poisoning attack can do in terms of, say, prescribing medicinal dosage helped underline the fact that these attacks can lead to serious real-life consequences.
 
 # References
 [26]. Poisoning attacks against support vector machines. Biggio et al. 2012
