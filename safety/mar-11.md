@@ -13,8 +13,7 @@ For ML and ML security/safety practitioners, it thus becomes key to ensure that 
 
 
 # Methods
-
-(I think we should split up the methods into poisoning attacks and proposed defenses)
+In this section, we discuss the methodology of some poisoning attacks and some defenses against them, in that order. For the attacks, we describe the respective threat models and the procedure involved in mounting them. Results for each attack and defense are deferred to the next section (Key Findings).
 ## Attacks
 
 ### Attack 1. Poisoning Attack against SVMs
