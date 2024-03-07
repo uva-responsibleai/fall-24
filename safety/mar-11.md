@@ -70,13 +70,13 @@ However, Poisoning attacks on end-to-end training become more difficult.Single p
 
 The [Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) paper discuss the defense against poisoning attacks, and particularly for linear regression models, the authors introduce TRIM. The basics of TRIM compared to traditional approach in robust statistics which is to identify and discard outliers, TRIM adopt a strategy that iteratively refines the training dataset. TRIM operates by selecting subsets of the data that contribute to a lower residual error in each iteration. This iterative selection process allows TRIM to effectively isolate and remove points that are likely to be poisoning attempts, thus safeguarding the integrity of the regression model. As mentioned by the authors, unlike traditional methods that might only offer resilience against random noise or non-adversarial outliers, TRIM is specifically designed to counteract the strategic manipulations characteristic of poisoning attacks. This is achieved by using a trimmed loss function, which recalibrates the influence of each data point based on its contribution to the overall error, thereby ensuring that the model remains robust even when faced with data points specifically designed to undermine its performance.
 
-TRIM operates on the principle of iterative estimation, where at each step, it aims to minimize the impact of potentially poisoned points on the model's performance. The algorithm can be conceptualized as follows:
+TRIM operates on the principle of iterative estimation, where at each step, it aims to minimize the impact of potentially poisoned points on the model's performance. The algorithm can be conceptualized as follows:\
 
-\Initialization: Begin with the initial dataset and model parameters.
-\Residual Computation: Calculate residuals for all points in the dataset.
-\Exclusion: Exclude a percentage of points with the highest residuals.
-\Parameter Re-estimation: Update the model parameters using the trimmed dataset.
-\Iteration: Repeat steps 2-4 until convergence.
+Initialization: Begin with the initial dataset and model parameters.\
+Residual Computation: Calculate residuals for all points in the dataset.\
+Exclusion: Exclude a percentage of points with the highest residuals.\
+Parameter Re-estimation: Update the model parameters using the trimmed dataset.\
+Iteration: Repeat steps 2-4 until convergence.\
 
 The optimization goal of TRIM can be mathematically formulated as: $\min_{\theta} L(D \setminus P, \theta)$, where $\theta$ represents the model parameters, $L$ denotes the loss function, $D$ is the original dataset, and $P$ is the set of points excluded from $D$ based on their residuals. The goal here is to minimize the loss function $L$ over the dataset $D$, while excluding a set $P$ of poisoned points.
 
