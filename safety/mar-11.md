@@ -33,7 +33,8 @@ This produces an attack point that maximizes the (validation) loss for an SVM an
 - The "gradient ascent" attack strategy against SVMs can be kernelized, allowing for attacks to be constructed in the input space.
     - The attack method can be kernelized because it only depends on "the gradients of the dot products in the input space".
     - This is a big advantage for the attacker when compared to a method which can't be kernelized; an attacker using a non-kernelizable method "has no practical means to access the feature space".
-        - The authors note that this emphasizes that "resistance against adversarial data" should be considered in the design of learning algorithms.
+
+The authors note that their findings emphasize that "resistance against adversarial data" should be considered in the design of learning algorithms.
 
 ### Poison Attack on Linear Regression Models:
 #### Optimization-Based Attack:
