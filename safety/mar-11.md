@@ -18,11 +18,14 @@ For ML and ML security/safety practitioners, it thus becomes key to ensure that 
 ## Attacks
 
 ### Attack 1. Poisoning Attack against SVMs
-Sparse Vector Machines, or SVMs, are prime targets for poisoning attacks. In certain cases, even moving one point (a support vector) can entirely alter the behavior of the SVM.
+Support Vector Machines, or SVMs, are prime targets for poisoning attacks. In certain cases, even moving one point (a support vector) can entirely alter the behavior of the SVM.
 #### Threat Model
 This is a white-box attack where it is assumed that the adversary has knowledge about the training data, the validation data, and the algorithm used to train the model (the incremental SVM training algorithm).
 #### Procedure
 1. Given the training data $`\mathcal{D}_\text{tr}`$ and the validation data $`\mathcal{D}_\text{val}`$, first train an SVM using $`\mathcal{D}_\text{tr}`$.
+2. Then pick any member of the attacked class (preferably sufficiently deep within its margin) and flip its label. Denote this point and its flipped label as $`x_c^(0), y_c`$. This is the initial attack point.
+3. Using the previously trained SVM, update it on $`\mathcal{D}_\text{tr}\cup x_c^{(k)}`$ for timestep $k$.
+4. 
 
 ### Poison Attack on Linear Regression Models:
 #### Optimization-Based Attack:
