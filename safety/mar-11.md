@@ -69,8 +69,12 @@ However, Poisoning attacks on end-to-end training become more difficult.Single p
 ### TRIM
 
 # Key Findings
+The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) presents a novel approach to poisoning attacks against Support Vector Machines (SVMs) 
+- Demonstrating that specially crafted training data can significantly increase SVM's test error. 
+- Achieved through a gradient ascent strategy that exploits the properties of SVM's optimal solution, even for non-linear kernels.
+- Can reliably identify good local maxima on the non-convex validation error surface
 
-[Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) proposes optimized poisoning attacks on the linear regression models and a novel way to defend against them.
+The [Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) proposes optimized poisoning attacks on the linear regression models and a novel way to defend against them.
 - Statistical-based attacks that are derived from insights gained from optimized research conclusions can act as very low maintenance way to manipulate the training data effectively
 - Neat mathematical tricks can be applied to these machine learning problems such as replacing the inner learning problem of the bilevel optimization problem with KKT equilibrium conditions allows us to efficiently approximate our desired learning
 - TRIM utilizes a trimmed loss function to iteratively estimate regression parameters, effectively isolating poisoned points and performing better than other robust regression algorithms designed for adversarial settings 
