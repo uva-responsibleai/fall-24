@@ -34,7 +34,7 @@ This produces an attack point that maximizes the (validation) loss for an SVM an
     - The attack method can be kernelized because it only depends on "the gradients of the dot products in the input space".
     - This is a big advantage for the attacker when compared to a method which can't be kernelized; an attacker using a non-kernelizable method "has no practical means to access the feature space".
  
-In other words, the authors incorporate arguments on how to account for kernelization and include it within the attack's considerations. 
+In other words, the authors incorporate arguments on how to account for kernelization (for the linear, polynomial, and RBF kernels) and include it within the attack's considerations. 
 
 The authors note that their findings emphasize that "resistance against adversarial data" should be considered in the design of learning algorithms.
 
