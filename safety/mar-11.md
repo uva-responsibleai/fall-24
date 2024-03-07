@@ -53,7 +53,7 @@ The problem of evasion attacks such as Poisoning Attack against SVMs is that the
 #### Procedure
 1. The attacker first chooses a target instance from the test set.
 2. The attacker samples a base instance from the base class, and makes imperceptible changes to it to craft a poison instance.
-    - Crafting poison data via feature collisions with equation $\mathbf{p}=\underset{\mathbf{x}}{\operatorname{argmin}}\|f(\mathbf{x})-f(\mathbf{t})\|_2^2+\beta\|\mathbf{x}-\mathbf{b}\|_2^2$
+    - Crafting poison data via feature collisions with equation $\mathbf{p}=\underset{\mathbf{x}}{\mathrm{argmin}}|f(\mathbf{x})-f(\mathbf{t})|_2^2+\beta|\mathbf{x}-\mathbf{b}|_2^2$
     - The right most term causes the poison instance p to appear like a base class instance to a human labeler. Meanwhile, the first term causes the poison instance to move toward the target instance in feature space and get embedded in the target class distriution.
 3. Inject the poison into the training data with the intent of fooling the model into labelling the target instance with the base label at test time.
 4. Train the model on the poisoned dataset.
