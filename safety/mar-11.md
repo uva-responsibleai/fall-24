@@ -22,7 +22,7 @@ Sparse Vector Machines, or SVMs, are prime targets for poisoning attacks. In cer
 #### Threat Model
 This is a white-box attack where it is assumed that the adversary has knowledge about the training data, the validation data, and the algorithm used to train the model (the incremental SVM training algorithm).
 #### Procedure
-1. Given the training data $\mathcal{D}_\text{tr}$ and the validation data $\mathcal{D}_\text{val}$, first train an SVM using \(\mathcal{D}_\text{tr}\).
+1. Given the training data $`\mathcal{D}_\text{tr}`$ and the validation data $`\mathcal{D}_\text{val}`$, first train an SVM using $`\mathcal{D}_\text{tr}`$.
 
 ### Poison Attack on Linear Regression Models:
 #### Optimization-Based Attack:
