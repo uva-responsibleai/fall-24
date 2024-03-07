@@ -90,6 +90,10 @@ The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) presents a
 - Demonstrating that specially crafted training data can significantly increase SVM's test error. 
 - Achieved through a gradient ascent strategy that exploits the properties of SVM's optimal solution, even for non-linear kernels.
 - Can reliably identify good local maxima on the non-convex validation error surface
+- Demonstrate efficacy of the attack on a synthetic dataset and MNIST as follows.
+
+  <img width="832" alt="image" src="https://github.com/wenqian-ye/fall-24/assets/42236940/4fc29f63-bc28-4199-8ea8-3e1eb68b7449">
+
 
 The [Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) proposes optimized poisoning attacks on the linear regression models and a novel way to defend against them.
 - Statistical-based attacks that are derived from insights gained from optimized research conclusions can act as very low maintenance way to manipulate the training data effectively
