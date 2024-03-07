@@ -24,8 +24,10 @@ This is a white-box attack where it is assumed that the adversary has knowledge 
 #### Procedure
 1. Given the training data $`\mathcal{D}_\text{tr}`$ and the validation data $`\mathcal{D}_\text{val}`$, first train an SVM using $`\mathcal{D}_\text{tr}`$.
 2. Then pick any member of the attacked class (preferably sufficiently deep within its margin) and flip its label. Denote this point and its flipped label as $`x_c^(0), y_c`$. This is the initial attack point.
-3. Using the previously trained SVM, update it on $`\mathcal{D}_\text{tr}\cup x_c^{(k)}`$ for timestep $k$.
-4. 
+3. Using the previously trained SVM, update it on $`\mathcal{D}_\text{tr}\cup x_c^{(k)}`$ for timestep $k$ using the incremental SVM training method.
+4. Perform gradient ascent using the the hinge loss incurred on $`\mathcal{D}_\text{val}`$ by this updated SVM and finding the direction in which it is maximized. Let $`u`$ be the corresponding unit directional vector.
+5. Update $`x_c^{(k+1)}\gets x_c^{(k)} + tu`$ where $`t`$ is a small step size.
+6. Iterate until termination (when the increase in loss is below a particular threshold).
 
 ### Poison Attack on Linear Regression Models:
 #### Optimization-Based Attack:
