@@ -28,6 +28,8 @@ This is a white-box attack where it is assumed that the adversary has knowledge 
 5. Update $`x_c^{(k+1)}\gets x_c^{(k)} + tu`$ where $`t`$ is a small step size.
 6. Iterate until termination (when the increase in loss is below a particular threshold).
 
+This produces an attack point that maximizes the (validation) loss for an SVM and can thus force it to misclassify. As we shall observe in the following section, this attack performs quite effectively.
+
 ### Poison Attack on Linear Regression Models:
 #### Optimization-Based Attack:
 This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss
@@ -63,7 +65,8 @@ The [Poison frogs!](https://arxiv.org/abs/1804.00792) paper discuss poisoning on
 
 # Critical Analysis
 The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper describes a kernelizable method of attacks against SVM models. The authors note that this work "breaks new ground" in the research of data-driven attacks against such models because their attack strategy is kernelizable. Their findings and conclusions are intuitive and easy to follow from the reader's point of view. Their attack strategy description is accompanied by a clear example: an attack on a digit classifier. They clearly show how the attacker is able to use their strategy to modify training input data to produce classification error. These attack modifications are understandable to the user as well: they clearly show how the attacker modifies the data so that the "7 straightens to resemble a 1, the lower segment of the 9 becomes more round thus mimicking an 8," and so on. Overall, the authors of this paper adequately communicate the technical aspects of their attack strategy in a way that even non-technical readers can easily understand, and the conclusions that follow are well-supported by the evidence they gathered in their attack.
-However, the results in this paper are rudimentary as compared to those in recent ML papers. They provide results on synthetic data and subsets of MNIST (by taking two digits and training a binary classifier SVM to distinguish between them). While they illustrated a novel concept well and in depth back then, a more thorough investigation may have been desirable.
+
+However, the results in this paper are rudimentary as compared to those in recent ML papers. They provide results on synthetic data and subsets of MNIST (by taking two digits and training a binary classifier SVM to distinguish between them). While they illustrated a novel concept well and in depth back then, a more thorough investigation may have been desirable. In addition, the attack on SVM is entirely white box, and involves strong assumptions about the knowledge the adversary has that may be too strong in practice: in real life, adversaries may not have access to information such as the training/validation data.
 
 # References
 [26]. Poisoning attacks against support vector machines. Biggio et al. 2012
