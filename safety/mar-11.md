@@ -38,7 +38,7 @@ In other words, the authors incorporate arguments on how to account for kerneliz
 
 The authors note that their findings emphasize that "resistance against adversarial data" should be considered in the design of learning algorithms.
 
-### Poison Attack on Linear Regression Models:
+### Poison Attack on Linear Regression Models [27]:
 #### Optimization-Based Attack:
 This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss
 #### Statistical-Based Attack:
@@ -66,7 +66,7 @@ However, Poisoning attacks on end-to-end training become more difficult.Single p
 
 
 ## Defenses
-### TRIM
+### TRIM [27]
 
 The [Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) paper discuss the defense against poisoning attacks, and particularly for linear regression models, the authors introduce TRIM. The basics of TRIM compared to traditional approach in robust statistics which is to identify and discard outliers, TRIM adopt a strategy that iteratively refines the training dataset. TRIM operates by selecting subsets of the data that contribute to a lower residual error in each iteration. This iterative selection process allows TRIM to effectively isolate and remove points that are likely to be poisoning attempts, thus safeguarding the integrity of the regression model. As mentioned by the authors, unlike traditional methods that might only offer resilience against random noise or non-adversarial outliers, TRIM is specifically designed to counteract the strategic manipulations characteristic of poisoning attacks. This is achieved by using a trimmed loss function, which recalibrates the influence of each data point based on its contribution to the overall error, thereby ensuring that the model remains robust even when faced with data points specifically designed to undermine its performance.
 
