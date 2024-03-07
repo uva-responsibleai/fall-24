@@ -17,7 +17,7 @@ In this section, we discuss the methodology of some poisoning attacks and some d
 ## Attacks
 
 ### Attack 1. Poisoning Attack against SVMs
-Support Vector Machines, or SVMs, are prime targets for poisoning attacks. In certain cases, even moving one point (a support vector) can entirely alter the behavior of the SVM.
+Support Vector Machines, or SVMs, are prime targets for poisoning attacks. In certain cases, even moving one point (a support vector) can entirely alter the behavior of the SVM. In this attack, an adversary can "construct malicious data" based on predictions of how an SVM's decision function will change in reaction to malicious input.
 #### Threat Model
 This is a white-box attack where it is assumed that the adversary has knowledge about the training data, the validation data, and the algorithm used to train the model (the incremental SVM training algorithm).
 #### Procedure
@@ -28,7 +28,12 @@ This is a white-box attack where it is assumed that the adversary has knowledge 
 5. Update $`x_c^{(k+1)}\gets x_c^{(k)} + tu`$ where $`t`$ is a small step size.
 6. Iterate until termination (when the increase in loss is below a particular threshold).
 
-This produces an attack point that maximizes the (validation) loss for an SVM and can thus force it to misclassify. As we shall observe in the following section, this attack performs quite effectively.
+This produces an attack point that maximizes the (validation) loss for an SVM and can thus force it to misclassify. As we shall observe in the following section, this attack performs quite effectively. In addition, this work provides some salient points that lend to the attack's potency.
+
+- The "gradient ascent" attack strategy against SVMs can be kernelized, allowing for attacks to be constructed in the input space.
+    - The attack method can be kernelized because it only depends on "the gradients of the dot products in the input space".
+    - This is a big advantage for the attacker when compared to a method which can't be kernelized; an attacker using a non-kernelizable method "has no practical means to access the feature space".
+        - The authors note that this emphasizes that "resistance against adversarial data" should be considered in the design of learning algorithms.
 
 ### Poison Attack on Linear Regression Models:
 #### Optimization-Based Attack:
@@ -44,13 +49,6 @@ A clean-label attack that does not require control over the labeling function. T
 ### TRIM
 
 # Key Findings
-The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper contributes these findings:
-- An adversary can "construct malicious data" based on predictions of how an SVM's decision function will change in reaction to malicious input
-- A "gradient ascent" attack strategy against SVMs can be kernelized, allowing for attacks to be constructed in the input space
-    - The attack method can be kernelized because it only depends on "the gradients of the dot products in the input space"
-    - This is a big advantage for the attacker when compared to a method which can't be kernelized; an attacker using a non-kernelizable method "has no practical means to access the feature space"
-        - The authors note that this emphasizes that "resistance against adversarial data" should be considered in the design of learning algorithms
-
 The [Certified Defenses for Data Poisoning Attacks](https://arxiv.org/abs/1706.03691) paper discusses how certain defenses against data poisoning can be tested against "the entire space of attacks".
 - Specifically, the defense must be one that removes "outliers residing outside a feasible set," and minimizes "a margin-based loss on the remaining data"
 - The authors' approach can find the upper bound of efficacy of any data poisoning attack on such a classifier
