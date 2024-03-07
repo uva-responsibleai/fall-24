@@ -20,7 +20,7 @@ For ML and ML security/safety practitioners, it thus becomes key to ensure that 
 ### Poisoning Attack against SVMs
 Sparse Vector Machines, or SVMs, are prime targets for poisoning attacks. In certain cases, even moving one point (a support vector) can entirely alter the behavior of the SVM.
 #### Threat Model
-
+This is a white-box attack where it is assumed that the adversary has knowledge about the training data, the validation data, and the algorithm used to train the model (the incremental SVM training algorithm).
 #### Procedure
 * Step 1
 
