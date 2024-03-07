@@ -28,7 +28,7 @@ This is a white-box attack where it is assumed that the adversary has knowledge 
 5. Update $`x_c^{(k+1)}\gets x_c^{(k)} + tu`$ where $`t`$ is a small step size.
 6. Iterate until termination (when the increase in loss is below a particular threshold).
 
-This produces an attack point that maximizes the (validation) loss for an SVM and can thus force it to misclassify. As we shall observe in the following section, this attack performs quite effectively. In addition, this work provides some salient points that lend to the attack's potency.
+This produces an attack point that maximizes the (validation) loss for an SVM and can thus force it to misclassify. As we shall observe in the following section, this attack performs quite effectively. In addition, this work provides some salient points that lend to the attack's potency against SVMs.
 
 - The "gradient ascent" attack strategy against SVMs can be kernelized, allowing for attacks to be constructed in the input space.
     - The attack method can be kernelized because it only depends on "the gradients of the dot products in the input space".
