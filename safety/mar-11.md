@@ -59,6 +59,8 @@ The problem of evasion attacks such as Poisoning Attack against SVMs is that the
 4. Train the model on the poisoned dataset.
 5. If the model mistakes the target instance as being in the base class, the poisoning attack is considered successful.
 
+Poisoning attacks on transfer learning is relatively effective. In this case a "one-shot kill" attack is possible, which means by adding just one poison instance to the training set, we cause misclassification of the target with 100% success rate.
+However, Poisoning attacks on end-to-end training become more difficult.Single poison instance attack does not work anymore. In this case, special techniques such as optimization, diversity of poison instances and watermarking are needed.
 
 
 
@@ -84,6 +86,7 @@ The [Poison frogs!](https://arxiv.org/abs/1804.00792) paper discuss poisoning on
 - Clean-labels are poisoned points that don’t require the attacker  to have any control over the labeling of training data. Only having knowledge of the model and its parameters allows us to create points that are undetected as poison and yet still able to influence the classifier.
 - There is an optimized method in making a single poisoned image influence the model especially for transfer learning scenarios. The addition of a low-opacity watermark of the target instance increases effectiveness for multiple poisoned instances
 - Transfer Learning reacts to poison points by rotating the decision boundary to encompass the target, while end-to-end training reacts by pulling the target into the feature space with the decision remaining stationary.
+- It is effective on transfer learning but not so effective on end-to-end training. For end-to-end training, all three special techniques are needed: optimization, diversity of poison instances and watermarking.
 
 
 # Critical Analysis
