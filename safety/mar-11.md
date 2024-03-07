@@ -24,6 +24,14 @@ Sparse Vector Machines, or SVMs, are prime targets for poisoning attacks. In cer
 #### Procedure
 * Step 1
 
+### Poison Attack on Linear Regression Models:
+#### Optimization-Based Attack:
+This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss
+#### Statistical-Based Attack:
+This attack is a fast statistical attack that produces poisoned points similar to that of the training data using a multivariate normal distribution. Then, knowing that the most effective poisoning points are near corners, it rounds the feature values of the generated points towards the corners. 
+
+### Clean-label Poison Attack on Neural Networks:
+A clean-label attack that does not require control over the labeling function. This attack produced poisoned points that appear to be correctly labeled by the expert observer but are able to control the behavior of the classifier.
 
 
 ## Defenses
@@ -41,6 +49,13 @@ The [Certified Defenses for Data Poisoning Attacks](https://arxiv.org/abs/1706.0
 - Specifically, the defense must be one that removes "outliers residing outside a feasible set," and minimizes "a margin-based loss on the remaining data"
 - The authors' approach can find the upper bound of efficacy of any data poisoning attack on such a classifier
 - The authors analyze the case where a model is poisoned and where both the model and its poisoning detector are given poisoned data
+
+The [Poison frogs!](https://arxiv.org/abs/1804.00792) paper discuss poisoning on neural networks that manipulate the behavior of machine learning models at test time without degrading overall performance
+
+- Clean-labels are poisoned points that don’t require the attacker  to have any control over the labeling of training data. Only having knowledge of the model and its parameters allows us to create points that are undetected as poison and yet still able to influence the classifier.
+- There is an optimized method in making a single poisoned image influence the model especially for transfer learning scenarios. The addition of a low-opacity watermark of the target instance increases effectiveness for multiple poisoned instances
+- Transfer Learning reacts to poison points by rotating the decision boundary to encompass the target, while end-to-end training reacts by pulling the target into the feature space with the decision remaining stationary.
+
 
 # Critical Analysis
 The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper describes a kernelizable method of attacks against SVM models. The authors note that this work "breaks new ground" in the research of data-driven attacks against such models because their attack strategy is kernelizable. Their findings and conclusions are intuitive and easy to follow from the reader's point of view. Their attack strategy description is accompanied by a clear example: an attack on a digit classifier. They clearly show how the attacker is able to use their strategy to modify training input data to produce classification error. These attack modifications are understandable to the user as well: they clearly show how the attacker modifies the data so that the "7 straightens to resemble a 1, the lower segment of the 9 becomes more round thus mimicking an 8," and so on. Overall, the authors of this paper adequately communicate the technical aspects of their attack strategy in a way that even non-technical readers can easily understand, and the conclusions that follow are well-supported by the evidence they gathered in their attack.
