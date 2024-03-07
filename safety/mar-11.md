@@ -52,6 +52,13 @@ A clean-label attack that does not require control over the labeling function. T
 ### TRIM
 
 # Key Findings
+
+[Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) proposes optimized poisoning attacks on the linear regression models and a novel way to defend against them.
+- Statistical-based attacks that are derived from insights gained from optimized research conclusions can act as very low maintenance way to manipulate the training data effectively
+- Neat mathematical tricks can be applied to these machine learning problems such as replacing the inner learning problem of the bilevel optimization problem with KKT equilibrium conditions allows us to efficiently approximate our desired learning
+- TRIM utilizes a trimmed loss function to iteratively estimate regression parameters, effectively isolating poisoned points and performing better than other robust regression algorithms designed for adversarial settings 
+
+
 The [Certified Defenses for Data Poisoning Attacks](https://arxiv.org/abs/1706.03691) paper discusses how certain defenses against data poisoning can be tested against "the entire space of attacks".
 - Specifically, the defense must be one that removes "outliers residing outside a feasible set," and minimizes "a margin-based loss on the remaining data"
 - The authors' approach can find the upper bound of efficacy of any data poisoning attack on such a classifier
