@@ -79,6 +79,8 @@ The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper desc
 
 However, the results in this paper are rudimentary as compared to those in recent ML papers. They provide results on synthetic data and subsets of MNIST (by taking two digits and training a binary classifier SVM to distinguish between them). While they illustrated a novel concept well and in depth back then, a more thorough investigation may have been desirable. In addition, the attack on SVM is entirely white box, and involves strong assumptions about the knowledge the adversary has that may be too strong in practice: in real life, adversaries may not have access to information such as the training/validation data.
 
+In [27], while the work on producing (then) state-of-the-art attacks is impressive, the rationale for basing the success of their results for OptP was not convincing and might lead to a slight inflation of claimed success. In particular, an adversary would have to mount multiple attacks (combinatorial in the number of choices of loss, label initialization strategy, argument, and attack objective/loss) and then report the best. This is not fairly comparable against baselines that only offer one candidate (apparently).
+
 # References
 [26]. Poisoning attacks against support vector machines. Biggio et al. 2012
 
