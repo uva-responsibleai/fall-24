@@ -124,7 +124,8 @@ The [Poison frogs!](https://arxiv.org/abs/1804.00792) paper discusses poisoning 
 - There is an optimized method in making a single poisoned image influence the model, especially for transfer learning scenarios. The addition of a low-opacity watermark of the target instance increases effectiveness for multiple poisoned instances
 - Transfer Learning reacts to poison points by rotating the decision boundary to encompass the target, while end-to-end training reacts by pulling the target into the feature space with the decision remaining stationary.
 - The below figure displays angular deviation of the feature space decision boundary when trained with clean dataset + poison instance(s) versus when trained with clean dataset alone. In transfer learning (blue), there is a significant rotation (average of 23 degrees) in the feature space decision boundary. In contrast, in end-to-end training (red) where we inject 50 poison instances, the decision boundary’s rotation is negligible. As we can see in the experiment, it is effective on transfer learning but not so effective on end-to-end training. For end-to-end training, all three special techniques are needed: optimization, diversity of poison instances and watermarking. 
-![Experiment 29](experiment_29.jpg)
+![experiment_29](https://github.com/wenqian-ye/fall-24/assets/84001887/dfe55b31-6204-4b65-9b04-e9141e02b338)
+
 
 
 # Critical Analysis
