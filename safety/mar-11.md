@@ -39,8 +39,9 @@ In other words, the authors incorporate arguments on how to account for kerneliz
 The authors note that their findings emphasize that "resistance against adversarial data" should be considered in the design of learning algorithms.
 
 ### Poison Attack on Linear Regression Models [27]:
+Up until the publication of this paper, poisoning attacks were mounted mostly on classifiers. The authors take inspiration from works like [26] and extend the attack methodology to work on classifiers.
 #### Optimization-Based Attack:
-This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss
+This attack optimizes the variables selected to make the largest impact on that specific model and dataset by optimizing the difference in predictions from the original unpoisoned model as opposed to the loss. The "label flipping" here is done by assuming that the labels are in $`[0,1]`$ and by taking an existing point, cloning it, and taking its label $`y`$ and replacing it with $`1-y`$ or optionally further rounding this inverted value to 0 or 1. The optimization can proceed using different choices of loss optimization arguments, datasets over which the attack loss is maximized, and the label flipping strategy. Using such an approach yields different optimization attacks. The authors show that for each form of linear regression and dataset that they consider, the hitherto best attack (compared to the baselines) comes from making optimal attack choices.
 #### Statistical-Based Attack:
 This attack is a fast statistical attack that produces poisoned points similar to that of the training data using a multivariate normal distribution. Then, knowing that the most effective poisoning points are near corners, it rounds the feature values of the generated points towards the corners. 
 
