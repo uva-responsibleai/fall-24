@@ -5,7 +5,7 @@ Machine learning is often under the naive assumption that the data used to train
 
 Consider the case when a company selling antivirus software relies on the use of ML to train malware classifiers. The data used to train such classifiers is often publicly sourced and given the large amounts of data that training such classifiers may require, it may not be humanly possible to audit every data point in the training set. Adversaries can then sneak in carefully perturbed points, given some knowledge about the model's architecture, training data distribution, parameters, etc. (white-box setting) or even just query access to it and some limited information about the features of the training data and the learning algorithm (black-box setting), and make the trained malware classifier classify some malware as benign software. Issues related to data poisoning have been investigated in the contexts of self-driving cars, medical AI, etc. as well.
 
-Adversarial attacks manipulate machine learning models by exploiting vulnerabilities in their decision-making processes. They can be split into two categories: causative adversarial attacks and exploratory adversarial attacks. Poisoning attacks fall under the causative adversarial attack category because it involves either injecting new malicious points or manipulating existing ones in the training data to degrade the model's performance generally or for specific targets. Subsequently, poisoning attacks can be categorized into either poisoning availability attacks or poisoning integrity attacks. Poisoning availability attacks aim to disrupt the availability of the model's prediction results indiscriminately, often leading to denial-of-service (DoS) scenarios. Conversely, poisoning integrity attacks target specific mispredictions at test time, therefore undermining the integrity of the model's output for malicious purposes while also in most cases keeping their attack undected.
+Adversarial attacks manipulate machine learning models by exploiting vulnerabilities in their decision-making processes. They can be split into two categories: causative adversarial attacks and exploratory adversarial attacks. Poisoning attacks fall under the causative adversarial attack category because it involves either injecting new malicious points or manipulating existing ones in the training data to degrade the model's performance generally or for specific targets. Subsequently, poisoning attacks can be categorized into either poisoning availability attacks or poisoning integrity attacks. Poisoning availability attacks aim to disrupt the availability of the model's prediction results indiscriminately, often leading to denial-of-service (DoS) scenarios. Conversely, poisoning integrity attacks target specific mispredictions at test time, therefore undermining the integrity of the model's output for malicious purposes while also in most cases keeping their attack undetected.
     
 In the context of online training, where machine learning models are continuously updated based on incoming data, poisoning attacks can be particularly potent. Depending on the training system, control over a small number of devices that submit fake information adversarially poison the dataset.
 
@@ -16,7 +16,7 @@ For ML and ML security/safety practitioners, it thus becomes key to ensure that 
 In this section, we discuss the methodology of some poisoning attacks and some defenses against them, in that order. For the attacks, we describe the respective threat models and the procedure involved in mounting them. Results for each attack and defense are deferred to the next section (Key Findings).
 ## Attacks
 
-### Attack 1. Poisoning Attack against SVMs
+### Attack 1. Poisoning Attack against SVMs [26]
 Support Vector Machines, or SVMs, are prime targets for poisoning attacks. In certain cases, even moving one point (a support vector) can entirely alter the behavior of the SVM. In this attack, an adversary can "construct malicious data" based on predictions of how an SVM's decision function will change in reaction to malicious input.
 #### Threat Model
 This is a white-box attack where it is assumed that the adversary has knowledge about the training data, the validation data, and the algorithm used to train the model (the incremental SVM training algorithm).
@@ -44,11 +44,12 @@ This attack optimizes the variables selected to make the largest impact on that 
 #### Statistical-Based Attack:
 This attack is a fast statistical attack that produces poisoned points similar to that of the training data using a multivariate normal distribution. Then, knowing that the most effective poisoning points are near corners, it rounds the feature values of the generated points towards the corners. 
 
-### Clean-label Poison Attack on Neural Networks:
-Clean-label attacks are poisoning attacks on neual nets that are targeted, meaning they aim to control the behavior of a classifier on one specific test instance. This type of attack does not require control over the labeling function. This attack produced poisoned points that appear to be correctly labeled by the expert observer but can control the behavior of the classifier. This makes the attack not only difficult to detect, but opens the door for attackers to succeed without any inside access to the data collection and labeling process.
+
+### Clean-label Poison Attack on Neural Networks[29]:
+Clean-label attacks are poisoning attacks on neural nets that are targeted, meaning they aim to control the behavior of a classifier on one specific test instance. This type of attack does not require control over the labeling function. This attack produced poisoned points that appear to be correctly labeled by the expert observer but can control the behavior of the classifier. This makes the attack difficult to detect and opens the door for attackers to succeed without any inside access to the data collection and labeling process.
 
 #### Threat Model
-The problem of evasion attacks such as Poisoning Attack against SVMs is that they do not map to certain relistic scenarios in which the attacker cannot control test time data. Unlike Poisoning Attack against SVMs, in Clean-label attack, the attacker has no knowledge of the training data. However, the attacker has knowledge of the model and its parameters, which is a reasonable assumption since many classic networks pre-trained on standard datasets. The attacker's goal is to cause the retrained network to misclassify a special test instance from one class as another class of her choice after the network has been retrained on the augmented data set that includes poison instances.
+The problem of evasion attacks such as Poisoning Attacks against SVMs is that they do not map to certain realistic scenarios in which the attacker cannot control test time data. Unlike Poisoning Attack against SVMs, in the Clean-label attack, the attacker has no knowledge of the training data. However, the attacker has knowledge of the model and its parameters, which is a reasonable assumption since many classic networks pre-trained on standard datasets. The attacker's goal is to cause the retrained network to misclassify a special test instance from one class as another class of her choice after the network has been retrained on the augmented data set that includes poison instances.
 
 #### Procedure
 1. The attacker first chooses a target instance from the test set.
@@ -59,8 +60,8 @@ The problem of evasion attacks such as Poisoning Attack against SVMs is that the
 4. Train the model on the poisoned dataset.
 5. If the model mistakes the target instance as being in the base class, the poisoning attack is considered successful.
 
-Poisoning attacks on transfer learning is relatively effective. In this case a "one-shot kill" attack is possible, which means by adding just one poison instance to the training set, we cause misclassification of the target with 100% success rate.
-However, Poisoning attacks on end-to-end training become more difficult.Single poison instance attack does not work anymore. In this case, special techniques such as optimization, diversity of poison instances and watermarking are needed.
+Poisoning attacks on transfer learning are relatively effective. In this case, a "one-shot kill" attack is possible, which means by adding just one poison instance to the training set, we cause misclassification of the target with 100% success rate.
+However, Poisoning attacks on end-to-end training become more difficult. Single poison instance attack does not work anymore. In this case, special techniques such as optimization, diversity of poison instances and watermarking are needed.
 
 
 
@@ -72,25 +73,35 @@ The [Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) paper disc
 
 TRIM operates on the principle of iterative estimation, where at each step, it aims to minimize the impact of potentially poisoned points on the model's performance. The algorithm can be conceptualized as follows:
 
-Initialization: Begin with the initial dataset and model parameters.\
-Residual Computation: Calculate residuals for all points in the dataset.\
-Exclusion: Exclude a percentage of points with the highest residuals.\
-Parameter Re-estimation: Update the model parameters using the trimmed dataset.\
-Iteration: Repeat steps 2-4 until convergence.
+- Initialization: Begin with the initial dataset and model parameters.
+- Residual Computation: Calculate residuals for all points in the dataset.
+- Exclusion: Exclude a percentage of points with the highest residuals.
+- Parameter Re-estimation: Update the model parameters using the trimmed dataset.
+- Iteration: Repeat steps 2-4 until convergence.
 
 The optimization goal of TRIM can be mathematically formulated as: $\min_{\theta} L(D \setminus P, \theta)$, where $\theta$ represents the model parameters, $L$ denotes the loss function, $D$ is the original dataset, and $P$ is the set of points excluded from $D$ based on their residuals. The goal here is to minimize the loss function $L$ over the dataset $D$, while excluding a set $P$ of poisoned points.
 
-In practical terms, this means that even if an attacker manages to inject a certain percentage of poisoned data into the training set, the TRIM algorithm is designed to iteratively "trim" these points out of the calculation for model updating, thereby preserving the integrity of the model's learning process. Furthermore, the paper demonstrates through extensive experiments that TRIM significantly outperforms traditional robust statistics methods, such as Huber regression and RANSAC, in defending against poisoning attacks. TRIM achieved much lower MSEs than existing methods, improving upon Huber by a factor of 131.8, RANSAC by a factor of 17.5, and RONI by a factor of 20.28 on one of the datasets. On the health care dataset, TRIM even achieved lower MSEs than those of unpoisoned models, with a reduction of 3.47% for LASSO regression at an attack strength of α = 8%. The reported results show a remarkable improvement in model accuracy and resilience, highlighting TRIM's capability to maintain high performance even in the presence of adversarial data manipulations.
+In practical terms, this means that even if an attacker manages to inject a certain percentage of poisoned data into the training set, the TRIM algorithm is designed to iteratively "trim" these points out of the calculation for model updating, thereby preserving the integrity of the model's learning process. Furthermore, the paper demonstrates through extensive experiments that TRIM significantly outperforms traditional robust statistics methods, such as Huber regression and RANSAC, in defending against poisoning attacks. TRIM achieved much lower MSEs than existing methods, improving upon Huber by a factor of 131.8, RANSAC by a factor of 17.5, and RONI by a factor of 20.28 on one of the datasets. On the healthcare dataset, TRIM even achieved lower MSEs than those of unpoisoned models, with a reduction of 3.47% for LASSO regression at an attack strength of α = 8%. The reported results show a remarkable improvement in model accuracy and resilience, highlighting TRIM's capability to maintain high performance even in the presence of adversarial data manipulations.
 
-Moreover, the authors demonstrated the effectiveness of TRIM through its ability to outperform existing defenses significantly, not only in terms of resilience to attack but also in computational efficiency. TRIM's running time exceeds among the evaluated defenses, averaging at 0.02 seconds for the house price dataset. The trimmed loss function of TRIM's methodology isolates poisoned data points and does so with a notable speed, making it an good solution for environments where machine learning models must be updated regularly with new data. This dual advantage of robustness and efficiency makes TRIM acceed in the ongoing effort to secure machine learning models against the evolving threat of poisoning attacks.
+Moreover, the authors demonstrated the effectiveness of TRIM through its ability to outperform existing defenses significantly, not only in terms of resilience to attack but also in computational efficiency. TRIM's running time exceeds among the evaluated defenses, averaging at 0.02 seconds for the house price dataset. The trimmed loss function of TRIM's methodology isolates poisoned data points and does so with a notable speed, making it a good solution for environments where machine learning models must be updated regularly with new data. This dual advantage of robustness and efficiency makes TRIM succeed in the ongoing effort to secure machine learning models against the evolving threat of poisoning attacks.
 
+### Certified Defenses [28]
+The defender constructs a feasible set $\mathcal{F} \subseteq \mathcal{X} \times \mathcal{Y}$ and trains only on points in $\mathcal{F}$ :
+$$\hat{\theta} = \text{argmin}_{\theta \in \Theta} L(\theta; (\mathcal{D}\_{\mathrm{c}} \cup \mathcal{D}\_{\mathrm{p}}) \cap \mathcal{F}), L(\theta; S) = \sum\_{(x,y) \in S} \ell(\theta;x,y)$$
+, where $\mathcal{D}\_{\mathrm{c}}$ denotes the clean data, $\mathcal{D}\_{\mathrm{p}}$ denotes the poisoned data. The defender constructs a feasible set $\mathcal{F} \subseteq X \times Y$ and trains only on points in $\mathcal{F}$.
+
+Given such a defense $\mathcal{F}$, this method considers the upper bound the worst possible test loss over any attacker (choice of $\mathcal{D}\_{\mathrm{p}}$). Such a bound would certify that the defender incurs at most some loss no matter what the attacker does.
+
+There are two classes of defenses.
+- Fixed defenses, where F does not depend on $\mathcal{D}\_{\mathrm{p}}$. While such defenders are not implementable in practice, they provide bounds: if even an oracle can be attacked, then we should be worried.
+- Data-dependent defenses, where F depends on $\mathcal{D}\_{\mathrm{c}} \cup \mathcal{D}\_{\mathrm{p}}$. These defenders are implementable in practice but they open up a new line of attack wherein the attacker chooses the poisoned data $\mathcal{D}\_{\mathrm{p}}$ to change the feasible set $\mathcal{F}$.
 
 # Key Findings
 The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) presents a novel approach to poisoning attacks against Support Vector Machines (SVMs) 
 - Demonstrating that specially crafted training data can significantly increase SVM's test error. 
 - Achieved through a gradient ascent strategy that exploits the properties of SVM's optimal solution, even for non-linear kernels.
 - Can reliably identify good local maxima on the non-convex validation error surface
-- Demonstrate efficacy of the attack on a synthetic dataset and MNIST. The below figure displays attack efficacy against MNIST when training an SVM to distinguish between 7 and 1, 9 and 8, and 4 and 0. With increasing number of iterations, the attack produces attack points that effectively increase errors on the validation and the test sets. 
+- Demonstrate the efficacy of the attack on a synthetic dataset and MNIST. The below figure displays attack efficacy against MNIST when training an SVM to distinguish between 7 and 1, 9 and 8, and 4 and 0. With increasing number of iterations, the attack produces attack points that effectively increase errors on the validation and the test sets. 
 
   <img width="832" alt="image" src="https://github.com/wenqian-ye/fall-24/assets/42236940/4fc29f63-bc28-4199-8ea8-3e1eb68b7449">
 
@@ -103,13 +114,13 @@ The [Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) proposes o
 
 The [Certified Defenses for Data Poisoning Attacks](https://arxiv.org/abs/1706.03691) paper discusses how certain defenses against data poisoning can be tested against "the entire space of attacks".
 - Specifically, the defense must be one that removes "outliers residing outside a feasible set," and minimizes "a margin-based loss on the remaining data"
-- The authors' approach can find the upper bound of efficacy of any data poisoning attack on such a classifier
+- The authors' approach can find the upper bound of the efficacy of any data poisoning attack on such a classifier
 - The authors analyze the case where a model is poisoned and where both the model and its poisoning detector are given poisoned data
 
-The [Poison frogs!](https://arxiv.org/abs/1804.00792) paper discuss poisoning on neural networks that manipulate the behavior of machine learning models at test time without degrading overall performance
+The [Poison frogs!](https://arxiv.org/abs/1804.00792) paper discusses poisoning on neural networks that manipulate the behavior of machine learning models at test time without degrading overall performance
 
 - Clean-labels are poisoned points that don’t require the attacker  to have any control over the labeling of training data. Only having knowledge of the model and its parameters allows us to create points that are undetected as poison and yet still able to influence the classifier.
-- There is an optimized method in making a single poisoned image influence the model especially for transfer learning scenarios. The addition of a low-opacity watermark of the target instance increases effectiveness for multiple poisoned instances
+- There is an optimized method in making a single poisoned image influence the model, especially for transfer learning scenarios. The addition of a low-opacity watermark of the target instance increases effectiveness for multiple poisoned instances
 - Transfer Learning reacts to poison points by rotating the decision boundary to encompass the target, while end-to-end training reacts by pulling the target into the feature space with the decision remaining stationary.
 - It is effective on transfer learning but not so effective on end-to-end training. For end-to-end training, all three special techniques are needed: optimization, diversity of poison instances and watermarking.
 
