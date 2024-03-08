@@ -116,6 +116,7 @@ The [Certified Defenses for Data Poisoning Attacks](https://arxiv.org/abs/1706.0
 - Specifically, the defense must be one that removes "outliers residing outside a feasible set," and minimizes "a margin-based loss on the remaining data"
 - The authors' approach can find the upper bound of the efficacy of any data poisoning attack on such a classifier
 - The authors analyze the case where a model is poisoned and where both the model and its poisoning detector are given poisoned data
+![Screenshot 2024-03-07 at 8 13 12 PM](https://github.com/wenqian-ye/fall-24/assets/32115593/6c11c060-7450-404f-8755-662197bf94dc)
 
 The [Poison frogs!](https://arxiv.org/abs/1804.00792) paper discusses poisoning on neural networks that manipulate the behavior of machine learning models at test time without degrading overall performance
 
