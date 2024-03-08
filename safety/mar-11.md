@@ -109,8 +109,10 @@ The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper [26]
 The [Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) paper [27] proposes optimized poisoning attacks on the linear regression models and a novel way to defend against them.
 - Statistical-based attacks that are derived from insights gained from optimized research conclusions can act as very low maintenance way to manipulate the training data effectively
 - Neat mathematical tricks can be applied to these machine learning problems such as replacing the inner learning problem of the bilevel optimization problem with KKT equilibrium conditions allows us to efficiently approximate our desired learning
-- TRIM utilizes a trimmed loss function to iteratively estimate regression parameters, effectively isolating poisoned points and performing better than other robust regression algorithms designed for adversarial settings 
-
+- TRIM utilizes a trimmed loss function to iteratively estimate regression parameters, effectively isolating poisoned points and performing better than other robust regression algorithms designed for adversarial settings
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/wenqian-ye/fall-24/assets/32115593/256a9235-ff47-47ae-adb1-b93014c8286a">
+</p>
 
 The [Certified Defenses for Data Poisoning Attacks](https://arxiv.org/abs/1706.03691) paper discusses how certain defenses against data poisoning can be tested against "the entire space of attacks".
 - Specifically, the defense must be one that removes "outliers residing outside a feasible set," and minimizes "a margin-based loss on the remaining data"
