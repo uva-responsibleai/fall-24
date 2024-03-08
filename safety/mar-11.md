@@ -110,8 +110,10 @@ The [Poisoning Attacks against SVMs](https://arxiv.org/abs/1206.6389) paper [26]
 The [Manipulating Machine Learning](https://arxiv.org/abs/1804.00308) paper [27] proposes optimized poisoning attacks on the linear regression models and a novel way to defend against them.
 - Statistical-based attacks that are derived from insights gained from optimized research conclusions can act as very low maintenance way to manipulate the training data effectively
 - Neat mathematical tricks can be applied to these machine learning problems such as replacing the inner learning problem of the bilevel optimization problem with KKT equilibrium conditions allows us to efficiently approximate our desired learning
-- As stated earlier, the best attacks for each scenario (combination of linear regression method and dataset) (OptP) comes from the optimization-based approach mounted using the best choices among label flipping strategies, the argument using which loss gradients are calculated, and the dataset over which this loss is maximized. In addition, the poisoning rate plays a role too.
+- As stated earlier, the best attacks for each scenario (combination of linear regression method and dataset) (OptP) comes from the optimization-based approach mounted using the best choices among label flipping strategies, the argument using which loss gradients are calculated, and the dataset over which this loss is maximized. In addition, the poisoning rate plays a role too. The table below shows the best choice of attacks for certain linear regression strategies, and how OptP outperforms baselines.
+  
   <img width="643" alt="image" src="https://github.com/wenqian-ye/fall-24/assets/42236940/12e11d63-0826-4a16-8932-458d5b56beb2">
+  <img width="777" alt="image" src="https://github.com/wenqian-ye/fall-24/assets/42236940/8982b139-5554-4be1-977d-66aa98e8d95d">
 
 - TRIM utilizes a trimmed loss function to iteratively estimate regression parameters, effectively isolating poisoned points and performing better than other robust regression algorithms designed for adversarial settings
 <p align="center">
