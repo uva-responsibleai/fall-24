@@ -11,9 +11,9 @@ With each new technology that is intended for good there are always those who wa
 ## Motivations
 <!-- Background information -->
 
-<!-- What is jailbreaking in LLMs? -->
+Large Language Models (LLMs) and Visual Language Models (VLMs) are artificial intelligence programs that take user input and output a helpful answer for the given questions. When an adversary decides to attack the model they can bypass the aforementioned censorship by using carefully crafted statements to trick the model. This practice is called "jailbreaking". Jailbreaking can come in multiple forms in the context of LLMs. The two main forms that will be discussed are [textual](#textual-attacks) and [multimodal jailbreaking](#multimodal-attacks).
 
-Large Language Models (LLMs) and Visual Language Models (VLMs) are artificial intelligence programs that take user input and output a helpful answer for the given questions. When an adversary decides to attack the model they can bypass the aforementioned censorship by using carefully crafted statements tricking the model. This practice is called "jailbreaking". Jailbreaking can come in multiple forms in the context of LLMs. The two main forms that will be discussed are textual and multimodal jailbreaking. Textual jailbreaking can be through ciphers, Mosaic Prompts, 
+These toxic prompts are engineered by adversaries that want to abuse the LLMs and then spread through the internet on sites like Reddit or Discord. By the time the developers can design a system that counteracts these prompts the adversaries can already design a new one. Now the question is "why should users, general public, developers, or companies care?". The reason is twofold: (1) users should care because these prompts can be used to construct convincing phishing scams, codes for worms and malware, or used for other negative means and (2) companies who allow this use would be showing neglegence which could effect their reputations. By circumventing the boundaries that have put in place for the LLM many bad actors could have access to a very powerful tool.
 
 <!--
 
@@ -32,15 +32,36 @@ What will there to be discussed?
     * Where are they found?
 * Show an image of examples of prompt and chatgpt interactions -->
 
-<!-- * Why is jailbreaking important to LLMs
+<!-- 
+* Why is jailbreaking important to LLMs
 * How is it disruptive?
 * Definition of censorship in the context of LLMs -->
 
 # Methods
 
-<sup><sub>[Home](#introduction)</sub></sup>
-
 <!-- How? -->
+
+<sup><sub>[Home](#introduction)</sub></sup> 
+
+## Attack Types
+
+### Textual Attacks
+
+Textual jailbreaking can be through ciphers, Mosaic Prompts, or more generally just cleverly written and tricky prompts.  
+
+### Multimodal Attacks
+
+![](./images/visualattack.PNG)
+
+## Censorship and Other Solutions
+
+Some argue that censorship of LLM should be a physical design problem not a problem that is just bandaided by more Machine Learning [3].
+
+$$
+\begin{align}
+S \in P & \text{  This is an example}
+\end{align}
+$$
 
 <!-- * How jailbreaking was monitored and looked over
 * How it plays into LLMs
@@ -78,3 +99,5 @@ https://www.reddit.com/r/ChatGPT/comments/120byvx/using_a_cipher_to_communicate_
     * how do we protect against other modes?
 * What policies could be in place?
     * Do we just make policies to make it so only text is allowed for LLM? -->
+
+# References
