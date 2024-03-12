@@ -51,7 +51,7 @@
     </li>
     <li>Key Findings
         <ol>
-            <li>How do they spread?
+            <li>How do they grow and spread? 
                 <ul>
                     <li>Where are they found?</li>
                     <li>Show an image of examples of prompt and chatgpt interactions</li>
@@ -63,23 +63,17 @@
                     </ol>
                 </ul>
             </li>
-            <li>What is their impact? How do they grow and spread? (push and pull of developers and attackers)</li>
-            <li>How have multi-modal attacks been counteracted?</li>
+            <li>What is their impact? (push and pull of developers and attackers)</li>
+            <li>How have attacks been counteracted?</li>
         </ol>
     </li>
     <li>Critical Thinking
         <ol>
-            <li>What are your opinions? Where do we go from here?</li>
-            <li> how can we achieve AI alignment without addressing adversarial examples in an adversarial environment?</li>
-            <li>how do we protect against images that are embedded with bad content? how do we protect against other modes?</li>
+            <li>Where do we go from here?</li>
+            <li> How can we achieve AI alignment? Is it possible? </li>
+            <li>How do we protect against images that are embedded with bad content? How do we protect against other modes?</li>
             <li>What policies could be in place? Do we just make policies to make it so only text is allowed for LLM?</li>
-            <li>What will there to be discussed?
-                <ul>
-                    <li>How to stop it</li>
-                    <li>Why is jailbreaking important to LLMs</li>
-                </ul>
-            </li>
-            <li>Imagine this scenario: in future a VLM is used as the backbone of a Smart Security system. If a tainted image has become available on the internet then a thief or person without access may be able to access a building through the use of this tainted image. This seems futuristic and unrealistic but if LLMs and VLMs are blindly used by developers this may be possible in the near future.</li>
+            <li>Is jailbreaking an important issue? Why or why not?</li>
         </ol>
     </li>
     <li>References</li>
@@ -139,7 +133,7 @@ All three versions of text based attacks discussed are meant to circumvent the e
 
 <img src='./images/visualattack.PNG' width=400>
 
-As technology increases in complexity so does its user input. From the LLMs came the development of VLMs, which take in input of images and text to construct an answer using both modals. As seen in the above figure, the authors of [49] explain that when given text of a adversarial question an LLM may be able to successfully censor the information from the user, however, when using visual input an attacker can design an image to circumvent the models ethical barriers without using text that can be monitored and then the text can ask an adversarial question that will then not be censored anymore. The authors of this paper designed two types of images: benign panda images tainted with an attack and noise data that is a valid image but does not look like anything to a user.
+As technology increases in complexity so does its user input. From the LLMs came the development of VLMs, which take in input of images and text to construct an answer using both modals. As seen in the above figure, the authors of [49] explain that when given text of a adversarial question an LLM may be able to successfully censor the information from the user, however, when using visual input an attacker can design an image to circumvent the model's ethical barriers without using text that can be monitored and then the text can ask an adversarial question that will then not be censored anymore. The authors of this paper designed two types of images: benign panda images tainted with an attack and noise data that is a valid image but does not look like anything to a user.
 
 The author of [49] argued that adding modes to a system only opens the system up to more attacks. In other words, as the use of VLMs and multi-modal variations of LLMs grows the ability to attack the models will grow as well because the more data there is the more area there is for an adversary to inject their attack. Other inputs that could open models for attack include: voice, video, and music. These could be embedded with bad code or hidden voices that the model will unknowingly take in and interpret as proper input. In this case the developers did not intend for this input to be given but the model allows it undetected.
 
@@ -172,9 +166,15 @@ The above images are examples of jailbreaking ChatGPT and have been spread by us
 
 ## Counteracting Attacks
 
+* [49] mentioned DiffPure
+* [47] argues that ML is not the answer and we need better censors based on security
+* [48] mentioned the monitoring of Reddit 
+
 # Critical Analysis
 
 <sup><sub>[Home](#introduction)</sub></sup>
+
+Imagine a future where LLMs, VLMs, and their variants are used for the backbone of most Smart Homes, Smart Assistants and even Smart Security systems. Without addressing the issue of jailbreaking are we making ourselves vulnerable to attacks? Can thieves use carefully designed images to trick the backbone VLM? Can a user open your door using a crafted audio message with underlying data embedded in it? While some of these might just be possible in James Bond and they seem futuristic and maybe even unrealistic there are true underlying issues that must be addressed in LLMs and VLMs. If they are blindly used by developers in industry without a concern for their underlying security defects then users may be opening themselves up to be more vulnerable than ever before.
 
 # References
 [1] https://www.reddit.com/r/ChatGPT/comments/1b8qzsd/the_riddle_jailbreak_is_extremely_effective/
