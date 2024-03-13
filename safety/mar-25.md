@@ -10,11 +10,6 @@ With each new technology that is intended for good there are always those who wa
 
 <!-- Background information -->
 
-* Motivation
-    * What are "jailbreaking prompts"?
-    * How are they engineered/created? (Words, Images/multimodal (audio maybe too))
-    * How is it disruptive?
-
 Large Language Models (LLMs) and Visual Language Models (VLMs) are artificial intelligence programs that take user input and output a helpful answer for the given questions. When an adversary decides to attack the model they can bypass the aforementioned censorship by using carefully crafted statements to trick the model. This practice is called "jailbreaking". Jailbreaking can come in multiple forms in the context of LLMs. The two main forms that will be discussed are [textual](#textual-attacks) and [multimodal jailbreaking](#multimodal-attacks).
 
 These toxic prompts are engineered by adversaries that want to abuse the LLMs and then spread through the internet on sites like Reddit or Discord. This, like many aspects of technology and policy as [4] states, acts like the two faced god Janus where one group, developers, work to censor these inputs and outputs while the other group, we will call them "adversaries", works to circumvent the rules. Now the question is "why should users, general public, developers, or companies care?". The reason is twofold: (1) users should care because these prompts can be used to construct convincing phishing scams, codes for worms and malware, or used for other negative means that can effect you or your loved ones and (2) companies who allow this use would be showing neglegence which could effect their reputations. By circumventing the boundaries that have been put in place for the LLM many bad actors could have access to a very powerful tool.
@@ -22,17 +17,6 @@ These toxic prompts are engineered by adversaries that want to abuse the LLMs an
 # Methods
 
 <!-- How? -->
-
-Methods Outline
-* Methods
-    * Protections and Censorship
-        * Definition of censorship in the context of LLMs
-        * How has it been counteracted?
-        * How jailbreaking was monitored and looked over?
-            * Section 7 of Do Anything Now: training sets are a limitation
-        * What safegaurds are in place and how effective?
-        * Protecting against attacks
-            * DiffPure: using diffusion to return image back to original manifold
 
 <sup><sub>[Home](#introduction)</sub></sup> 
 
@@ -70,7 +54,15 @@ The author of [[49]](#ref49) argued that adding modes to a system only opens the
 
 ## Censorship and Other Solutions
 
-<!-- Add more here -->
+Outline (delete later)
+* Protections and Censorship
+    * Definition of censorship in the context of LLMs
+    * How has it been counteracted?
+    * How jailbreaking was monitored and looked over?
+        * Section 7 of Do Anything Now: training sets are a limitation
+    * What safegaurds are in place and how effective?
+    * Protecting against attacks
+        * DiffPure: using diffusion to return image back to original manifold
 
 Some argue that censorship of LLM should be a physical design problem not a problem that is just bandaided by more Machine Learning [[47]](#ref47).
 
@@ -83,9 +75,6 @@ $$ -->
 # Key Findings
 
 <!-- What? -->
-Key Findings Outline
-* Key Findings
-    * What is their impact? (push and pull of developers and attackers)
 
 <sup><sub>[Home](#introduction)</sub></sup>
 
@@ -109,8 +98,9 @@ However, the method of ML has been described to be akin to putting a bandaid on 
 
 # Critical Analysis
 
-Critical Thinking Outline
+Outline (delete later)
 * Critical Thinking
+    * What is their impact? (push and pull of developers and attackers)
     * Where do we go from here?
     * How can we achieve AI alignment? Is it possible?
     * How do we protect against images that are embedded with bad content? How do we protect against other modes?
