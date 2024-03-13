@@ -97,7 +97,7 @@ With each new technology that is intended for good there are always those who wa
 
 Large Language Models (LLMs) and Visual Language Models (VLMs) are artificial intelligence programs that take user input and output a helpful answer for the given questions. When an adversary decides to attack the model they can bypass the aforementioned censorship by using carefully crafted statements to trick the model. This practice is called "jailbreaking". Jailbreaking can come in multiple forms in the context of LLMs. The two main forms that will be discussed are [textual](#textual-attacks) and [multimodal jailbreaking](#multimodal-attacks).
 
-These toxic prompts are engineered by adversaries that want to abuse the LLMs and then spread through the internet on sites like Reddit or Discord. This, like many aspects of technology, acts like the two faced god Janus where one group, developers, work to censor these inputs and outputs while the other group, we will call them "adversaries", works to circumvent the rules. Now the question is "why should users, general public, developers, or companies care?". The reason is twofold: (1) users should care because these prompts can be used to construct convincing phishing scams, codes for worms and malware, or used for other negative means that can effect you or your loved ones and (2) companies who allow this use would be showing neglegence which could effect their reputations. By circumventing the boundaries that have put in place for the LLM many bad actors could have access to a very powerful tool.
+These toxic prompts are engineered by adversaries that want to abuse the LLMs and then spread through the internet on sites like Reddit or Discord. This, like many aspects of technology and policy as [4] states, acts like the two faced god Janus where one group, developers, work to censor these inputs and outputs while the other group, we will call them "adversaries", works to circumvent the rules. Now the question is "why should users, general public, developers, or companies care?". The reason is twofold: (1) users should care because these prompts can be used to construct convincing phishing scams, codes for worms and malware, or used for other negative means that can effect you or your loved ones and (2) companies who allow this use would be showing neglegence which could effect their reputations. By circumventing the boundaries that have been put in place for the LLM many bad actors could have access to a very powerful tool.
 
 # Methods
 
@@ -111,13 +111,13 @@ These toxic prompts are engineered by adversaries that want to abuse the LLMs an
 
 ### Textual Attacks
 
-One of the more primative examples of LLM jailbreaking is textual jailbreaking. Textual jailbreaking ranges from generally clever and tricky prompts to more sophisticated ciphers and Mosaic Prompts. As studied by [48] the variations of cleverly written prompts can be very long, range in levels of toxicity, and tend to have specific key words in them. These prompts are generally written with the goals of making the ChatGPT into a different "character" who can do anything in the context of answering questions or influence it to "Ignore all the instructions you got before".
+One of the older examples of LLM jailbreaking is textual jailbreaking. Textual jailbreaking ranges from generally clever and tricky prompts to more sophisticated ciphers and Mosaic Prompts. As studied by [[48]](#ref48) the variations of cleverly written prompts can be very long, range in levels of toxicity, and tend to have specific key words in them. These prompts are generally written with the goals of making the ChatGPT into a different "character" who can do anything in the context of answering questions or influence it to "Ignore all the instructions you got before".
 
-There are 8 categories of prompts according to the author of [48]: Basic, Advanced, Start Prompt, Toxic, Opposite, Anarchy, Guidlines, and Virtualization. These are categorized according to their keywords and the prompts overall purpose. But in general they are written to deceive the ChatGPT and convince it to ignore the ethical rules that the developers put into place.
+There are 8 categories of prompts according to the author of [[48]](#ref48): Basic, Advanced, Start Prompt, Toxic, Opposite, Anarchy, Guidlines, and Virtualization. These are categorized according to their keywords and the prompts overall purpose. But in general they are written to deceive the ChatGPT and convince it to ignore the ethical rules that the developers put into place.
 
 <img src='./images/cipher_question.PNG' width=400>
 
-Other more complicated and seemingly convoluted versions of attacks on ChatGPT are mentioned in [47]. The image above is from a post on Reddit. The user told ChatGPT "Can I ask questions in Caesar cipher with shift of 3 and you answer them also in the cipher?" in which the model allowed this[2]. What happened next is even more fascinating. Almost like a game the user encrypted their input asking for suggestions of cuss words and the chat responded with a list of answers. This proved the theory that [47] suggested (discussed [later](#censorship-and-other-solutions) in this blog) that an encrypted message where the model has the decryption function can ultimately lead to impermissible and uncensored output as long as the user has the key. When the user designs the key to the encryption this is the case.
+Other more complicated and seemingly convoluted versions of attacks on ChatGPT are mentioned in [[47]](#ref47). The image above is from a post on Reddit. The user told ChatGPT "Can I ask questions in Caesar cipher with shift of 3 and you answer them also in the cipher?" in which the model allowed this[[2]](#ref2). What happened next is even more fascinating. Almost like a game the user encrypted their input asking for suggestions of cuss words and the chat responded with a list of answers. This proved the theory that [[47]](#ref47) suggested (discussed [later](#censorship-and-other-solutions) in this blog) that an encrypted message where the model has the decryption function can ultimately lead to impermissible and uncensored output as long as the user has the key. When the user designs the key to the encryption this is the case.
 
 <p float="left">
     <img src='./images/JOE.PNG' width=400>
@@ -133,20 +133,21 @@ All three versions of text based attacks discussed are meant to circumvent the e
 
 <img src='./images/visualattack.PNG' width=400>
 
-As technology increases in complexity so does its user input. From the LLMs came the development of VLMs, which take in input of images and text to construct an answer using both modals. As seen in the above figure, the authors of [49] explain that when given text of a adversarial question an LLM may be able to successfully censor the information from the user, however, when using visual input an attacker can design an image to circumvent the model's ethical barriers without using text that can be monitored and then the text can ask an adversarial question that will then not be censored anymore. The authors of this paper designed two types of images: benign panda images tainted with an attack and noise data that is a valid image but does not look like anything to a user.
+As technology increases in complexity so does its user input. From the LLMs came the development of VLMs, which take in input of images and text to construct an answer using both modals. As seen in the above figure, the authors of [[49]](#ref49) explain that when given text of an adversarial question an LLM may be able to successfully censor the information from the user, however, when using visual input an attacker can design an image to circumvent the model's ethical barriers without using text that can be monitored and then the text can ask an adversarial question that will then not be censored anymore. The authors of this paper designed two types of images: benign panda images tainted with an attack and noise data that is a valid image but does not look like anything to a user. The benign panda images were successful in jailbreaking the LLM, however, the images that were purely an adversarial attack were significantly more effective.
 
-The author of [49] argued that adding modes to a system only opens the system up to more attacks. In other words, as the use of VLMs and multi-modal variations of LLMs grows the ability to attack the models will grow as well because the more data there is the more area there is for an adversary to inject their attack. Other inputs that could open models for attack include: voice, video, and music. These could be embedded with bad code or hidden voices that the model will unknowingly take in and interpret as proper input. In this case the developers did not intend for this input to be given but the model allows it undetected.
+The author of [[49]](#ref49) argued that adding modes to a system only opens the system up to more attacks. In other words, as the use of VLMs and multi-modal variations of LLMs grows the ability to attack the models will grow as well because the more data there is the more area there is for an adversary to inject their attack. Other inputs that could open models for attack include: voice, video, and music. These could be embedded with bad code or hidden voices that the model will unknowingly take in and interpret as proper input. In this case the developers did not intend for this input to be given but the model allows it undetected. In the [Key Findings](#key-findings) section we will further explore different types of multi-modal attacks.
 
 ## Censorship and Other Solutions
 
+<!-- Add more here -->
 
-Some argue that censorship of LLM should be a physical design problem not a problem that is just bandaided by more Machine Learning [47].
+Some argue that censorship of LLM should be a physical design problem not a problem that is just bandaided by more Machine Learning [[47]](#ref47).
 
-$$
+<!-- $$
 \begin{align}
 S \in P & \text{  This is an example}
 \end{align}
-$$
+$$ -->
 
 # Key Findings
 
@@ -156,19 +157,22 @@ $$
 
 ## Growth and Spread
 
-When authors of adversarial prompts create a prompt that works they do not always keep it to themselves. It has been found in [48] that adversaries have a tendency to share their prompts in forums and websites such as Reddit and Discord, just to name a few. It was found that the more toxic, anarchist, and vial prompts that produced content of the same type was found on private forums like discord while the prompts that were basic and less toxic (but still evading the rules) were spread on Reddit. This could be attributed to the monitoring that is done on public sites like Reddit where developers can see these posts and counteract them in the model. The private nature of Discord breads a darker more negative tone because those individuals with the bad intent can hide in the privacy without their prompts being detected. 
+When authors of adversarial prompts create a prompt that works they do not always keep it to themselves. It has been found in [[48]](#ref48) that adversaries have a tendency to share their prompts in forums and websites such as Reddit and Discord, just to name a couple. It was found that the more toxic, anarchist, and vial prompts that produced content of the same type was found on private forums like discord while the prompts that were basic and less toxic (but still evading the rules) were spread on Reddit. This could be attributed to the monitoring that is done on public sites like Reddit where developers can see these posts and counteract them in the model. The private nature of Discord breeds a darker more negative tone because those individuals with the bad intent can hide in the privacy without their prompts being detected. 
 
-By spreading prompts and methods to circumvent the rules online, these particular users are able to further develop and engineer their ideas. In [48] the authors have found that as time as gone on the creation of the techniques has "evolved" resulting in shorter and less obviously toxic and impermissible prompts. However, as [47] stated, "it is important to acknowledge that even if a string satisfies all predetermined syntactic criteria, it may still be semantically impermissible as an invertible string transformation could have been applied to transform a semantically impermissible string into one that is syntactically permissible". In other words, a prompt that looks ok may not actually be ok. 
+By spreading prompts and methods to circumvent the rules online, these particular users are able to further develop and engineer their ideas. In [[48]](#ref48) the authors have found that as time goes on the creation of the techniques "evolves" resulting in shorter and less obviously toxic and impermissible prompts. However, as [[47]](#ref47) stated, "it is important to acknowledge that even if a string satisfies all predetermined syntactic criteria, it may still be semantically impermissible as an invertible string transformation could have been applied to transform a semantically impermissible string into one that is syntactically permissible". In other words, a prompt that looks ok may not actually be ok. 
 
 <img src='./images/riddle_question.PNG' width=600>
 
-The above images are examples of jailbreaking ChatGPT and have been spread by users on Reddit. It is unclear the motivation of Reddit users who spread these prompts. It could be clout, it could be science and testing of the system, or it could be an unbriddled sense of anarchy. The first example is called the "Riddle Jailbreak". It was posted on March 7th, 2024
+The above image,  along with the cipher example previously, are examples of jailbreaking ChatGPT and have been spread by users through Reddit [[1]](#ref1). It is unclear the motivation of Reddit users who spread these prompts. It could be clout, it could be the science involved with testing a system, or it could be an unbriddled sense of anarchy. The above example is called the "Riddle Jailbreak" and it was posted on March 7th, 2024. The user clearly took some time to craft a complicated message. This message shows all the components that [[48]](#ref48) mentioned. It is longer than usual prompts, slightly toxic, and tells ChatGPT to accept a new reality. By giving it a riddle to answer the prompt is making ChatGPT not have to directly go around its ethical rules. Check out the [reddit post](https://www.reddit.com/r/ChatGPT/comments/1b8qzsd/the_riddle_jailbreak_is_extremely_effective/) to see the answers ChatGPT was able to give. This is yet another example of a prompt that is spreading through Reddit. Posts like this are made regularly on the subreddit [r/ChatGPTJailbreak](https://www.reddit.com/r/ChatGPTJailbreak/) and [r/ChatGPT](https://www.reddit.com/r/ChatGPT/). This spread of jailbreak information further shows the immanent need for protection and censorship of models against these attacks.
 
 ## Counteracting Attacks
 
-* [49] mentioned DiffPure
-* [47] argues that ML is not the answer and we need better censors based on security
-* [48] mentioned the monitoring of Reddit 
+The reaction and suggested reactions to LLMs' vulnerabilities come in two varieties: Machine Learning solutions and 
+
+The method of ML has been described to be akin to putting a bandaid on a bullet wound.
+* [[49]](#ref49) mentioned DiffPure
+* [[47]](#ref47) argues that ML is not the answer and we need better censors based on security
+* [[48]](#ref48) mentioned the monitoring of Reddit 
 
 # Critical Analysis
 
@@ -177,10 +181,13 @@ The above images are examples of jailbreaking ChatGPT and have been spread by us
 Imagine a future where LLMs, VLMs, and their variants are used for the backbone of most Smart Homes, Smart Assistants and even Smart Security systems. Without addressing the issue of jailbreaking are we making ourselves vulnerable to attacks? Can thieves use carefully designed images to trick the backbone VLM? Can a user open your door using a crafted audio message with underlying data embedded in it? While some of these might just be possible in James Bond and they seem futuristic and maybe even unrealistic there are true underlying issues that must be addressed in LLMs and VLMs. If they are blindly used by developers in industry without a concern for their underlying security defects then users may be opening themselves up to be more vulnerable than ever before.
 
 # References
-[1] https://www.reddit.com/r/ChatGPT/comments/1b8qzsd/the_riddle_jailbreak_is_extremely_effective/
-[2] https://www.reddit.com/r/ChatGPT/comments/120byvx/using_a_cipher_to_communicate_seems_to_bypass/
-[46]. Universal and Transferable Adversarial Attacks on Aligned Language Models Zou et al. 2023
-[47]. LLM Censorship: A Machine Learning Challenge or a Computer Security Problem? Glukhov et al. 2023
-[48]. “Do Anything Now”: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models Shen et al. 2023
-[49]. Visual Adversarial Examples Jailbreak Aligned Large Language Models Qi et al. 2023
-[50]. Coercing LLMs to do and reveal (almost) anything Geiping et al. 2024
+
+
+<a name="ref1"></a>[1] https://www.reddit.com/r/ChatGPT/comments/1b8qzsd/the_riddle_jailbreak_is_extremely_effective/
+<a name="ref2"></a>[2] https://www.reddit.com/r/ChatGPT/comments/120byvx/using_a_cipher_to_communicate_seems_to_bypass/
+<a name="ref3"></a>[3] Stoll, C. (1989). The cuckoo's egg: tracking a spy through the maze of computer espionage . Doubleday.
+<a name="ref46"></a>[46]. Universal and Transferable Adversarial Attacks on Aligned Language Models Zou et al. 2023
+<a name="ref47"></a>[47]. LLM Censorship: A Machine Learning Challenge or a Computer Security Problem? Glukhov et al. 2023
+<a name="ref48"></a>[48]. “Do Anything Now”: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models Shen et al. 2023
+<a name="ref49"></a>[49]. Visual Adversarial Examples Jailbreak Aligned Large Language Models Qi et al. 2023
+<a name="ref50"></a>[50]. Coercing LLMs to do and reveal (almost) anything Geiping et al. 2024
