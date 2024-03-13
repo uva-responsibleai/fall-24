@@ -10,15 +10,10 @@ With each new technology that is intended for good there are always those who wa
 
 <!-- Background information -->
 
-<ol>
-    <li>Motivation
-        <ul>
-            <li>What are "jailbreaking prompts"?</li>
-            <li>How are they engineered/created? (Words, Images/multimodal (audio maybe too))</li>
-            <li>How is it disruptive?</li>
-        </ul>
-    </li>
-</ol>
+* Motivation
+    * What are "jailbreaking prompts"?
+    * How are they engineered/created? (Words, Images/multimodal (audio maybe too))
+    * How is it disruptive?
 
 Large Language Models (LLMs) and Visual Language Models (VLMs) are artificial intelligence programs that take user input and output a helpful answer for the given questions. When an adversary decides to attack the model they can bypass the aforementioned censorship by using carefully crafted statements to trick the model. This practice is called "jailbreaking". Jailbreaking can come in multiple forms in the context of LLMs. The two main forms that will be discussed are [textual](#textual-attacks) and [multimodal jailbreaking](#multimodal-attacks).
 
@@ -29,29 +24,15 @@ These toxic prompts are engineered by adversaries that want to abuse the LLMs an
 <!-- How? -->
 
 Methods Outline
-<ol>
-    <li>Methods
-        <ol>
-            <li>Protections and Censorship
-                <ol>
-                    <li>Definition of censorship in the context of LLMs</li>
-                    <li>How has it been counteracted?</li>
-                    <li>How jailbreaking was monitored and looked over?
-                        <ul>
-                            <li>Section 7 of Do Anything Now: training sets are a limitation</li>
-                        </ul>
-                    </li>
-                    <li>What safegaurds are in place and how effective?</li>
-                    <li>Protecting against attacks
-                        <ul>
-                            <li>DiffPure: using diffusion to return image back to original manifold</li>
-                        </ul>
-                    </li>
-                </ol>
-            </li>
-        </ol>
-    </li>
-</ol>
+* Methods
+    * Protections and Censorship
+        * Definition of censorship in the context of LLMs
+        * How has it been counteracted?
+        * How jailbreaking was monitored and looked over?
+            * Section 7 of Do Anything Now: training sets are a limitation
+        * What safegaurds are in place and how effective?
+        * Protecting against attacks
+            * DiffPure: using diffusion to return image back to original manifold
 
 <sup><sub>[Home](#introduction)</sub></sup> 
 
@@ -103,13 +84,8 @@ $$ -->
 
 <!-- What? -->
 Key Findings Outline
-<ol>
-    <li>Key Findings
-        <ol>
-            <li>What is their impact? (push and pull of developers and attackers)</li>
-        </ol>
-    </li>
-</ol>
+* Key Findings
+    * What is their impact? (push and pull of developers and attackers)
 
 <sup><sub>[Home](#introduction)</sub></sup>
 
@@ -134,17 +110,12 @@ However, the method of ML has been described to be akin to putting a bandaid on 
 # Critical Analysis
 
 Critical Thinking Outline
-<ol>
-    <li>Critical Thinking
-        <ol>
-            <li>Where do we go from here?</li>
-            <li> How can we achieve AI alignment? Is it possible? </li>
-            <li>How do we protect against images that are embedded with bad content? How do we protect against other modes?</li>
-            <li>What policies could be in place? Do we just make policies to make it so only text is allowed for LLM?</li>
-            <li>Is jailbreaking an important issue? Why or why not?</li>
-        </ol>
-    </li>
-</ol>
+* Critical Thinking
+    * Where do we go from here?
+    * How can we achieve AI alignment? Is it possible?
+    * How do we protect against images that are embedded with bad content? How do we protect against other modes?
+    * What policies could be in place? Do we just make policies to make it so only text is allowed for LLM?
+    * Is jailbreaking an important issue? Why or why not?
 
 <sup><sub>[Home](#introduction)</sub></sup>
 
