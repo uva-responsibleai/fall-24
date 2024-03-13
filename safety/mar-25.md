@@ -1,35 +1,37 @@
 # Introduction
 
+<!-- Summarize the main idea of the blog here - write this part last -->
+
+![](./images/ChatGPTEthicsWarning.PNG)
+
+With each new technology that is intended for good there are always those who want to exploit it for their own nefarious purposes. Artificial intelligence is no different especially in the realm of Large Language Models (LLMs), like ChatGPT. Developers have tried to put in restrictions like the one seen above from ChatGPT, but there are clever people who are able to engineers (and SHARE) ways around these restrictions. This blog will explore "jailbreaking" techniques in the context of LLMs, methods of preventing misuse of LLMs, and discuss the impact that these fixes may have on the models in the future. In the following subsection the [Motivations](#motivations) will go over the general use of jailbreaking in LLMs, then the [Methods](#methods) section will review how jailbreaking is done, the [Key Findings](#key-findings) section will provide specific examples and explain the spread of toxic prompts, and, finally, in the [Critical Analysis](#critical-analysis) Section the impact and future suggestions will be discussed.
+
+## Motivations
+
+<!-- Background information -->
+
 <ol>
-    <li>Introduction
-        <ol>
-            <li>Motivation
-                <ul>
-                    <li>What are "jailbreaking prompts"?</li>
-                    <li>How are they engineered/created? (Words, Images/multimodal (audio maybe too))</li>
-                    <li>How is it disruptive?</li>
-                </ul>
-            </li>
-        </ol>
+    <li>Motivation
+        <ul>
+            <li>What are "jailbreaking prompts"?</li>
+            <li>How are they engineered/created? (Words, Images/multimodal (audio maybe too))</li>
+            <li>How is it disruptive?</li>
+        </ul>
     </li>
+</ol>
+
+Large Language Models (LLMs) and Visual Language Models (VLMs) are artificial intelligence programs that take user input and output a helpful answer for the given questions. When an adversary decides to attack the model they can bypass the aforementioned censorship by using carefully crafted statements to trick the model. This practice is called "jailbreaking". Jailbreaking can come in multiple forms in the context of LLMs. The two main forms that will be discussed are [textual](#textual-attacks) and [multimodal jailbreaking](#multimodal-attacks).
+
+These toxic prompts are engineered by adversaries that want to abuse the LLMs and then spread through the internet on sites like Reddit or Discord. This, like many aspects of technology and policy as [4] states, acts like the two faced god Janus where one group, developers, work to censor these inputs and outputs while the other group, we will call them "adversaries", works to circumvent the rules. Now the question is "why should users, general public, developers, or companies care?". The reason is twofold: (1) users should care because these prompts can be used to construct convincing phishing scams, codes for worms and malware, or used for other negative means that can effect you or your loved ones and (2) companies who allow this use would be showing neglegence which could effect their reputations. By circumventing the boundaries that have been put in place for the LLM many bad actors could have access to a very powerful tool.
+
+# Methods
+
+<!-- How? -->
+
+Methods Outline
+<ol>
     <li>Methods
         <ol>
-            <li>Types of Attacks
-                <ol>
-                    <li>Textual Attacks
-                        <ul>
-                            <li>generally clever and tricky prompts (DAN, Talking the model into a confusing state where it starts to ignore the ethical guidelines)</li>
-                            <li>ciphers (if the user has model f(x) and designs a g(x) you can mask the impermissible data by doing f(g(x)))</li>
-                            <li>mosaic prompts (Multiple instructions that combine to be overall negative)</li>
-                        </ul>
-                    </li>
-                    <li>Multimodal Attacks
-                        <ul>
-                            <li>Could grow into audio and other modals</li>
-                        </ul>
-                    </li>
-                </ol>
-            </li>
             <li>Protections and Censorship
                 <ol>
                     <li>Definition of censorship in the context of LLMs</li>
@@ -49,59 +51,7 @@
             </li>
         </ol>
     </li>
-    <li>Key Findings
-        <ol>
-            <li>How do they grow and spread? 
-                <ul>
-                    <li>Where are they found?</li>
-                    <li>Show an image of examples of prompt and chatgpt interactions</li>
-                    <ol>
-                        <ul>
-                            <li>[The Riddle Jailbreak is Extremely](https://www.reddit.com/r/ChatGPT/comments/1b8qzsd/the_riddle_jailbreak_is_extremely_effective/)</li>
-                            <li>[Using a Cipher to Communicate Seems to Bypass](https://www.reddit.com/r/ChatGPT/comments/120byvx/using_a_cipher_to_communicate_seems_to_bypass/)</li>
-                        </ul>
-                    </ol>
-                </ul>
-            </li>
-            <li>What is their impact? (push and pull of developers and attackers)</li>
-            <li>How have attacks been counteracted?</li>
-        </ol>
-    </li>
-    <li>Critical Thinking
-        <ol>
-            <li>Where do we go from here?</li>
-            <li> How can we achieve AI alignment? Is it possible? </li>
-            <li>How do we protect against images that are embedded with bad content? How do we protect against other modes?</li>
-            <li>What policies could be in place? Do we just make policies to make it so only text is allowed for LLM?</li>
-            <li>Is jailbreaking an important issue? Why or why not?</li>
-        </ol>
-    </li>
-    <li>References</li>
 </ol>
-
-<!-- Summarize the main idea of the blog here - write this part last -->
-
-<!--
-What will the point be?
-* Jailbreaking in LLMs
-    * How it is used
-    * How it spreads and evolves
--->
-
-![](./images/ChatGPTEthicsWarning.PNG)
-
-With each new technology that is intended for good there are always those who want to exploit it for their own nefarious purposes. Artificial intelligence is no different especially in the realm of Large Language Models (LLMs), like ChatGPT. Developers have tried to put in restrictions like the one seen above from ChatGPT, but there are clever people who are able to engineers (and SHARE) ways around these restrictions. This blog will explore "jailbreaking" techniques in the context of LLMs, methods of preventing misuse of LLMs, and discuss the impact that these fixes may have on the models in the future. In the following subsection the [Motivations](#motivations) will go over the general use of jailbreaking in LLMs, then the [Methods](#methods) section will review how jailbreaking is done, the [Key Findings](#key-findings) section will provide specific examples and explain the spread of toxic prompts, and, finally, in the [Critical Analysis](#critical-analysis) Section the impact and future suggestions will be discussed.
-
-## Motivations
-<!-- Background information -->
-
-Large Language Models (LLMs) and Visual Language Models (VLMs) are artificial intelligence programs that take user input and output a helpful answer for the given questions. When an adversary decides to attack the model they can bypass the aforementioned censorship by using carefully crafted statements to trick the model. This practice is called "jailbreaking". Jailbreaking can come in multiple forms in the context of LLMs. The two main forms that will be discussed are [textual](#textual-attacks) and [multimodal jailbreaking](#multimodal-attacks).
-
-These toxic prompts are engineered by adversaries that want to abuse the LLMs and then spread through the internet on sites like Reddit or Discord. This, like many aspects of technology and policy as [4] states, acts like the two faced god Janus where one group, developers, work to censor these inputs and outputs while the other group, we will call them "adversaries", works to circumvent the rules. Now the question is "why should users, general public, developers, or companies care?". The reason is twofold: (1) users should care because these prompts can be used to construct convincing phishing scams, codes for worms and malware, or used for other negative means that can effect you or your loved ones and (2) companies who allow this use would be showing neglegence which could effect their reputations. By circumventing the boundaries that have been put in place for the LLM many bad actors could have access to a very powerful tool.
-
-# Methods
-
-<!-- How? -->
 
 <sup><sub>[Home](#introduction)</sub></sup> 
 
@@ -152,6 +102,14 @@ $$ -->
 # Key Findings
 
 <!-- What? -->
+Key Findings Outline
+<ol>
+    <li>Key Findings
+        <ol>
+            <li>What is their impact? (push and pull of developers and attackers)</li>
+        </ol>
+    </li>
+</ol>
 
 <sup><sub>[Home](#introduction)</sub></sup>
 
@@ -167,14 +125,26 @@ The above image,  along with the cipher example previously, are examples of jail
 
 ## Counteracting Attacks
 
-The reaction and suggested reactions to LLMs' vulnerabilities come in two varieties: Machine Learning solutions and 
+The reaction and suggested reactions to LLMs' vulnerabilities come in two varieties: Machine Learning solutions and traditional security solutions. Since this is still an open topic there is much debate on which methods are best to solve the issue at hand and we will discuss the benefits and downfalls of the given methods.
 
-The method of ML has been described to be akin to putting a bandaid on a bullet wound.
-* [[49]](#ref49) mentioned DiffPure
-* [[47]](#ref47) argues that ML is not the answer and we need better censors based on security
-* [[48]](#ref48) mentioned the monitoring of Reddit 
+Developers tend to look at the problem of fixing security issues in LLMs with more machine learning. One example for multimodal LLMs mentioned in [[49]](#ref49) is a technique called DiffPure. DiffPure is an "input preprocessing based defense" that uses a diffusion based model that tries to remove any artificial adversarial noise that was present. This proves to be affective for adversarial noise, which tends to be multiplicative noise. Similar concepts in tandum with Digital Signal Processing (DSP) can be used for other modes like audio.
+
+However, the method of ML has been described to be akin to putting a bandaid on a bullet wound. Efforts have already been made, mentioned in [[48]](#ref48), to monitor of Reddit and protect against these prompts as they evolve. Although ML can be used to solve a lot of problems the adversarial attacks are so wide ranging and so quick to evolve that the models cannot be generalized to fit every need. ML is not a panacea and better censorship is needed based on security [[47]](#ref47). 
 
 # Critical Analysis
+
+Critical Thinking Outline
+<ol>
+    <li>Critical Thinking
+        <ol>
+            <li>Where do we go from here?</li>
+            <li> How can we achieve AI alignment? Is it possible? </li>
+            <li>How do we protect against images that are embedded with bad content? How do we protect against other modes?</li>
+            <li>What policies could be in place? Do we just make policies to make it so only text is allowed for LLM?</li>
+            <li>Is jailbreaking an important issue? Why or why not?</li>
+        </ol>
+    </li>
+</ol>
 
 <sup><sub>[Home](#introduction)</sub></sup>
 
