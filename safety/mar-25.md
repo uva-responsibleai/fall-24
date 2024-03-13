@@ -183,11 +183,11 @@ Imagine a future where LLMs, VLMs, and their variants are used for the backbone 
 # References
 
 
-<a name="ref1"></a>[1] https://www.reddit.com/r/ChatGPT/comments/1b8qzsd/the_riddle_jailbreak_is_extremely_effective/
-<a name="ref2"></a>[2] https://www.reddit.com/r/ChatGPT/comments/120byvx/using_a_cipher_to_communicate_seems_to_bypass/
-<a name="ref3"></a>[3] Stoll, C. (1989). The cuckoo's egg: tracking a spy through the maze of computer espionage . Doubleday.
-<a name="ref46"></a>[46]. Universal and Transferable Adversarial Attacks on Aligned Language Models Zou et al. 2023
-<a name="ref47"></a>[47]. LLM Censorship: A Machine Learning Challenge or a Computer Security Problem? Glukhov et al. 2023
-<a name="ref48"></a>[48]. “Do Anything Now”: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models Shen et al. 2023
-<a name="ref49"></a>[49]. Visual Adversarial Examples Jailbreak Aligned Large Language Models Qi et al. 2023
-<a name="ref50"></a>[50]. Coercing LLMs to do and reveal (almost) anything Geiping et al. 2024
+<a name="ref1"></a>[1] https://www.reddit.com/r/ChatGPT/comments/1b8qzsd/the_riddle_jailbreak_is_extremely_effective/ \
+<a name="ref2"></a>[2] https://www.reddit.com/r/ChatGPT/comments/120byvx/using_a_cipher_to_communicate_seems_to_bypass/ \
+<a name="ref3"></a>[3] Stoll, C. (1989). The cuckoo's egg: tracking a spy through the maze of computer espionage . Doubleday. \
+<a name="ref46"></a>[46]. Universal and Transferable Adversarial Attacks on Aligned Language Models Zou et al. 2023 \
+<a name="ref47"></a>[47]. LLM Censorship: A Machine Learning Challenge or a Computer Security Problem? Glukhov et al. 2023 \
+<a name="ref48"></a>[48]. “Do Anything Now”: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models Shen et al. 2023 \
+<a name="ref49"></a>[49]. Visual Adversarial Examples Jailbreak Aligned Large Language Models Qi et al. 2023 \
+<a name="ref50"></a>[50]. Coercing LLMs to do and reveal (almost) anything Geiping et al. 2024 \
