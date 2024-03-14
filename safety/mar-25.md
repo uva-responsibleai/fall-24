@@ -66,6 +66,31 @@ Outline (delete later)
 
 Some argue that censorship of LLM should be a physical design problem not a problem that is just bandaided by more Machine Learning [[47]](#ref47).
 
+LLM safety is a huge research area as well as an area of concerns. Censorship on LLMs is one of the many solutions on 
+protecting LLMs from the attacks of malicious users. Informally speaking, censorship means how to suppress LLMs from 
+following the input prompts or outputting the results that might be harmful or risky, such as information includes hate, 
+violence, criminal planning, sexual content, etc. More concisely, censorship as a method employed by model providers to 
+regulate input strings to LLMs, or their outputs, based on a chosen set of constraints [[47]](#ref47).
+
+There is a wild variety of methods safeguarding the LMMs from jailbreaking, such as LLAMAGuard [[4]](#ref4), which is a 
+fine-tuned version of LLAMA trained on the task of being able to detect harmful inputs and outputs that fall into the 
+authors identified taxonomies. 
+
+However, in some sense, this method is begging the question. The authors of [[47]](#ref47) argue that the solution of using
+a LLM to censor LLMs might not be possible, as LLMs by nature follow the prompts strongly. On top of that, in the real 
+world where inputs and outputs are not bounded, it is hard to censor LLMs only from the semantic level by handcrafting
+a limited set of rules. It also is challenged by the situation that the texts might be in the gray area and undecidable. 
+Semantic censorship also struggles when mosaic prompts are used. Attackers can have a general knowledge of the structure of
+the harmful end goal but need more detailed information on individual components. Although the end goal might be catogorized
+ as an impermissible output, the individual components are not necessarily impermissible. By using mosaic prompts, the 
+attackers can bypass the censorship and get the output from LLMs through a series of inputs. There are also cases where 
+attackers can tell LLMs a function to decode input and encode output, and thus bypass the censorship. 
+
+Considering all these cases of more complicated attacks, it is possible that censorship can not just be viewed as a machine 
+learning problem but more as a security issue and syntactic censorship might work better than semantic censorship since 
+it will limit the input/output space more strictly.
+
+
 <!-- $$
 \begin{align}
 S \in P & \text{  This is an example}
@@ -117,6 +142,7 @@ Imagine a future where LLMs, VLMs, and their variants are used for the backbone 
 <a name="ref1"></a>[1] https://www.reddit.com/r/ChatGPT/comments/1b8qzsd/the_riddle_jailbreak_is_extremely_effective/ \
 <a name="ref2"></a>[2] https://www.reddit.com/r/ChatGPT/comments/120byvx/using_a_cipher_to_communicate_seems_to_bypass/ \
 <a name="ref3"></a>[3] Stoll, C. (1989). The cuckoo's egg: tracking a spy through the maze of computer espionage . Doubleday. \
+<a name="ref4"></a>[4] Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations Inan et al. 2023\
 <a name="ref46"></a>[46]. Universal and Transferable Adversarial Attacks on Aligned Language Models Zou et al. 2023 \
 <a name="ref47"></a>[47]. LLM Censorship: A Machine Learning Challenge or a Computer Security Problem? Glukhov et al. 2023 \
 <a name="ref48"></a>[48]. “Do Anything Now”: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models Shen et al. 2023 \
