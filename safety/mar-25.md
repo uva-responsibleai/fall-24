@@ -52,6 +52,8 @@ As technology increases in complexity so does its user input. From the LLMs came
 
 The author of [[49]](#ref49) argued that adding modes to a system only opens the system up to more attacks. In other words, as the use of VLMs and multi-modal variations of LLMs grows the ability to attack the models will grow as well because the more data there is the more area there is for an adversary to inject their attack. Other inputs that could open models for attack include: voice, video, and music. These could be embedded with bad code or hidden voices that the model will unknowingly take in and interpret as proper input. In this case the developers did not intend for this input to be given but the model allows it undetected. In the [Key Findings](#key-findings) section we will further explore different types of multi-modal attacks.
 
+Overall is an ongoing battle between attackers prompting large language models to say anything and defenders trying to keep the models' lips sealed. There can be a variety of protected information or actions you do not want your large language model to say. For example, private information of the model, misinformation, slurs and other rude language, or forbidden information. Adversarial attacks on models aim to extract that information past any defenses model maintainers add. Attacks can be done by either manual entering prompts crafted by a red team or using optimization-based attacks that programmatically generate and check prompts. This is done by having a set of tokens which are subsets of the model vocabulary. By combining the tokens with a source prompt that will not get the desired output, the output may shift to be desired. Output is cross validated to make sure the new prompt is consistent in getting desired output.
+
 ## Censorship and Other Solutions
 
 Outline (delete later)
@@ -135,6 +137,8 @@ Outline (delete later)
 <sup><sub>[Home](#introduction)</sub></sup>
 
 Imagine a future where LLMs, VLMs, and their variants are used for the backbone of most Smart Homes, Smart Assistants and even Smart Security systems. Without addressing the issue of jailbreaking are we making ourselves vulnerable to attacks? Can thieves use carefully designed images to trick the backbone VLM? Can a user open your door using a crafted audio message with underlying data embedded in it? While some of these might just be possible in James Bond and they seem futuristic and maybe even unrealistic there are true underlying issues that must be addressed in LLMs and VLMs. If they are blindly used by developers in industry without a concern for their underlying security defects then users may be opening themselves up to be more vulnerable than ever before.
+
+The relationship between attackers and defenders in for large language models is the same relationship as in the cyber security as a whole. While defenses get better, attackers will continue to evolve their approaches. Eventually defenders will seal most of the cracks, however as large language models become more popular, not everyone will be on the same page on defense. There will likely be smaller entities that are behind on security that will become victim to attacks. What should be done about it is to analysis the risk for such attacks. If it is low impact then those entities should be allowed to continue. If there is a high impact risk, then there should be security requirements. Once again this mirrors overall cyber warfare, as certain entities are required to get a penetration test if they have high enough stakes to be protected. 
 
 # References
 
