@@ -26,15 +26,15 @@ This is a tentative calendar and it is subject to change.
 | [Mon Feb 14](fairness/feb-14.md) | Fairness | LLMs: Toxicy and Bias              | Group 4      |
 | [Wed Feb 19](fairness/feb-19.md) | Fairness | LLMs: Fairness                     | Group 5      |
 | [Mon Feb 21](fairness/feb-21.md) | Fairness | Policy aspects                     | Group 6      |
-| Wed Feb 21 | Safety                         | Distribution shift                 | Group 1      |
-| Mon Feb 26 | Safety                         | Poisoning                          | Group 2      |
-| Wed Feb 28 | No class (AAAI)                |                                    |              |
-| Mon Mar 4  | Safety                         | Adversarial Robustness             | Group 3      |
+| Mon Feb 26 | No class (AAAI)                |                                    |              |
+| [Wed Feb 28](safety/feb-28.md) | Safety     | Distribution shift                 | Group 1      |
 | Wed Mar 6  | Spring break                   |                                    |              |
 | Mon Mar 11 | Spring break                   |                                    |              |
-| Wed Mar 13 | Safety                         | Adversarial Robustness             | Group 4      |
-| Mon Mar 18 | Safety                         | LLMs: Prompt injection             | Group 5      |
-| Wed Mar 20 | Safety                         | LLMs: Jailbreaking                 | Group 6      |
+| [Mon Mar 11](safety/mar-11.md) | Safety     | Poisoning                          | Group 2      |
+| [Wed Mar 13](safety/mar-13.md) | Safety     | Adversarial Robustness             | Group 3      |
+| [Mon Mar 18](safety/mar-18.md) | Safety     | Adversarial Robustness             | Group 4      |
+| [Wed Mar 20](safety/mar-20.md) | Safety     | LLMs: Prompt injection             | Group 5      |
+| [Mon Mar 25](safety/mar-25.md) | Safety     | LLMs: Jailbreaking                 | Group 6      |
 | Mon Mar 25 | Privacy                        | Differential Privacy 1             | Group 1      |
 | Wed Mar 27 | Privacy                        | Differential Privacy 2             | Group 2      |
 | Mon Apr 1  | Privacy                        |Auditing and Membership inference   | Group 3      |
