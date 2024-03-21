@@ -162,14 +162,6 @@ However, the method of ML has been described to be akin to putting a bandaid on 
 
 # Critical Analysis
 
-Outline (delete later)
-* Critical Thinking
-    * What is their impact? (push and pull of developers and attackers)
-    * Where do we go from here?
-    * How can we achieve AI alignment? Is it possible?
-    * How do we protect against images that are embedded with bad content? How do we protect against other modes?
-    * What policies could be in place? Do we just make policies to make it so only text is allowed for LLM?
-    * Is jailbreaking an important issue? Why or why not?
 
 <sup><sub>[Home](#introduction)</sub></sup>
 
