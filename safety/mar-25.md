@@ -68,7 +68,7 @@ Three components to the attack method:
 
 
 ## Censorship and Other Solutions
-
+<!--
 Outline (delete later)
 * Protections and Censorship
     * Definition of censorship in the context of LLMs
@@ -78,7 +78,7 @@ Outline (delete later)
     * What safegaurds are in place and how effective?
     * Protecting against attacks
         * DiffPure: using diffusion to return image back to original manifold
-
+-->
 Some argue that censorship of LLM should be a physical design problem not a problem that is just bandaided by more Machine Learning [[47]](#ref47).
 
 LLM safety is a huge research area as well as an area of concerns. Censorship on LLMs is one of the many solutions on 
