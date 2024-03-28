@@ -19,7 +19,7 @@ $$
 \Delta_2^{(f)}=\max _{X, X^{\prime}}\left\|f(X)-f\left(X^{\prime}\right)\right\|_2,
 $$
       
-where $X$ and $X^{\prime}$ are neighbouring databases.
+      where $X$ and $X^{\prime}$ are neighbouring databases.
 
 - Exponential Mechanism
 - Private Multiplicative Weights
