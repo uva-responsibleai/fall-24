@@ -26,6 +26,9 @@ Note that the Gaussian Mechanism uses $\ell_2$-sensitivity unlike the Laplace Me
 
 The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_1$-sensitivity, which lends to the fact that Laplace Mechanism offers a stronger privacy guarantee but has a potentially worse error, compared to the Gaussian Mechanism. 
 
+The Laplace distribution with location and scale parameters 0 and $b$, respectively, has the following density:
+$$p(x)=\frac{1}{2 b} \exp \left(-\frac{|x|}{b}\right)$$
+
 > The Gaussian Mechanism is $(\varepsilon, \delta)$-differentially private.
 
 - Exponential Mechanism
