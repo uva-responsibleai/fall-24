@@ -34,7 +34,7 @@ The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_
 
 - Exponential Mechanism
 
-The Exponential mechanism is another fundamental technique for achieving differential privacy. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the Exponential mechanism selects outputs from a set of possible outcomes based on their relevance to the input data, in an attempt to balance its *privacy* and *utility*.
+The exponential mechanism is another fundamental technique for achieving differential privacy in the setting of selecting objects. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the exponential mechanism selects the best object from a set of objects depending on a specified notion of utility of these objects.
 
 The exponential mechanism takes in the following input:
 - A dataset X ∈ X n  (private)
