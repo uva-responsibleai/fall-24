@@ -29,6 +29,23 @@ The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_
 > The Gaussian Mechanism is $(\varepsilon, \delta)$-differentially private.
 
 - Exponential Mechanism
+
+The Exponential mechanism is another fundamental technique for achieving differential privacy. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the Exponential mechanism selects outputs from a set of possible outcomes based on their relevance to the input data, in an attempt to balance its *privacy* and *utility*.
+
+The exponential mechanism takes in the following input:
+- A dataset X ∈ X n  (private)
+- A set of objects H   (public)
+- A score function s : X^n × → `ℝ` .  (public)
+
+The only private information is the dataset X. With this in mind, we define the sensitivity(∆) of the score function with respect to the dataset only: 
+
+∆s = \max_{h∈H} \max_{X,X'}  |s(X, h) − s(X0, h)|,
+
+We are able to guarantee that the Exponential Mechanism ME is ε-differentially private and that it will select an object that is comparable in quality to the best choice of object with a small loss, depending on the ε, the sensitivity, and the number of candidate objects 
+
+
+
+
 - Private Multiplicative Weights
 
 Private Multiplicative Weights algorithm is designed to answer a set of linear queries on a database while ensuring differential privacy. The algorithm guarantees that for a database of size $n$, it can answer a set $Q$ of linear queries to accuracy $\alpha$ under $(\epsilon, \delta)$-differential privacy, provided $n=O\left(\frac{\log |Q| \log |X| \log (1 / \delta)}{\alpha^2 \epsilon}\right)$ data points are available.
