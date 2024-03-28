@@ -30,6 +30,9 @@ The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_
 
 - Exponential Mechanism
 - Private Multiplicative Weights
+
+Private Multiplicative Weights algorithm is designed to answer a set of linear queries on a database while ensuring differential privacy. The algorithm guarantees that for a database of size $n$, it can answer a set $Q$ of linear queries to accuracy $\alpha$ under $(\epsilon, \delta)$-differential privacy, provided $n=O\left(\frac{\log |Q| \log |X| \log (1 / \delta)}{\alpha^2 \epsilon}\right)$ data points are available.
+
 - Report Noisy Max
 - DP and Mechanism Design
 
