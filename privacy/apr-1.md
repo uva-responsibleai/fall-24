@@ -119,3 +119,14 @@ Moreover, the failure probability $\delta$ in ($\varepsilon,\delta$)-DP introduc
 Brought up by Dwork and Roth, it is important to note that as data continues to play a pivotal role in decision-making across various sectors, the demand for privacy-preserving data analysis methods will only increase. Future research directions may include the development of new differential privacy mechanisms that offer better trade-offs between privacy and utility, the refinement of parameter setting methods to ease the application of differential privacy in practice, and the exploration of differential privacy in emerging fields such as machine learning and artificial intelligence.
 
 # Critical Analysis
+
+### Lectures 5 - 8 by Gautam Kamath
+
+Each of the lecture notes provided a strong overview of their respective differential privacy topic, going very detailed into how they derived and proved their theorems. We found these readings, more some than others, to be incredibly dense technically especially when only having introductory knowledge of Differential Privacy. The author gave useful practical scenarios and applications for certain mechanisms, especially for Lectures 5 and 7, but the notes could have benefited from more real-world and illustrative examples. 
+
+### [Sections 3.3, 3.4, 10.1-10.2 of the Algorithmic Foundations of Differential Privacy](https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf)
+
+Interesting to see how they were able to incorporate differential privacy as a tool for mechanical design. 
+
+Incorporating different fields of study such as game theory, which is talked about more in the field of Economics, into how we view differential privacy is a compelling avenue of research to find better ways for us to quantify and control privacy loss in certain situations.
+
