@@ -45,6 +45,8 @@ The only private information is the dataset X. With this in mind, we define the 
 
 $$∆s = \max_{h∈H} \max_{X,X'}  |s(X, h) − s(X', h)|$$
 
+> The mechanism is NOT defined. That is just the sensitivity of the score function
+
 We are able to guarantee that **the Exponential Mechanism ME is ε-differentially private** and that it will **select an object that is comparable in quality to the best choice of object with a small loss**, depending on the ε, the sensitivity, and the number of candidate objects 
 
 
