@@ -18,9 +18,7 @@ However, it does raise some questions. For instance, the failure probability $`\
 The Gaussian mechanism is the canonical mechanism for ($`\varepsilon,\delta`$)-DP. Like the Laplace mechanism, it is a global sensitivity method, named after the eponymous quantity that is defined as follows.
 
 Let $`f: \mathcal{X}^n \rightarrow \mathbb{R}^k`$. The global $\ell_2$-sensitivity of $f$ is given by the maximum difference in the output of $`f`$ over the choice of all the pairs of neighboring datasets. More precisely, it is given by
-$$
-\Delta_2^{(f)}=\max_{D\sim D'}\left\|f(D)-f\left(D'\right)\right\|_2.
-$$
+$$\Delta_2^{(f)}=\max_{D\sim D'}\left\|f(D)-f\left(D'\right)\right\|_2.$$
 
 > The difference between the Gaussian Mechanism and the Laplace Mechanism is that Gaussian Mechanism uses $\ell_2$-sensitivity, while the Laplace Mechanism uses $\ell_1$-sensitivity.
 
