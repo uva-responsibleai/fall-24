@@ -12,7 +12,7 @@ However, it does raise some questions. For instance, the failure probability $`\
 
 # Methods
 
-- Linear/numerical queries
+- Linear/numerical/histogram queries
 - Gaussian Mechanism
 
 The Gaussian mechanism is the canonical mechanism for ($`\varepsilon,\delta`$)-DP. Like the Laplace mechanism, it is a global sensitivity method, named after the eponymous quantity that is defined as follows.
@@ -30,6 +30,7 @@ The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_
 
 - Exponential Mechanism
 - Private Multiplicative Weights
+- Report Noisy Max
 - DP and Mechanism Design
 
 # Key Findings
