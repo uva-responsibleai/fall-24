@@ -96,17 +96,21 @@ Every agent is simultaneously playing an (approximate) best response to what the
 In examining the various facets of differential privacy, especially the $\varepsilon$-differential privacy ($\varepsilon$-DP) and the ($\varepsilon,\delta$)-differential privacy ($\varepsilon,\delta$)-DP, alongside mechanisms like the Gaussian and Laplace mechanisms designed to enforce these privacy standards that protects individual privacy in data analysis, several key findings such as theoretical baselines of differential privacy and its practical implications and potential limitations can be found.
 
 Efficacy of Differential Privacy Mechanisms
+
 One of the pivotal findings is the effectiveness of these differential privacy mechanisms, particularly the Gaussian mechanism, in protecting individual data. The Gaussian mechanism operates by adding noise calibrated to the $\ell_2$ sensitivity of a function, $\Delta_2f$, which is a measure of the maximum change in the function's output that any single individual's data can cause. This is formalized as: `σ >= cΔ₂f/ε`
 for $\varepsilon$ within (0, 1) and $\delta$ satisfying $c^2 > 2 \ln(1.25/\delta)$. This mechanism ensures $(\varepsilon, \delta)$-differential privacy, which offers a quantifiable foundation for privacy-preserving data analysis. It ensures that the presence or absence of any single data point does not significantly alter the outcome of data analyses. This is crucial in an era where data breaches are increasingly common, and traditional data protection methods have shown limitations.
 
 Flexibility and Practical Application
+
 The properties of sequential and parallel composition in differential privacy enable complex, multi-step data analysis processes to maintain privacy guarantees throughout. Composition theorems, as discussed by Dwork and Roth, elaborate on how differential privacy guarantees degrade with the sequential application of differential privacy mechanisms. An essential part of these theorems is understanding how privacy parameters ($\varepsilon$ and $\delta$) adjust in composite analyses, ensuring that privacy guarantees remain intact across multiple queries or analyses on the same dataset. The balance between privacy and utility is particularly evident in the setting of the privacy parameters, where $\delta$ represents a small probability of privacy breach, allowing for practical utility at the expense of a negligible risk. This compromise facilitates the use of differential privacy in a variety of settings, extending its applicability beyond strictly theoretical frameworks.
 
 Composition and Sequential Analysis
+
 Another significant finding is the composability properties of differential privacy, including sequential and parallel composition. These properties enable the application of differential privacy to complex data analysis workflows, where multiple differential privacy mechanisms may be applied 
 with adjustments to the privacy budget across multiple analyses either in sequence or in parallel. This composability is instrumental in ensuring that the overall data analysis process remains privacy-preserving, even when composed of multiple steps.
 
 Challenges
+
 While differential privacy provides a well-constructed framework for protecting individual privacy, it also introduces certain challenges. The trade-off between privacy and utility is a constant balancing act; achieving higher levels of privacy often results in decreased accuracy of the data analysis results. Additionally, the setting of parameters ($\varepsilon$ and $\delta$) requires careful consideration, as it directly impacts the level of privacy and utility.
 
 Moreover, the failure probability $\delta$ in ($\varepsilon,\delta$)-DP introduces a theoretical possibility of privacy breaches, although it is mentioned with a low probability, this aspect calls for further research into mechanisms that can minimize this risk while maintaining practical utility as mentioned by Joseph and Chiké.
