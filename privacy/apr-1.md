@@ -13,16 +13,15 @@ However, it does raise some questions. For instance, the failure probability $`\
 # Methods
 
 - Linear/numerical queries
-- Gaussian Mechanism:
+- Gaussian Mechanism
 
+The Gaussian mechanism is the canonical mechanism for ($`\varepsilon,\delta`$)-DP. Like the Laplace mechanism, it is a global sensitivity method, named after the eponymous quantity that is defined as follows.
 
-> Gaussian Mechanism privatizes a statistic by adding Gaussian noise. The definition is that: Let $f: \mathcal{X}^n \rightarrow \mathbb{R}^k$. The $\ell_2$-sensitivity of $f$ is
+Let $`f: \mathcal{X}^n \rightarrow \mathbb{R}^k`$. The global $\ell_2$-sensitivity of $f$ is given by the maximum difference in the output of $`f`$ over the choice of all the pairs of neighboring datasets.
 
 $$
-\Delta_2^{(f)}=\max _{X, X^{\prime}}\left\|f(X)-f\left(X^{\prime}\right)\right\|_2,
+\Delta_2^{(f)}=\max _{D\sim D'}\left\|f(D)-f\left(D'\right)\right\|_2,
 $$
-      
-> where $X$ and $X^{\prime}$ are neighbouring databases.
 
 > The difference between the Gaussian Mechanism and the Laplace Mechanism is that Gaussian Mechanism uses $\ell_2$-sensitivity, while the Laplace Mechanism uses $\ell_1$-sensitivity.
 
