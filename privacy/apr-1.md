@@ -20,7 +20,7 @@ The Gaussian mechanism is the canonical mechanism for ($`\varepsilon,\delta`$)-D
 Let $`f: \mathcal{X}^n \rightarrow \mathbb{R}^k`$. The global $\ell_2$-sensitivity of $f$ is given by the maximum difference in the output of $`f`$ over the choice of all the pairs of neighboring datasets.
 
 $$
-\Delta_2^{(f)}=\max _{D\sim D'}\left\|f(D)-f\left(D'\right)\right\|_2,
+\Delta_2^{(f)}=\max _{D\sim D'}\left\|f(D)-f\left(D'\right)\right\|_2.
 $$
 
 > The difference between the Gaussian Mechanism and the Laplace Mechanism is that Gaussian Mechanism uses $\ell_2$-sensitivity, while the Laplace Mechanism uses $\ell_1$-sensitivity.
