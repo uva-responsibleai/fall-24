@@ -1,5 +1,5 @@
 # Introduction and Motivations
-With massive amounts of data being required for machine learning, data analysis, and decision-making, data privacy arises as a natural concern as such data often constitutes sensitive information collected from entities like individuals or organizations. While data privacy has been discussed and attempted to be enforced using various methods, it was not until the 2000s that a widely-accepted, mathematically rigorous definition of privacy was adopted.
+With massive amounts of data required for machine learning, data analysis, and decision-making, data privacy arises as a natural concern as such data often constitutes sensitive information collected from entities like individuals or organizations. While data privacy has been discussed and attempted to be enforced using various methods, it was not until the 2000s that a widely accepted, mathematically rigorous definition of privacy was adopted.
 
 Pure ($`\varepsilon`$-)differential privacy ($`\varepsilon`$-DP) ensures that the contribution of any one individual/record does not change the output of an algorithm (much). Approximate differential privacy, on the other hand, relaxes pure DP by allowing for a small failure probability $`\delta`$. This allows for more forgiving data perturbations in practice with a low failure probability.
 
@@ -12,8 +12,7 @@ However, it does raise some questions. For instance, the failure probability $`\
 
 # Methods
 
-- Linear/numerical/histogram queries
-- Gaussian Mechanism
+## Gaussian Mechanism
 
 The Gaussian mechanism is the canonical mechanism for ($`\varepsilon,\delta`$)-DP. Like the Laplace mechanism, it is a global sensitivity method, named after the eponymous quantity that is defined as follows.
 
@@ -32,7 +31,7 @@ The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_
 
 > The Gaussian Mechanism is $(\varepsilon, \delta)$-differentially private.
 
-- Exponential Mechanism
+## Exponential Mechanism
 
 The exponential mechanism is another fundamental technique for achieving differential privacy in the setting of selecting objects. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the exponential mechanism selects the best object from a set of objects depending on a specified notion of utility of these objects.
 
@@ -55,7 +54,7 @@ $exp(\frac{$`\varepsilon`$ $`\mathcal{u}`$(x,r)}{2$`\Delta`$ $`\mathcal{u}`$})$
 
 
 
-- Private Multiplicative Weights
+## Private Multiplicative Weights
 
 Private Multiplicative Weights algorithm is designed to answer a set of linear queries on a database while ensuring differential privacy. The algorithm guarantees that for a database of size $n$, it can answer a set $Q$ of linear queries to accuracy $\alpha$ under $(\epsilon, \delta)$-differential privacy, provided $n=O\left(\frac{\log |Q| \log |X| \log (1 / \delta)}{\alpha^2 \epsilon}\right)$ data points are available.
 
@@ -64,8 +63,7 @@ There are two steps in each iteration which depend on the dataset:
 2. checking how much error this query incurs (and the associated sign). After selecting a query, the algorithm computes $y^t=\left\langle q^t, p^t\right\rangle-\left\langle q^t, p\right\rangle+{\rm Laplace}\left(1 / \varepsilon_0 n\right)$. Based on the magnitude of $y_t$, if the error exceeds a certain threshold $2 \alpha$, the algorithm updates $p_t$ to reduce this error, using function $p_i^{t+1} \propto p_i^t\left(1-s \sqrt{\frac{\ln |\mathcal{X}|}{T}} q_i^t\right)$
 
 
-- Report Noisy Max
-- DP and Mechanism Design
+## DP and Mechanism Design
 
 Mechanism Design involves the problem of algorithm design when a self-interested individual controls the input to an algorithm, rather than the designer of that algorithm. This individual has some preferences of outputs which the algorithm maps its inputs to, which can lead to an incentive for the individual to mis-report data so as to get their preferred outcomes. 
 
@@ -86,7 +84,7 @@ If a mechanism $M$ is $\epsilon$-differentially private, then $M$ is also $2\eps
 
 The proposition above makes differential privacy robust as a solution concept. In addition, differential privacy generalizes to group privacy. 
 
-The authors note one drawback of differential privacy: since the outcome of the mechanism is approximately independent of any single agent's report, *any* report is actually the dominant strategy for an agent, rather than truthfully reporting the agent's type. However, the authors also describe situations in which this can be alleviated. 
+The authors note one drawback of differential privacy: since the outcome of the mechanism is approximately independent of any single agent's report, *any* report is the dominant strategy for an agent, rather than truthfully reporting the agent's type. However, the authors also describe situations in which this can be alleviated. 
 
 In a Nash Equilibrium: Suppose each player has a set of actions $\mathcal{A}$, and can choose to play any action $a_i \in \mathcal{A}$. Suppose, moreover, that outcomes are merely choices of actions that the agents might choose to play, and so agent utility functions are defined as $u: \mathcal{T} \times \mathcal{A}^n \rightarrow[0,1]$. Then:
 
