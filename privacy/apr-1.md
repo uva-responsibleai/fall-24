@@ -37,9 +37,9 @@ The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_
 The exponential mechanism is another fundamental technique for achieving differential privacy in the setting of selecting objects. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the exponential mechanism selects the best object from a set of objects depending on a specified notion of utility of these objects.
 
 The exponential mechanism takes in the following input:
-- A dataset X ∈ X n  (private)
-- A set of objects H   (public)
-- A score function s : X^n × → \mathbb{R} .  (public)
+- A dataset $`X\in\mathcal{X}^n`$  (private)
+- A set of objects $`\mathcal{H}`$   (public)
+- A score function $`s : \mathcal{X}^n × → \mathbb{R}`$ .  (public)
 
 The only private information is the dataset X. With this in mind, we define the sensitivity(∆) of the score function with respect to the dataset only: 
 
