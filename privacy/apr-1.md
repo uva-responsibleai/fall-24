@@ -14,6 +14,15 @@ However, it does raise some questions. For instance, the failure probability $`\
 
 - Linear/numerical queries
 - Gaussian Mechanism
+      Gaussian Mechanism privatizes a statistic by adding Gaussian noise. The definition is that:
+  Let \(f: \mathcal{X}^n \rightarrow \mathbb{R}^k\). The \(\ell_2\)-sensitivity of \(f\) is
+
+$$
+\Delta_2^{(f)}=\max _{X, X^{\prime}}\left\|f(X)-f\left(X^{\prime}\right)\right\|_2,
+$$
+
+where \(X\) and \(X^{\prime}\) are neighbouring databases.
+
 - Exponential Mechanism
 - Private Multiplicative Weights
 - DP and Mechanism Design
