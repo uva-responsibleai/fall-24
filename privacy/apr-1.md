@@ -24,6 +24,12 @@ $$
       
 where $X$ and $X^{\prime}$ are neighbouring databases.
 
+The difference between the Gaussian Mechanism and the Laplace Mechanism is that Gaussian Mechanism uses $\ell_2$-sensitivity, while the Laplace Mechanism uses $\ell_1$-sensitivity.
+
+The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_1$-sensitivity, which causes Laplace Mechanism have stronger privacy guarantee but have potentially worse error, compared to Gaussian Mechanism. 
+
+The Gaussian Mechanism is $(\varepsilon, \delta)$-differentially private.
+
 - Exponential Mechanism
 - Private Multiplicative Weights
 - DP and Mechanism Design
