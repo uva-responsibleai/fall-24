@@ -3,6 +3,8 @@ Pure ($`\varepsilon`$-)differential privacy ($`\varepsilon`$-DP) ensures that th
 
 More precisely, given any two neighboring datasets (i.e. datasets that differ by one record) $`D`$, $`D'`$ (henceforth denoted by the relation $`D\sim D'`$), an algorithm $`M:\mathcal{X}^n\to \mathcal{Y}`$ is said to be ($`\varepsilon,\delta`$)-differentially private if it satisfies for some $`\varepsilon>0`$ and $`\delta\in[0,1]`$ and $\forall\ T\in P(\mathcal{Y})$,
 $$\Pr[M(X)\in T]\leq\exp(\varepsilon)\Pr[M(X')\in T] + \delta.$$
+
+In practice, given a dataset with $`n`$ records, it is common to set $`\delta<\frac{1}{n}`$.
 # Methods 
 
 # Key Findings
