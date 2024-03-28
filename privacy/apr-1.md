@@ -43,7 +43,7 @@ The exponential mechanism takes in the following input:
 
 The only private information is the dataset X. With this in mind, we define the sensitivity(∆) of the score function with respect to the dataset only: 
 
-$$∆s = \max_{h∈H} \max_{X,X'}  |s(X, h) − s(X', h)|$$
+$$\Delta s = \max_{h\in H} \max_{X,X'\in\mathcal{X}}  |s(X, h) − s(X', h)|$$
 
 > The mechanism is NOT defined. That is just the sensitivity of the score function. Also do not copy and paste notation, it looks horrible. Use LaTeX.
 
