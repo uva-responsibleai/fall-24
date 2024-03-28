@@ -39,7 +39,7 @@ The exponential mechanism is another fundamental technique for achieving differe
 The exponential mechanism takes in the following input:
 - A dataset $`X\in\mathcal{X}^n`$  (private)
 - A set of objects $`\mathcal{H}`$   (public)
-- A score function $`s : \mathcal{X}^n × → \mathbb{R}`$ .  (public)
+- A score function $`s : \mathcal{X}^n \times \mathcal{H} → \mathbb{R}`$ .  (public)
 
 The only private information is the dataset X. With this in mind, we define the sensitivity(∆) of the score function with respect to the dataset only: 
 
