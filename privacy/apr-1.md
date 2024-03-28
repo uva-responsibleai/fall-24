@@ -12,6 +12,11 @@ However, it does raise some questions. For instance, the failure probability $`\
 
 # Methods
 
+- Linear/numerical queries
+- Gaussian Mechanism
+- Exponential Mechanism
+- Private Multiplicative Weights
+- DP Mechanism Design
 
 # Key Findings
 
