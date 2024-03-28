@@ -97,7 +97,7 @@ In examining the various facets of differential privacy, especially the $\vareps
 
 ## Efficacy of Differential Privacy Mechanisms
 
-One of the pivotal findings is the effectiveness of these differential privacy mechanisms, particularly the Gaussian mechanism, in protecting individual data. The Gaussian mechanism operates by adding noise calibrated to the $\ell_2$ sensitivity of a function, $\Delta_2f$, which is a measure of the maximum change in the function's output that any single individual's data can cause. This is formalized as: `σ >= cΔ₂f/ε`
+One of the pivotal findings is the effectiveness of these differential privacy mechanisms, particularly the Gaussian mechanism, in protecting individual data. The Gaussian mechanism operates by adding noise calibrated to the $\ell_2$ sensitivity of a function, $\Delta_2f$, which is a measure of the maximum change in the function's output that any single individual's data can cause. This is formalized as: $`\sigma\geq c\Delta_2 f/\varepsilon`$
 for $\varepsilon$ within (0, 1) and $\delta$ satisfying $c^2 > 2 \ln(1.25/\delta)$. This mechanism ensures $(\varepsilon, \delta)$-differential privacy, which offers a quantifiable foundation for privacy-preserving data analysis. It ensures that the presence or absence of any single data point does not significantly alter the outcome of data analyses. This is crucial in an era where data breaches are increasingly common, and traditional data protection methods have shown limitations.
 
 ## Flexibility and Practical Application
