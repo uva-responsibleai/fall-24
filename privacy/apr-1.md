@@ -65,9 +65,7 @@ The authors note one drawback of differential privacy: since the outcome of the 
 In a Nash Equilibrium: Suppose each player has a set of actions $\mathcal{A}$, and can choose to play any action $a_i \in \mathcal{A}$. Suppose, moreover, that outcomes are merely choices of actions that the agents might choose to play, and so agent utility functions are defined as $u: \mathcal{T} \times \mathcal{A}^n \rightarrow[0,1]$. Then:
 
 A set of actions $a \in \mathcal{A}^n$ is an $\epsilon$-approximate Nash equilibrium if for all players $i$ and for all actions $a_i^{\prime}$ :
-$$
-u_i(a) \geq u_i\left(a_i^{\prime}, a_{-i}\right)-\epsilon
-$$
+$$u_i(a) \geq u_i\left(a_i^{\prime}, a_{-i}\right)-\epsilon$$
 
 Every agent is simultaneously playing an (approximate) best response to what the other agents are doing, assuming they are playing according to $a$. This work showed that if we could compute an approximate equilibrium of the game under the constraint of differential privacy, then truthful reporting, followed by taking the suggested action of the coordination device would be a Nash equilibrium. 
 
