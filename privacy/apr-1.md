@@ -49,14 +49,18 @@ The Exponential mechanism is as follows:
 Using the inputs defined above, $`X`$, $`\mathcal{H}`$, and $`s`$ the mechanism outputs $h\in H$ with the probability proportional to 
 exp($\frac{\varepsilon \mathcal{s}(X,h)}{2\Delta}$)
 
-**The exponential mechanism is $`\varepsilon`$-differentially private** and that it will **select an object that is comparable in quality to the best choice of object with a small loss**, depending on the value of $`\varepsilon`$, the sensitivity, and the number of candidate objects 
+> **The exponential mechanism is $`\varepsilon`$-differentially private** and that it will **select an object that is comparable in quality to the best choice of object with a small loss**, depending on the value of $`\varepsilon`$, the sensitivity, and the number of candidate objects 
 
 
 
 
-## Private Multiplicative Weights
+## An online mechanism: Private Multiplicative Weights
 
 Private Multiplicative Weights algorithm is designed to answer a set of linear queries on a database while ensuring differential privacy. The algorithm guarantees that for a database of size $n$, it can answer a set $Q$ of linear queries to accuracy $\alpha$ under $(\epsilon, \delta)$-differential privacy, provided $n=O\left(\frac{\log |Q| \log |X| \log (1 / \delta)}{\alpha^2 \epsilon}\right)$ data points are available.
+
+<p align="center">
+  <img src="https://github.com/wenqian-ye/fall-24/assets/32115593/fec0f2d3-6185-4614-a00f-cbf66af84f69" alt="Description of the image" width="48%">
+</p>
 
 There are two steps in each iteration which depend on the dataset: 
 1. selecting a query which causes the algorithm to err. It uses the exponential mechanism to select a query from the set $Q$ that the current iteration of the algorithm is most inaccurate, using score function $\left|\left\langle q^t, p^t\right\rangle-\left\langle q^t, p\right\rangle\right|$
@@ -85,6 +89,8 @@ If a mechanism $M$ is $\epsilon$-differentially private, then $M$ is also $2\eps
 The proposition above makes differential privacy robust as a solution concept. In addition, differential privacy generalizes to group privacy. 
 
 The authors note one drawback of differential privacy: since the outcome of the mechanism is approximately independent of any single agent's report, *any* report is the dominant strategy for an agent, rather than truthfully reporting the agent's type. However, the authors also describe situations in which this can be alleviated. 
+
+## DP for Privacy Aware Agents
 
 In a Nash Equilibrium: Suppose each player has a set of actions $\mathcal{A}$, and can choose to play any action $a_i \in \mathcal{A}$. Suppose, moreover, that outcomes are merely choices of actions that the agents might choose to play, and so agent utility functions are defined as $u: \mathcal{T} \times \mathcal{A}^n \rightarrow[0,1]$. Then:
 
