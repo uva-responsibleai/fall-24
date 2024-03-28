@@ -16,19 +16,19 @@ However, it does raise some questions. For instance, the failure probability $`\
 - Gaussian Mechanism:
 
 
-Gaussian Mechanism privatizes a statistic by adding Gaussian noise. The definition is that: Let $f: \mathcal{X}^n \rightarrow \mathbb{R}^k$. The $\ell_2$-sensitivity of $f$ is
+> Gaussian Mechanism privatizes a statistic by adding Gaussian noise. The definition is that: Let $f: \mathcal{X}^n \rightarrow \mathbb{R}^k$. The $\ell_2$-sensitivity of $f$ is
 
 $$
 \Delta_2^{(f)}=\max _{X, X^{\prime}}\left\|f(X)-f\left(X^{\prime}\right)\right\|_2,
 $$
       
-where $X$ and $X^{\prime}$ are neighbouring databases.
+> where $X$ and $X^{\prime}$ are neighbouring databases.
 
-The difference between the Gaussian Mechanism and the Laplace Mechanism is that Gaussian Mechanism uses $\ell_2$-sensitivity, while the Laplace Mechanism uses $\ell_1$-sensitivity.
+> The difference between the Gaussian Mechanism and the Laplace Mechanism is that Gaussian Mechanism uses $\ell_2$-sensitivity, while the Laplace Mechanism uses $\ell_1$-sensitivity.
 
-The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_1$-sensitivity, which causes Laplace Mechanism have stronger privacy guarantee but have potentially worse error, compared to Gaussian Mechanism. 
+> The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_1$-sensitivity, which causes Laplace Mechanism have stronger privacy guarantee but have potentially worse error, compared to Gaussian Mechanism. 
 
-The Gaussian Mechanism is $(\varepsilon, \delta)$-differentially private.
+> The Gaussian Mechanism is $(\varepsilon, \delta)$-differentially private.
 
 - Exponential Mechanism
 - Private Multiplicative Weights
