@@ -47,7 +47,7 @@ $$\Delta s = \max_{h\in H} \max_{X,X'\in\mathcal{X}}  |s(X, h) − s(X', h)|$$
 The Exponential mechanism is as follows:
 
 Using the inputs defined above, $`X`$, $`\mathcal{H}`$, and $`s`$ the mechanism outputs $h\in H$ with the probability proportional to 
-$exp(\frac{$`\varepsilon`$ $`\mathcal{u}`$(x,r)}{2$`\Delta`$ $`\mathcal{u}`$})$
+exp($\frac{\varepsilon \mathcal{s}(X,h)}{2\Delta}$)
 
 **The exponential mechanism is $`\varepsilon`$-differentially private** and that it will **select an object that is comparable in quality to the best choice of object with a small loss**, depending on the value of $`\varepsilon`$, the sensitivity, and the number of candidate objects 
 
