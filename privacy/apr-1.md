@@ -16,7 +16,7 @@ However, it does raise some questions. For instance, the failure probability $`\
 - Gaussian Mechanism
 - Exponential Mechanism
 - Private Multiplicative Weights
-- DP Mechanism Design
+- DP and Mechanism Design
 
 # Key Findings
 
