@@ -20,7 +20,11 @@ The Gaussian mechanism is the canonical mechanism for ($`\varepsilon,\delta`$)-D
 Let $`f: \mathcal{X}^n \rightarrow \mathbb{R}^k`$. The global $\ell_2$-sensitivity of $f$ is given by the maximum difference in the output of $`f`$ over the choice of all the pairs of neighboring datasets. More precisely, it is given by
 $$\Delta_2^{(f)}=\max_{D\sim D'}\left\|f(D)-f\left(D'\right)\right\|_2.$$
 
-> Include the definition of the Gaussian mechanism here.
+The Gaussian mechanism is as follows:
+
+Let $f : \mathcal{X}^n → \mathbb{R}^k.$ The Gaussian mechanism is defined as
+$$M(X) = f(X) + (Y_1, . . . , Y_k),$$
+where the $Y_i$ are independent $N(0, 2 ln(1.25/δ)∆_2^2 /ε^2$) random variables
 
 Note that the Gaussian Mechanism uses $\ell_2$-sensitivity unlike the Laplace Mechanism, which uses $\ell_1$-sensitivity.
 
@@ -35,13 +39,13 @@ The Exponential mechanism is another fundamental technique for achieving differe
 The exponential mechanism takes in the following input:
 - A dataset X ∈ X n  (private)
 - A set of objects H   (public)
-- A score function s : X^n × → `ℝ` .  (public)
+- A score function s : X^n × → \mathbb{R} .  (public)
 
 The only private information is the dataset X. With this in mind, we define the sensitivity(∆) of the score function with respect to the dataset only: 
 
 $$∆s = \max_{h∈H} \max_{X,X'}  |s(X, h) − s(X', h)|$$
 
-We are able to guarantee that the Exponential Mechanism ME is ε-differentially private and that it will select an object that is comparable in quality to the best choice of object with a small loss, depending on the ε, the sensitivity, and the number of candidate objects 
+We are able to guarantee that **the Exponential Mechanism ME is ε-differentially private** and that it will **select an object that is comparable in quality to the best choice of object with a small loss**, depending on the ε, the sensitivity, and the number of candidate objects 
 
 
 
