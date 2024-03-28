@@ -20,9 +20,9 @@ The Gaussian mechanism is the canonical mechanism for ($`\varepsilon,\delta`$)-D
 Let $`f: \mathcal{X}^n \rightarrow \mathbb{R}^k`$. The global $\ell_2$-sensitivity of $f$ is given by the maximum difference in the output of $`f`$ over the choice of all the pairs of neighboring datasets. More precisely, it is given by
 $$\Delta_2^{(f)}=\max_{D\sim D'}\left\|f(D)-f\left(D'\right)\right\|_2.$$
 
-> The difference between the Gaussian Mechanism and the Laplace Mechanism is that Gaussian Mechanism uses $\ell_2$-sensitivity, while the Laplace Mechanism uses $\ell_1$-sensitivity.
+Note that the Gaussian Mechanism uses $\ell_2$-sensitivity unlike the Laplace Mechanism, which uses $\ell_1$-sensitivity.
 
-> The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_1$-sensitivity, which causes Laplace Mechanism have stronger privacy guarantee but have potentially worse error, compared to Gaussian Mechanism. 
+The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_1$-sensitivity, which lends to the fact that Laplace Mechanism offers a stronger privacy guarantee but has a potentially worse error, compared to the Gaussian Mechanism. 
 
 > The Gaussian Mechanism is $(\varepsilon, \delta)$-differentially private.
 
