@@ -47,7 +47,7 @@ $$\Delta s = \max_{h\in H} \max_{X,X'\in\mathcal{X}}  |s(X, h) − s(X', h)|$$
 
 > The mechanism is NOT defined. That is just the sensitivity of the score function. Also do not copy and paste notation, it looks horrible. Use LaTeX.
 
-We are able to guarantee that **the Exponential Mechanism ME is ε-differentially private** and that it will **select an object that is comparable in quality to the best choice of object with a small loss**, depending on the ε, the sensitivity, and the number of candidate objects 
+**The exponential mechanism is $`\varepsilon`$-differentially private** and that it will **select an object that is comparable in quality to the best choice of object with a small loss**, depending on the value of $`\varepsilon`$, the sensitivity, and the number of candidate objects 
 
 
 
