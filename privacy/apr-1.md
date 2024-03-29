@@ -60,11 +60,8 @@ exp($\frac{\varepsilon \mathcal{s}(X,h)}{2\Delta}$)
 
 > COMMENT: Add discussion on composition and the statement of the advanced composition theorem.
 
-### Sequential Composition
-
-### Parallel composition
-
-### Post-processing
+### (Basic) Composition
+Suppose $`M=(M_1, \ldots, M_k)`$ is a sequence of $`\varepsilon`$-differentially private algorithms, potentially chosen sequentially and adaptively. Then $`M`$ is $`k \varepsilon`$-differentially private.
 
 ## An online mechanism: Private Multiplicative Weights
 
