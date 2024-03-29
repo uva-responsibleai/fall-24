@@ -40,7 +40,7 @@ Recall the Laplace mechanism covered in the last lecture. Suppose if we want to 
 
 ## Exponential Mechanism
 
-The exponential mechanism is another fundamental technique for achieving differential privacy in the setting of selecting objects. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the exponential mechanism selects the best object from a set of objects depending on a specified notion of utility of these objects. This is done keeping in mind that adding noise in certain contexts can severely alter the results of the selection process (for instance, if there is an auction with buyers with strict budgets, by adding noise to the bids/budgets, the price output by the auctioneer may end up exceeding the highest bid/budget, leading to no sales).
+The exponential mechanism is another fundamental technique for achieving differential privacy in the setting of selecting objects. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the exponential mechanism selects the best object from a set of objects depending on a specified notion of utility of these objects. This is done keeping in mind that adding noise in certain contexts can severely alter the results of the selection process (for instance, if there is an auction with buyers with strict budgets, by adding noise to the bids/budgets, the price output by the auctioneer after noise addition may end up exceeding the highest bid/budget, leading to no sales).
 
 The exponential mechanism takes in the following input:
 - A dataset $`X\in\mathcal{X}^n`$  (private)
