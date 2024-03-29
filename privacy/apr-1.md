@@ -74,6 +74,8 @@ $`(\varepsilon, \delta)`$-differential privacy under $`k`$-fold adaptive composi
 For all $`\varepsilon, \delta, \delta^{\prime} \geq 0`$, the class of $`(\varepsilon, \delta)`$-differentially private mechanisms satisfies $`\left(\varepsilon^{\prime}, k \delta+\delta^{\prime}\right)`$-differential privacy under $`k`$-fold adaptive composition for:
 $$\varepsilon^{\prime}=\sqrt{2 k \ln \left(1 / \delta^{\prime}\right)} \varepsilon+k \varepsilon\left(e^{\varepsilon}-1\right) .$$
 
+Advanced Composition provides a asymptotically better composition. It  allows for more operations on the data before reaching the same level of privacy loss as would be calculated under Basic Composition. Advanced Composition is particularly useful in scenarios involving complex analyses or algorithms, where multiple differentially private queries or computations are performed on the same dataset. However, there are still some challenges. Choosing appropriate values for $`\varepsilon`$ and $`\delta`$ remains a critical and challenging task. Advanced Composition doesn't eliminate the need to make informed decisions about these parameters. Also, Advanced Composition allows for better utility for a given level of privacy loss but doesn't eliminate the fundamental tension between these two goals.
+
 ## An online mechanism: Private Multiplicative Weights
 
 Private Multiplicative Weights algorithm is designed to answer a set of linear queries on a database while ensuring differential privacy. The algorithm guarantees that for a database of size $n$, it can answer a set $Q$ of linear queries to accuracy $\alpha$ under $(\epsilon, \delta)$-differential privacy, provided $n=O\left(\frac{\log |Q| \log |X| \log (1 / \delta)}{\alpha^2 \epsilon}\right)$ data points are available.
