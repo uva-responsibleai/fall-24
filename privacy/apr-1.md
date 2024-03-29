@@ -65,6 +65,15 @@ It is important to understand how we can combine several DP algorithms to design
 ### Composition Theorem
 Let $`\mathcal{M}_1: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_1`$ be an $`\varepsilon_1`$-differentially private algorithm, and let $`\mathcal{M}_2: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_2`$ be an $`\varepsilon_2`$-differentially private algorithm. Then their combination, defined to be $`\mathcal{M}_{1,2}: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_1 \times \mathcal{R}_2`$ by the mapping: $`\mathcal{M}_{1,2}(x)=\left(\mathcal{M}_1(x), \mathcal{M}_2(x)\right)`$ is $`\varepsilon_1+\varepsilon_2`$-differentially private.
 
+In addition to allowing the parameters to degrade more slowly, we would like our theorem to be able to handle more complicated forms of composition. Thus we have want to introduce advance composition. First, we define $`\varepsilon`$-differential privacy under $`k`$-fold adaptive composition:
+
+We say that the family $`\mathcal{F}`$ of database access mechanisms satisfies $`\varepsilon`$-differential privacy under $`k`$-fold adaptive composition if for every adversary $`A`$, we have $`D_{\infty}(V^0 \| V^1) \leq \varepsilon`$ where $`V^b`$ denotes the view of $`A`$ in $`k`$-fold Composition Experiment $`b`$ above.
+$`(\varepsilon, \delta)`$-differential privacy under $`k`$-fold adaptive composition instead requires that $`D_{\infty}^\delta(V^0 \| V^1) \leq \varepsilon`$.
+
+### Advanced Composition
+For all $`\varepsilon, \delta, \delta^{\prime} \geq 0`$, the class of $`(\varepsilon, \delta)`$-differentially private mechanisms satisfies $`\left(\varepsilon^{\prime}, k \delta+\delta^{\prime}\right)`$-differential privacy under $`k`$-fold adaptive composition for:
+$$\varepsilon^{\prime}=\sqrt{2 k \ln \left(1 / \delta^{\prime}\right)} \varepsilon+k \varepsilon\left(e^{\varepsilon}-1\right) .$$
+
 ## An online mechanism: Private Multiplicative Weights
 
 Private Multiplicative Weights algorithm is designed to answer a set of linear queries on a database while ensuring differential privacy. The algorithm guarantees that for a database of size $n$, it can answer a set $Q$ of linear queries to accuracy $\alpha$ under $(\epsilon, \delta)$-differential privacy, provided $n=O\left(\frac{\log |Q| \log |X| \log (1 / \delta)}{\alpha^2 \epsilon}\right)$ data points are available.
