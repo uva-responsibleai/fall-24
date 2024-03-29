@@ -152,3 +152,6 @@ Interesting to see how they were able to incorporate differential privacy as a t
 
 Incorporating different fields of study such as game theory, which is talked about more in the field of Economics, into how we view differential privacy is a compelling avenue of research to find better ways for us to quantify and control privacy loss in certain situations.
 
+
+### [Programming Differential Privacy](https://programming-dp.com/cover.html)
+This website provides a grab-and-use source for programmers to program the DP algorithms. It views data privacy as "Data privacy techniques have the goal of allowing analysts to learn about trends in sensitive data, without revealing information specific to individuals." In this format, it shows differential privacy (and its variants) is the only formal approach we know about that seems to provide robust privacy protection. Several commonly used approaches are broken down into sections with Python Code. We will show some of the code demos in the upcoming presentation.
