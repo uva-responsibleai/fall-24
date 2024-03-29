@@ -100,7 +100,13 @@ $$u_i(a) \geq u_i\left(a_i^{\prime}, a_{-i}\right)-\epsilon$$
 
 Every agent is simultaneously playing an (approximate) best response to what the other agents are doing, assuming they are playing according to $a$. This work showed that if we could compute an approximate equilibrium of the game under the constraint of differential privacy, then truthful reporting, followed by taking the suggested action of the coordination device would be a Nash equilibrium. 
 
-To obtain exact truthfulness (i.e. mechanisms that are exactly dominant strategy truthful), the author also mentioned a framework which uses differentially private mechanisms as a building block toward designing exactly truthful mechanisms without money. The idea is to randomize between the exponential mechanism (with good social welfare properties) and a strictly truthful mechanism which punishes false reporting (but with poor social welfare properties). If we mix appropriately, then we will get an exactly truthful mechanism with reasonable social welfare guarantees.
+To obtain exact truthfulness (i.e. mechanisms that are exactly dominant strategy truthful), the author also mentioned a framework which uses differentially private mechanisms as a building block toward designing exactly truthful mechanisms without money. The idea is to randomize between the exponential mechanism (with good social welfare properties) and a strictly truthful mechanism which punishes false reporting (but with poor social welfare properties). If we mix appropriately, then we will get an exactly truthful mechanism with reasonable social welfare guarantees. One punishing mechanism is ( simple, but not necessarily the best):
+
+The commitment mechanism $`M^P\left(t^{\prime}\right)`$ selects $s \in \mathcal{O}$ uniformly at random and sets $`\hat{R}_i= \{r_i(t_i^{\prime}, s, R_i)\}`$, i.e., it picks a random outcome and forces everyone to react as if their reported type was their true type.
+Define the gap of an environment as
+$`\gamma=\min _{i, t_i \neq t_i^{\prime}, t_{-i}} \max _{s \in \mathcal{O}}(u(t_i, s, r_i(t_i, s, R_i))-u(t_i, s, r_i(t_i^{\prime}, s, R_i)))`$
+i.e., $\gamma$ is a lower bound over players and types of the worst-case cost (over $s$) of mis-reporting. Note that for each player, this worst-case is realized with probability at least $1/|\mathcal{O}|$. 
+
 
 # Key Findings
 In examining the various facets of differential privacy, especially the $\varepsilon$-differential privacy ($\varepsilon$-DP) and the ($\varepsilon,\delta$)-differential privacy ($\varepsilon,\delta$)-DP, alongside mechanisms like the Gaussian and Laplace mechanisms designed to enforce these privacy standards that protects individual privacy in data analysis, several key findings such as theoretical baselines of differential privacy and its practical implications and potential limitations can be found.
