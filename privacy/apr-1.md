@@ -58,8 +58,6 @@ exp($\frac{\varepsilon \mathcal{s}(X,h)}{2\Delta}$)
 
 > **The exponential mechanism is $`\varepsilon`$-differentially private** and that it will **select an object that is comparable in quality to the best choice of object with a small loss**, depending on the value of $`\varepsilon`$, the sensitivity, and the number of candidate objects 
 
-> COMMENT: Add discussion on composition and the statement of the advanced composition theorem.
-
 It is important to understand how we can combine several DP algorithms to design more sophisticated algorithms.
 
 ### Composition Theorem
