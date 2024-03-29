@@ -35,9 +35,12 @@ The $\ell_2$-sensitivity might be up to a factor $\sqrt{d}$ less than the $\ell_
 
 > The Gaussian Mechanism is $(\varepsilon, \delta)$-differentially private.
 
+## Report Noisy Max
+Recall the Laplace mechanism covered in the last lecture. Suppose if we want to determine what is the most frequent object (viz. most visited website, most bought product, etc.) but in a differentially private manner, there is a straightforward way to achieve that. This mechanism, aptly called Report Noisy Max, adds laplace noise $`\text{Laplace}(1/\varepsilon)`$ to the counts, then outputs the index with the highest noisy count. This is shown to satisfy $`(\varepsilon,\delta)`$-DP.
+
 ## Exponential Mechanism
 
-The exponential mechanism is another fundamental technique for achieving differential privacy in the setting of selecting objects. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the exponential mechanism selects the best object from a set of objects depending on a specified notion of utility of these objects.
+The exponential mechanism is another fundamental technique for achieving differential privacy in the setting of selecting objects. Unlike the Laplace and Gaussian mechanisms, which focus on adding noise to query results, the exponential mechanism selects the best object from a set of objects depending on a specified notion of utility of these objects. This is done keeping in mind that adding noise in certain contexts can severely alter the results of the selection process (for instance, if a buyer with a budget is trying to buy some items, but some items that they would have bought in an optimal situation may have their utility scores pushed over the threshold by noise addition).
 
 The exponential mechanism takes in the following input:
 - A dataset $`X\in\mathcal{X}^n`$  (private)
