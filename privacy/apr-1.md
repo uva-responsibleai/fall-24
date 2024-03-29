@@ -60,6 +60,11 @@ exp($\frac{\varepsilon \mathcal{s}(X,h)}{2\Delta}$)
 
 > COMMENT: Add discussion on composition and the statement of the advanced composition theorem.
 
+### Sequential Composition
+
+### Parallel composition
+
+### Post-processing
 
 ## An online mechanism: Private Multiplicative Weights
 
