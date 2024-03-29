@@ -69,7 +69,8 @@ There are two steps in each iteration which depend on the dataset:
 
 ## DP and Mechanism Design
 
-Mechanism Design involves the problem of algorithm design when a self-interested individual controls the input to an algorithm, rather than the designer of that algorithm. This individual has some preferences of outputs which the algorithm maps its inputs to, which can lead to an incentive for the individual to mis-report data so as to get their preferred outcomes. 
+Mechanism Design involves the problem of algorithm design when a self-interested individual controls the input to an algorithm, rather than the designer of that algorithm. This individual has some preferences of outputs which the algorithm maps its inputs to, which can lead to an incentive for the individual to mis-report data so as to get their preferred outcomes.  which is the science of designing incentives to get people to do what you
+want them to do.
 
 An algorithm $A$ is $\epsilon$-differentially private if for every function $f$ and pair of neighboring databases $x, y$:
 $exp(-\epsilon)E_{z\sim A(y)}|f(z)|\leq E_{z\sim A(x)}|f(z)|\leq exp(\epsilon)E_{z\sim A(y)}|f(z)|$
@@ -84,13 +85,13 @@ If $\epsilon =0$, then the mechanism $M$ is exactly truthful.
 
 From these definitions, it follows that:
 
-If a mechanism $M$ is $\epsilon$-differentially private, then $M$ is also $2\epsilon$-approximately dominant strategy truthful.
+> If a mechanism $M$ is $\epsilon$-differentially private, then $M$ is also $2\epsilon$-approximately dominant strategy truthful.
 
 The proposition above makes differential privacy robust as a solution concept. In addition, differential privacy generalizes to group privacy. 
 
 The authors note one drawback of differential privacy: since the outcome of the mechanism is approximately independent of any single agent's report, *any* report is the dominant strategy for an agent, rather than truthfully reporting the agent's type. However, the authors also describe situations in which this can be alleviated. 
 
-## DP for Privacy Aware Agents
+### Approximately Truthful Equilibrium Selection Mechanisms
 
 In a Nash Equilibrium: Suppose each player has a set of actions $\mathcal{A}$, and can choose to play any action $a_i \in \mathcal{A}$. Suppose, moreover, that outcomes are merely choices of actions that the agents might choose to play, and so agent utility functions are defined as $u: \mathcal{T} \times \mathcal{A}^n \rightarrow[0,1]$. Then:
 
@@ -98,6 +99,8 @@ A set of actions $a \in \mathcal{A}^n$ is an $\epsilon$-approximate Nash equilib
 $$u_i(a) \geq u_i\left(a_i^{\prime}, a_{-i}\right)-\epsilon$$
 
 Every agent is simultaneously playing an (approximate) best response to what the other agents are doing, assuming they are playing according to $a$. This work showed that if we could compute an approximate equilibrium of the game under the constraint of differential privacy, then truthful reporting, followed by taking the suggested action of the coordination device would be a Nash equilibrium. 
+
+To obtain exact truthfulness (i.e. mechanisms that are exactly dominant strategy truthful), the author also mentioned a framework which uses differentially private mechanisms as a building block toward designing exactly truthful mechanisms without money. The idea is to randomize between the exponential mechanism (with good social welfare properties) and a strictly truthful mechanism which punishes false reporting (but with poor social welfare properties). If we mix appropriately, then we will get an exactly truthful mechanism with reasonable social welfare guarantees.
 
 # Key Findings
 In examining the various facets of differential privacy, especially the $\varepsilon$-differential privacy ($\varepsilon$-DP) and the ($\varepsilon,\delta$)-differential privacy ($\varepsilon,\delta$)-DP, alongside mechanisms like the Gaussian and Laplace mechanisms designed to enforce these privacy standards that protects individual privacy in data analysis, several key findings such as theoretical baselines of differential privacy and its practical implications and potential limitations can be found.
