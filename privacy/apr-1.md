@@ -65,7 +65,7 @@ It is important to understand how we can combine several DP algorithms to design
 ### Composition Theorem
 Let $`\mathcal{M}_1: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_1`$ be an $`\varepsilon_1`$-differentially private algorithm, and let $`\mathcal{M}_2: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_2`$ be an $`\varepsilon_2`$-differentially private algorithm. Then their combination, defined to be $`\mathcal{M}_{1,2}: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_1 \times \mathcal{R}_2`$ by the mapping: $`\mathcal{M}_{1,2}(x)=\left(\mathcal{M}_1(x), \mathcal{M}_2(x)\right)`$ is $`\varepsilon_1+\varepsilon_2`$-differentially private.
 
-In addition to allowing the parameters to degrade more slowly, we would like our theorem to be able to handle more complicated forms of composition. Thus we have want to introduce advance composition. First, we define $`\varepsilon`$-differential privacy under $`k`$-fold adaptive composition:
+In addition to allowing the parameters to degrade more slowly, we would like our theorem to be able to handle more complicated forms of composition. Thus we have want to introduce advanced composition. First, we define $`\varepsilon`$-differential privacy under $`k`$-fold adaptive composition:
 
 We say that the family $`\mathcal{F}`$ of database access mechanisms satisfies $`\varepsilon`$-differential privacy under $`k`$-fold adaptive composition if for every adversary $`A`$, we have $`D_{\infty}(V^0 \| V^1) \leq \varepsilon`$ where $`V^b`$ denotes the view of $`A`$ in $`k`$-fold Composition Experiment $`b`$ above.
 $`(\varepsilon, \delta)`$-differential privacy under $`k`$-fold adaptive composition instead requires that $`D_{\infty}^\delta(V^0 \| V^1) \leq \varepsilon`$.
