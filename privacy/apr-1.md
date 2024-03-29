@@ -60,8 +60,10 @@ exp($\frac{\varepsilon \mathcal{s}(X,h)}{2\Delta}$)
 
 > COMMENT: Add discussion on composition and the statement of the advanced composition theorem.
 
-### (Basic) Composition
-Suppose $`M=(M_1, \ldots, M_k)`$ is a sequence of $`\varepsilon`$-differentially private algorithms, potentially chosen sequentially and adaptively. Then $`M`$ is $`k \varepsilon`$-differentially private.
+It is important to understand how we can combine several DP algorithms to design more sophisticated algorithms.
+
+### Composition Theorem
+Let $`\mathcal{M}_1: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_1`$ be an $`\varepsilon_1`$-differentially private algorithm, and let $`\mathcal{M}_2: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_2`$ be an $`\varepsilon_2`$-differentially private algorithm. Then their combination, defined to be $`\mathcal{M}_{1,2}: \mathbb{N}^{|\mathcal{X}|} \rightarrow \mathcal{R}_1 \times \mathcal{R}_2`$ by the mapping: $`\mathcal{M}_{1,2}(x)=\left(\mathcal{M}_1(x), \mathcal{M}_2(x)\right)`$ is $`\varepsilon_1+\varepsilon_2`$-differentially private.
 
 ## An online mechanism: Private Multiplicative Weights
 
