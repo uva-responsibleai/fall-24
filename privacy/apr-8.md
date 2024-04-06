@@ -26,7 +26,7 @@ This membership inference attack exploits the observation that machine learning 
 
 To train the attack model, we build multiple “shadow” models intended to behave similarly to the target model. In contrast to the target model, we know the ground truth for each shadow model, i.e., whether a given record was in its training dataset or not. Therefore, we can use supervised training on the inputs and the corresponding outputs (each labeled “in” or “out”) of the shadow models to teach the attack model how to distinguish the shadow models’ outputs on members of their training datasets from their outputs on non-members. Figure 1 illustrates our end-to-end attack process.
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_1.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_1.png" alt="Description of the image">
 </p>
 
 
@@ -44,7 +44,7 @@ A key optimization utilized by the algorithm involves batch processing: instead 
 This Efficient Extraction Algorithm serves a dual purpose. It not only validates the exposure metric proposed in the paper as a reliable measure of unintended memorization but also provides a practical tool for identifying specific instances of memorization. By efficiently pinpointing sequences that a model has memorized to an extent that they can be extracted through this method, the algorithm highlights potential privacy risks in models trained on sensitive data, offering a pathway towards more secure and privacy-preserving machine learning practices.
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_2.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_2.png" alt="Description of the image">
 </p>
 
 ### The Likelihood Radio Attack(LiRA):This method is based on the following game:
@@ -60,11 +60,11 @@ The researcher train model on a random samples of data from the distribution D a
 The overall training algorithm is display below
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_3.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_3.png" alt="Description of the image">
 </p>
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_4.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_4.png" alt="Description of the image">
 </p>
 
 The researchers begin by training N shadow models on random samples from the data distribution D. Half of these models are trained on the target point (x,y), while the other half are not. They are respectively referred to as IN and OUT models for (x,y). Two Gaussians are then fitted to the confidences of the IN and OUT models on (x,y) in logit scale. Subsequently, the confidence of the target model f on (x,y) is queried, and a parametric Likelihood-ratio test is conducted to generate the output.
@@ -76,7 +76,7 @@ DP-SGD modifies the traditional Stochastic Gradient Descent (SGD) by adding nois
 Another component they introduced is how to measure lower bound, which is equivalent to estimate p0 and p1 properly. And the estimation method rely on Monte Carlo estimation. What is more, to ensure statistical certainty, they used the Clopper Pearson confidence interval as correction. The Algorithm detail is shown below
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_7.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_7.png" alt="Description of the image">
 </p>
 
 
@@ -84,7 +84,7 @@ Another component they introduced is how to measure lower bound, which is equiva
 In a backdoored model, the performance on natural data is maintained, but, by adding a small perturbation to a data point x into Pert(x), the adversary changes the predicted class of the perturbed data. These attacks have been developed for image datasets. The original backdoor poisoning perform unsatisfied because of clipping, so they use Clipping-Aware Backdoor Poisoning Attack and Test Statistic primal poisoning attack method even though they also have experiments on original poisoning attack.				
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_8.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_8.png" alt="Description of the image">
 </p>
 
 		
@@ -99,14 +99,14 @@ In a backdoored model, the performance on natural data is maintained, but, by ad
 The first takeaway from evaluating the attack model is that the number of output classes of the target model contributes to how much the model leaks. The more classes, the more signals about the internal state of the model are available to the attacker. We can see in the figure below that the results for CIFAR-100 are better than for CIFAR-10. The CIFAR-100 model is also more overfitted to its training dataset. For the same number of training records per class, the attack performs better against CIFAR-100 than against CIFAR-10. Informally, models with more output classes need to remember more about their training data, thus they leak more information.
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_9.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_9.png" alt="Description of the image">
 </p>
 
 
 The figure below illustrates how the target models’ outputs distinguish members of their training datasets from the non-members. This is the information that the attack exploits. The plots show that there is an observable difference between the output of the model on the member inputs versus the non-member inputs in the cases where the attack is successful.
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_10.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_10.png" alt="Description of the image">
 </p>
 
 
@@ -125,7 +125,7 @@ Online Attack Evaluation:
 Figure 5 presents the primary results of the researchers' online attack when evaluated on the four more complex datasets mentioned above (CIFAR-10, CIFAR-100, ImageNet, and WikiText-103). The attack demonstrates true-positive rates ranging from 0.1% to 10% at a false-positive rate of 0.001%. When comparing the three image datasets, consistent with prior works, the researchers find that the attack's average success rate (i.e., the AUC) is directly correlated with the generalization gap of the trained model. All three models have perfect 100% training accuracy, but the test accuracy of the CIFAR-10 model is 90%, the ImageNet model is 65%, and the CIFAR-100 model is 60%. Yet, at low false positives, the CIFAR-10 models are easier to attack than the ImageNet models, despite their better generalization.
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_11.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_11.png" alt="Description of the image">
 </p>
 
 
@@ -137,7 +137,7 @@ Offline Attack Evaluation:
 From the experiment, we can conclude that ClipBKD returns epsilon lower bounds that are closer to the theoretical bound than other models.
 
 <p align="center">
-  <img src="https://https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_12.png" alt="Description of the image">
+  <img src="https://github.com/elleryyu/fall-24-RAI/blob/main/privacy/img_0408/img_0408_12.png" alt="Description of the image">
 </p>
 
 
