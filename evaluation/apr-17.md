@@ -5,7 +5,7 @@ Transparency and clear documentation techniques will enable stakeholders and pot
 ## Motivations
 Machine learning models have demonstrated sensitive and harmful social biases in reproducing and amplifying training data in recent research and experiments. However, the traceability of the problematic training data in this section has not been deeply discussed and studied in the machine learning community.
 
-To investigate the issue of data traceability, the paper [Datasheets for Datasets] proposes a standard for documenting the process of machine learning datasets to record the source, content, and purpose of data recall, to improve transparency and fairness. The main target group includes data memory creators and data users, and this method aims to promote data memory maintenance, remove sensitive information, and prevent leakage; For dataset users, it can help them have a better understanding of the data's situation and content before use, avoiding misuse.
+To investigate the issue of data traceability, the paper [Datasheets for Datasets](https://arxiv.org/pdf/1803.09010.pdf) proposes a standard for documenting the process of machine learning datasets to record the source, content, and purpose of data recall, to improve transparency and fairness. The main target group includes data memory creators and data users, and this method aims to promote data memory maintenance, remove sensitive information, and prevent leakage; For dataset users, it can help them have a better understanding of the data's situation and content before use, avoiding misuse.
 
 With the increasing application of machine learning technologies, reports of errors and failures have surfaced, emphasizing the need for a framework that standardizes ethical practice and reporting. This framework would enable stakeholders to evaluate models not only on traditional metrics but also on ethical, inclusive, and fair considerations. The "Model Cards" concept aims to fill this gap by providing a standardized way to communicate the intended use, performance, and limitations of ML models, facilitating informed decision-making among developers, users, and regulators. Furthemore, the “Data Cards" concept aims to provide a method to make documentation of datasets more transparent and accountable for responsible AI systems, as well as enable tracking of AI systems trained on particular datasets. 
 
@@ -48,6 +48,7 @@ Furthermore, the authors were also able to categorize 31 themes that can describ
 <img src="./contentTheme.png" alt="drawing" width="450" height="250"/>
 
 The authors also propose OFTEn, a consistent and repeatable approach to identify and add new themes from dataset life cycles in a Data Card that are reportable by everyone in the organization. OFTEn considers the agents’ use of the dataset as a distinct stage, enabling feedback from the downstream stakeholders. This enables tracking of AI systems trained on such datasets as well as increases our understanding about the caveats and assumptions that potential agents should be aware of.
+
 <img src="./OFTEn.png" alt="drawing" width="450" height="200"/> 
 
 An example of OFTEn framework used as a generative tool for data consent across a datasets’ life cycle.
