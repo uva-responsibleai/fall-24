@@ -7,7 +7,7 @@ Machine learning models have demonstrated sensitive and harmful social biases in
 
 To investigate the issue of data traceability, the paper [Datasheets for Datasets] proposes a standard for documenting the process of machine learning datasets to record the source, content, and purpose of data recall, to improve transparency and fairness. The main target group includes data memory creators and data users, and this method aims to promote data memory maintenance, remove sensitive information, and prevent leakage; For dataset users, it can help them have a better understanding of the data's situation and content before use, avoiding misuse.
 
-With the increasing application of machine learning technologies, reports of errors and failures have surfaced, emphasizing the need for a framework that standardizes ethical practice and reporting. This framework would enable stakeholders to evaluate models not only on traditional metrics but also on ethical, inclusive, and fair considerations. The "Model Cards" concept aims to fill this gap by providing a standardized way to communicate the intended use, performance, and limitations of ML models, facilitating informed decision-making among developers, users, and regulators. Furthemore, the “Data Cards” concept aims to provide a method to make documentation of datasets more transparent and accountable for responsible AI systems, as well as enable tracking of AI systems trained on particular datasets. 
+With the increasing application of machine learning technologies, reports of errors and failures have surfaced, emphasizing the need for a framework that standardizes ethical practice and reporting. This framework would enable stakeholders to evaluate models not only on traditional metrics but also on ethical, inclusive, and fair considerations. The "Model Cards" concept aims to fill this gap by providing a standardized way to communicate the intended use, performance, and limitations of ML models, facilitating informed decision-making among developers, users, and regulators. Furthemore, the “Data Cards" concept aims to provide a method to make documentation of datasets more transparent and accountable for responsible AI systems, as well as enable tracking of AI systems trained on particular datasets. 
 
 # Methods
 [Datasheets for Datasets](https://arxiv.org/pdf/1803.09010.pdf) Using the Labeled Faces in the Wild and the Pang and Lee polarity datasets, the two datasets were tested by creating strength data tables. The test included whether the datasets contained unintentional, useless, harmful/unwanted biases to society. 
@@ -39,20 +39,20 @@ In contexts involving human-related data, interdisciplinary collaboration with e
 - **Extensible**: Contents of the data card must be easily reconfigurable and extendable for novel datasets, analyses and platforms.
 - **Content-agnostic**: Should be able to use various data representation methods such as multiple choice selections, long-form inputs, visualizations, images, code blocks and others.
 
-The diagram below shows a Data Card template to better understand how data cards can be used to build more transparent and trackable dataset documentations for Responsible AI systems. 
+The diagram below shows a Data Card template to better understand how data cards can be used to build more transparent and trackable dataset documentations for Responsible AI systems.
 
-<img src=”./datacard_temp.png” alt=”drawing” width=”450” height=”250”/> 
+<img src="./datacard_temp.png" alt="drawing" width="450" height="250"/> 
 
 Furthermore, the authors were also able to categorize 31 themes that can describe any dataset. The figure below tabulates these 31 themes.
 
-<img src=”./contentTheme.png” alt=”drawing” width=”450” height=”250”/> 
+<img src="./contentTheme.png" alt="drawing" width="450" height="250"/>
 
 The authors also propose OFTEn, a consistent and repeatable approach to identify and add new themes from dataset life cycles in a Data Card that are reportable by everyone in the organization. OFTEn considers the agents’ use of the dataset as a distinct stage, enabling feedback from the downstream stakeholders. This enables tracking of AI systems trained on such datasets as well as increases our understanding about the caveats and assumptions that potential agents should be aware of.
-<img src=”./OFTEn.png” alt=”drawing” width=”450” height=”200”/> 
+<img src="./OFTEn.png" alt="drawing" width="450" height="200"/> 
 
 An example of OFTEn framework used as a generative tool for data consent across a datasets’ life cycle.
 
-<img src=”./OFTEn_example.png” alt=”drawing” width=”450” height=”150”/> 
+<img src="./OFTEn_example.png" alt="drawing" width="450" height="150"/> 
 
 The [Model Cards for Model Reporting](https://arxiv.org/pdf/1810.03993.pdf) outlines a detailed structure for what a model card should contain, including:
 - **Model Details:** Basic information about the model such as developers, version, type, and intended use.
@@ -64,9 +64,9 @@ The [Model Cards for Model Reporting](https://arxiv.org/pdf/1810.03993.pdf) outl
 - **Quantitative Analyses:** Disaggregated evaluation results showing model performance across different groups and conditions.
 - **Ethical Considerations and Caveats:** Discussion of any ethical issues, potential risks, and any other concerns or recommendations.
 
-The authors of [The Values Encoded in Machine Learning Research](https://arxiv.org/abs/2106.15590) conduct a manual analysis of 100 of the most highly-cited machine learning research papers from 2008-09 and 2018-19 focusing on the abstract, introduction, discussion, and conclusion sections of each paper. All of the papers they looked at had been accepted by the top tier NeurIPS and ICML conferences as a first measure of importance and the “most highly-cited” factor solidifies the perceived importance of the papers selected. They also investigated papers across the two different time periods a decade apart to avoid any short lived trends. Their novel annotation scheme they created and carried out to analyze each paper used the following steps:
+The authors of [The Values Encoded in Machine Learning Research](https://arxiv.org/abs/2106.15590) conduct a manual analysis of 100 of the most highly-cited machine learning research papers from 2008-09 and 2018-19 focusing on the abstract, introduction, discussion, and conclusion sections of each paper. All of the papers they looked at had been accepted by the top tier NeurIPS and ICML conferences as a first measure of importance and the “most highly-cited" factor solidifies the perceived importance of the papers selected. They also investigated papers across the two different time periods a decade apart to avoid any short lived trends. Their novel annotation scheme they created and carried out to analyze each paper used the following steps:
 
-- Examine the “justificatory chain” of reasoning by which the paper justifies its contributions
+- Examine the “justificatory chain" of reasoning by which the paper justifies its contributions
 - Closely read each of the abstract, introduction, discussion, and conclusion sections to identify perceived values being portrayed
 - Identify the extent to which the paper discusses potential negative impacts
 - Document and categorize the author affiliations and funding sources
@@ -79,19 +79,19 @@ The [Model Cards for Model Reporting](https://arxiv.org/pdf/1810.03993.pdf) pres
 [The Values Encoded in Machine Learning Research](https://arxiv.org/abs/2106.15590) presents a survey of popular machine learning research works to illustrate common values found across the overarching ML research domain.
 The figure below shows the breakdown of values identified in each of the 100 research papers analyzed. The vast majority of papers were found to focus on factors like performance and efficiency, whereas user rights and ethical principles were rarely considered. The authors attribute some of this to the pressure and political climate behind having a paper accepted by a leading conference with limited room to capture your audience’s attention.
 
-<img src=”./FAccT-figure0.png” alt=”Proportion of annotated papers that uplift each value”/>
+<img src="./FAccT-figure0.png" alt="Proportion of annotated papers that uplift each value"/>
 
 The image below shows the breakdown of paper affiliations with big tech companies and other corporate entities across two time periods from 2008-09 and 2018-19. It is clear that these affiliations are becoming more and more common with the potential to truly shape the agenda of the research being conducted. Funding from these sources has the potential to skew the reliability of work and especially the values being portrayed.
 
-<img src=”./FAccT-figure1.png” alt=”Research affiliation comparison over time”/>
+<img src="./FAccT-figure1.png" alt="Research affiliation comparison over time"/>
 
-Ties in research to big tech are becoming more and more common. It is said that “the influence of powerful players in ML research is consistent with field-wide value commitments that centralize power.” This means that research funded by large corporations often perpetuates the goals of those behind the funding, for better or worse.
+Ties in research to big tech are becoming more and more common. It is said that “the influence of powerful players in ML research is consistent with field-wide value commitments that centralize power." This means that research funded by large corporations often perpetuates the goals of those behind the funding, for better or worse.
 
-<img src=”./FAccT-figure2.png” alt=”Affiliations and funding ties”/>
+<img src="./FAccT-figure2.png" alt="Affiliations and funding ties"/>
 
 Finally, the image below shows the breakdown of the so-called justificatory-chain of research which illustrates the vast lack of care for considering the potential for negative impact within research.
 
-<img src=”./jchain.png” alt=”Justificatory chain”/>
+<img src="./jchain.png" alt="Justificatory chain"/>
 
 Papers are said to often try to portray themselves as appealing to the needs of the overall machine learning research community while the societal benefits or drawbacks of the work within the greater context are often ignored. There is little discussion of ethics across the board with an emphasis on performance instead.
 
