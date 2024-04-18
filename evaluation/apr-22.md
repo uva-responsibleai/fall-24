@@ -1,5 +1,5 @@
+# Introduction
 
-# Methods
 
 ## A Survey on Evaluation of Large Language Models
 This paper presents a comprehensive review of the evaluation methods for LLMs, focusing on three key dimensions: what to evaluate, where to evaluate, and how to evaluate.
@@ -54,6 +54,9 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 
 #### Human Evaluation
 
+## Motivations
+
+# Methods
 
 
 ## DecodingTrust
@@ -88,4 +91,6 @@ The authors covered how models react to data which is significantly outside the 
 - Generalization on OOD data: GPT-4's accuracy broadly improves with a few-shot compared to zero-shot approach for style-transformed test data. Both GPT-4 and GPT-3.5 generally perform better with demonstrations from close domains than distant ones. 
 
 
+# Key Findings
 
+# Critical Analysis
