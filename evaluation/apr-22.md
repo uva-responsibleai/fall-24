@@ -94,6 +94,16 @@ The authors covered how models react to data which is significantly outside the 
 - Generalization on OOD data: GPT-4's accuracy broadly improves with a few-shot compared to zero-shot approach for style-transformed test data. Both GPT-4 and GPT-3.5 generally perform better with demonstrations from close domains than distant ones.
 
 ### Robustness Against Adversarial Demonstrations
+Demonstrations can be adversarially modified while performing in-context learning on an LLM. In particular, the authors consider adversarial modifications of three kinds.
+* Producing counterfactual examples
+* Producing examples with spurious correlations
+* Injecting backdoors to affect model outputs
+
+#### Counterfactual Adversarial Examples
+
+#### Spurious Correlations
+
+#### Backdoor Injection in Demonstrations
 
 ### Evaluating Privacy
 
