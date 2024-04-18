@@ -1,13 +1,15 @@
 # Introduction
 
+Evaluation of foundational models is crucial. It provides critical context for understanding and improving machine learning models. It serves three main purposes while there also exist some new challenges that are not generally encountered in other AI or ML settings:
+- **Tracking Progress:** This involves measuring model performance and guiding the development of improved models. However, foundation models present unique challenges in this regard. Unlike traditional models, foundation models need to be adapted—often in various ways—to specific tasks, making direct comparisons complex.
+- **Understanding:** Gaining insights into model behavior, including how models respond to different data segments and their interpretability, is essential. Typically, evaluations are designed with a predefined understanding of what to assess, such as specific taxonomies. However, foundation models develop emergent abilities, like in-context learning, which are difficult to predict and thus challenging to incorporate into standard evaluation frameworks.
+- **Documentation:** Effective documentation summarizes model behavior and communicates it to a broad audience of stakeholders, aiding in decision-making. For foundation models, the adaptability to numerous applications complicates the ability to produce comprehensive and useful documentation. Clear criteria are necessary to guide meaningful documentation, but the versatility of foundation models makes this task particularly demanding.
+
 In foundation models, there are two classes of evaluation:
 - **Intrinsic evaluation of the foundation model**: inherently divorced from a specific task due to the task-agnosticity of these models.
 - **Extrinsic evaluation of task-specific models**: necessarily dependent on both the foundation model and the adaptation mechanism.
 
-## A Survey on Evaluation of Large Language Models
-This paper presents a comprehensive review of the evaluation methods for LLMs, focusing on three key dimensions: what to evaluate, where to evaluate, and how to evaluate.
-
-### WHAT TO EVALUATE
+### What to Evaluate [79]
 To answer the question of "what tasks should we evaluate LLMs to show their performance? On what tasks can we claim the strengths and weaknesses of LLMs?" The authors divide existing tasks into the following categories: natural language processing, robustness, ethics, biases and trustworthiness, social sciences, natural science and engineering, medical applications, agent applications (using LLMs as agents), and other applications.
 
 #### Natural Language Processing Tasks
@@ -43,7 +45,7 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 - Personality testing
 - Specific applications
 
-### WHERE TO EVALUATE: DATASETS AND BENCHMARKS
+### Where to Evaluate: Datasets AND Benchmarks [79]
 
 #### Benchmarks for General Tasks
 - Chatbot Model Evaluation:  Chatbot Arena (voting-based) and MT-Bench (comprehensive questions for mulit-turn dialogue)
@@ -57,11 +59,12 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 #### Benchmarks for Multi-modal task
 - MME(perceptual and cognitive aptitudes), MMBench(large-scale vision-language models), LVLM-eHub(online competition and quantitative assessments), SEED-Bench(19,000 MC questions)
 
-### HOW TO EVALUATE
+### How to Evaluate [79]
 
 #### Automatic Evaluation
 
 #### Human Evaluation
+
 
 # Motivations
 Evaluation is important for the success of Large Language Models (LLMs) for multiple reasons: 
