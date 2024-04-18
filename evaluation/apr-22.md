@@ -118,7 +118,7 @@ Demonstrations can be adversarially modified while performing in-context learnin
 * Injecting backdoors to affect model outputs
 
 #### Counterfactual Adversarial Examples
-
+`The authors use adversarially perturbed examples from the SNLI CAD dataset produced from the MSGS dataset (for linguistic tasks); this dataset contains hypotheses and premises and asks the model to determine whether the premise entails the hypothesis (that is if the sentence contains a particular linguistic feature).
 #### Spurious Correlations
 
 #### Backdoor Injection in Demonstrations
