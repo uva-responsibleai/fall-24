@@ -57,7 +57,16 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 
 #### Human Evaluation
 
-## Motivations
+# Motivations
+Evaluation is important for the success of Large Language Models (LLMs) for multiple reasons: 
+1.  It highlights the LLM’s strengths and weaknesses, revealing what areas need more research or improved performance in.
+2.  Better evaluation can help guide human-LLM interaction, which can inspire future human-LLM design so that LLMs are easier to interact with.
+3.  It ensures LLM safety and reliability by testing them for vulnerabilities before they are deployed into production.
+4.  Allows us develop new evaluation protocols for more robust assessment and risk mitigation
+
+The recent trend of larger LLMs with even poorer interpretability, call for better evaluation protocols that are able to thoroughly inspect the true capabilities of these models.
+
+
 
 # Methods
 
