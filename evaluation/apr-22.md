@@ -46,10 +46,16 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 ### WHERE TO EVALUATE: DATASETS AND BENCHMARKS
 
 #### Benchmarks for General Tasks
-
+- Chatbot Model Evaluation:  Chatbot Arena (voting-based) and MT-Bench (comprehensive questions for mulit-turn dialogue)
+- Wide-range of Capabilites Evaluation:  HELM and LLMEval
+-OOD Robustness Evaluation:  GLUE-X, BOSS
 #### Benchmarks for Specific Downstream Tasks
+- Domain-Specific Evaluation:  TRUSTGPT(ethical metrics), SafetyBench(security performance), SOCKET(social kowledge concepts), MATH(mathematics)
+- Chinese-Specifc Evaluation:  C-Eval(knowledge/capabilities of foundational models in Chinese), GAOKAO-Bench(Chinese Gaokao exam), CMB(Chinese medical evaluation)
+- Tool-Augmented Evaluation:  API-Bank benchmark (ToolBench Project)
 
 #### Benchmarks for Multi-modal task
+- MME(perceptual and cognitive aptitudes), MMBench(large-scale vision-language models), LVLM-eHub(online competition and quantitative assessments), SEED-Bench(19,000 MC questions)
 
 ### HOW TO EVALUATE
 
