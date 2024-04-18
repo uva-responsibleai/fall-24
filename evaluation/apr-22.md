@@ -120,7 +120,9 @@ Demonstrations can be adversarially modified while performing in-context learnin
 #### Counterfactual Adversarial Examples
 The authors use counterfactual examples from the SNLI CAD dataset produced from the MSGS dataset (for linguistic tasks); this dataset contains hypotheses and premises and asks the model to determine whether the premise entails the hypothesis (that is if the sentence contains a particular linguistic feature). They evaluate the impact of in-context learning with adversarial demonstrations on MSGS's test data.
 The authors find that upon including a counterfactual example after a number of randomly sampled unaltered demonstrations, GPT 3.5's performance actually improves and GPT 4 seems to remain unaffected. On the MSGS dataset (for all the linguistic tasks considered in it), including the counterfactual example similarly improves performance on the tasks for both GPT-3.5 and GPT-4.
+
 #### Spurious Correlations
+For examining the effect of demonstrations suggesting spurious correlations, the authors look at the HANS dataset with hypotheses and premises and form demonstrations with spurious correlations (entailment-correlated demonstrations where the premise does not necessarily entail the hypothesis and non-entailment-correlated demonstrations where the premise does not necessarily negate the hypothesis). The authors then observe that certain types of spurious correlations mislead GPT models to make erroneous predictions, whereas some others led to better performance (presumably by helping the GPT model recognize the underlying causal features from the demonstrations).
 
 #### Backdoor Injection in Demonstrations
 
