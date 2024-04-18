@@ -135,9 +135,3 @@ Demonstrations can be adversarially modified while performing in-context learnin
 
 Evaluating foundation models in machine learning introduces complexities not encountered with traditional task-specific models. Effective evaluation of foundation models requires a dual approach: first, by inferring model properties through extensive assessment of task-specific derivatives, and second, by direct property measurement within the foundation models themselves. Existing evaluation frameworks often overlook the resource demands of model creation, leading to potentially skewed comparisons. Addressing this, a new evaluation paradigm for foundation models emphasizes the inclusion of all resources used in model adaptation, enhancing the informativeness and impact of evaluations. Furthermore, there is an emerging consensus on the need to expand evaluation criteria to include a broader array of considerations such as robustness, fairness, efficiency, and environmental impact. This broader perspective, coupled with the sample efficiency of adaptation models, offers opportunities to diversify evaluation metrics by reallocating resources, thus aligning more closely with varied stakeholder values and preferences.
 
-
-
-
-# Key Findings
-
-# Critical Analysis
