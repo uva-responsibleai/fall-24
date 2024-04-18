@@ -1,5 +1,8 @@
 # Introduction
 
+In foundation models, there are two classes of evaluation:
+- **Intrinsic evaluation of the foundation model**: inherently divorced from a specific task due to the task-agnosticity of these models.
+- **Extrinsic evaluation of task-specific models**: necessarily dependent on both the foundation model and the adaptation mechanism.
 
 ## A Survey on Evaluation of Large Language Models
 This paper presents a comprehensive review of the evaluation methods for LLMs, focusing on three key dimensions: what to evaluate, where to evaluate, and how to evaluate.
