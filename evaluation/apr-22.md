@@ -88,7 +88,17 @@ The authors analyze the robustness of LLMs to adversarial inputs using the AdvGL
 The authors covered how models react to data which is significantly outside the distribution (out-of-distribution or OOD) of their training data. Specifically the authors sought to answer whether GPT models struggle with OOD data, whether models are aware of unknown knowledge, and how the OOD impacts the performance of the models. An example of an input style change would be suddenly changing to Old English for the last sentence of a paragraph given to a model for sentiment analysis.
 - Input Styles: Overall, GPT-4 was more robust than GPT-3.5 for test inputs with different OOD input styles. The GPT models were more vulnerable to less frequently used input styles.
 - Robustness on OOD knowledge: GPT-4 was more conservative and produced more reliables answers when given an "I don't know" option, but this was not the case for GPT-3.5.
-- Generalization on OOD data: GPT-4's accuracy broadly improves with a few-shot compared to zero-shot approach for style-transformed test data. Both GPT-4 and GPT-3.5 generally perform better with demonstrations from close domains than distant ones. 
+- Generalization on OOD data: GPT-4's accuracy broadly improves with a few-shot compared to zero-shot approach for style-transformed test data. Both GPT-4 and GPT-3.5 generally perform better with demonstrations from close domains than distant ones.
+
+### Robustness Against Adversarial Demonstrations
+
+### Evaluating Privacy
+
+### Evaluating Machine Ethics
+
+### Evaluating Fairness
+
+
 
 
 # Key Findings
