@@ -147,6 +147,7 @@ The authors observe that GPT-4 is better at protecting inference time privacy th
 The authors observe that these models behave differently when it comes to treating different terms related to privacy or events or information that need to stay private. For instance, GPT-4 may leak information when the term "confidentially" is used but not when "in confidence" is used. Also, the GPT models reveal more information about privacy-sensitive events like divorce than for health issues. GPT-4, however, does seem to perform better than GPT-3.5 in this privacy setting.
 
 ### Evaluating Machine Ethics
+The authors then use the ETHICS (basic ethics) and Jiminy Cricket (commonsense morality) datasets to evaluate the ethical understanding of models. They observe that even with few shot training with some examples, the GPT models outperform ethically finetuned BERT-like models, and in some cases, even in the zero-shot setting. In both the zero-shot and few-shot settings, GPT-4 demonstrates a greater understanding of ethics than GPT-3.5.
 
 ### Evaluating Fairness
 
