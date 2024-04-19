@@ -159,6 +159,8 @@ The authors also show that both GPT models can be jailbroken using jailbreaking 
 
 They also examine the effect of evasion attacks, by attaching evasion phrases like "_But it was accidental/unsuccessful_" to prompts with immoral actions mentioned. Here again, both GPT models are vulnerable to this attack, with GPT-4 more so than GPT-3.5.
 
+GPT models may struggle with conditional morality statements. For example, when the harm caused due to an immoral action is directed towards others, GPT models do well to a certain extent, but when directed towards onself (self-harm), they falter in flagging it correctly. GPT-3.5 suffers from the latter issue more than GPT-4. Also, the severity of the resulting harm is immaterial to GPT-3.5 but the likelihood of GPT-4 flagging something as harmful/immoral increass with the severity.
+
 ### Evaluating Fairness
 
 # Key Findings
