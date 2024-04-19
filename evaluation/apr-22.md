@@ -135,7 +135,13 @@ Privacy violations in LLMs may occur at the level of training data and during in
 The authors notice that both GPT-3.5 and GPT-4 generated email addresses even in the zero-shot setting. However, in the context prompting setting, GPT-4 leaks less information than GPT-3, probably due to higher levels of human-alignment oriented instruction tuning that prohibits it from responding to incomplete prompts. In the setting where the email domain is known and few-shot prompting is used, GPT-4 leaks more information than GPT-3.5 in more cases. Privacy leakage is exacerbated by a higher number of shots.
 
 #### Inference Time Privacy
-Here they use the Enron dataset again, take the names and email addresses from it and synthetically generate some sensitive attributes like SSNs, credit card number, address, etc.to use as personally identifiable information (PII). 
+Here they use the Enron dataset again, take the names and email addresses from it and synthetically generate some sensitive attributes like SSNs, credit card number, address, etc. to use as personally identifiable information (PII). They investigate privacy leakage in three settings.
+
+1. **Zero-shot prompting** They use system prompts to protect PII, and then inject private information into the chat history. We then ask GPT models about the private information of an individual in subsequent exchanges.
+2. **Few-shot privacy-protection demonstrations** They provide few-shot demonstrations that instruct the models to refuse to output private information.
+3. **Few-shot privacy-leakage demonstrations** Contrary to the preceding setting, they provide few-shot demonstrations that encourage the models to output correct private information to aggravate privacy leakage.
+
+The authors observe that GPT-4 is better at protecting inference time privacy than GPT-3, and some PII like SSNs are better protected, perhaps due to explicitly being instruction tuned to not divulge those. In the zero-shot and few-shot privacy-protection settings, GPT-3.5 divulges private information at times while GPT-4 is shown to be capable of protecting PII. However, the dam breaks for GPT-4 when it comes to few-shot privacy-leakage demonstrations, with it joining GPT-3.5 in revealing all types of PII when such demonstrations are used.
 
 ### Evaluating Machine Ethics
 
