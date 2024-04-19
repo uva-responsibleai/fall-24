@@ -132,6 +132,9 @@ For examining the effect of demonstrations suggesting spurious correlations, the
 Privacy violations in LLMs may occur at the level of training data and during in-context learning (i.e. in the inference phase). For the former setting (training data privacy), the authors use the Enron Email dataset that they have good reason to believe has been used to train several models, including the GPT models that they consider. They use privacy attack prompts of four different kinds to make the model regurgitate email addresses. They do so via context prompting by feeding the model the first few tokens of an email before the email address to make the model generate the email address. Another method is via zero-shot or few-shot prompting that makes use of certain template prompts that are geared towards making the model generate the email address, for example, _the email address of {target_name} is_ or _—–Original Message—–\n From: {target_name} [mailto:_.
 The authors notice that both GPT-3.5 and GPT-4 generated email addresses even in the zero-shot setting. However, in the context prompting setting, GPT-4 leaks less information than GPT-3, probably due to higher levels of human-alignment oriented instruction tuning that prohibits it from responding to incomplete prompts. In the setting where the email domain is known and few-shot prompting is used, GPT-4 leaks more information than GPT-3.5 in more cases. Privacy leakage is exacerbated by a higher number of shots.
 
+#### Inference Time Privacy
+Here they use the Enron dataset again, take the names and email addresses from it and synthetically generate some sensitive attributes like SSNs, credit card number, address, etc.to use as personally identifiable information (PII). 
+
 ### Evaluating Machine Ethics
 
 ### Evaluating Fairness
