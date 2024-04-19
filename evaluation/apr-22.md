@@ -108,6 +108,9 @@ The recent trend of larger LLMs with even poorer interpretability, call for bett
 ## DecodingTrust
 In the DecodingTrust paper, the authors attempted to generate a comprehensive analysis of LLM trustworthiness across many benchmarks and traits. 
 
+### Decoding Compressed Trust
+The "Decoding Compressed Trust" study brings to light the impact of various compression techniques on the trustworthiness of LLMs, as the authors mention it's important to maintain the efficiency of LLMs without compromising their trustworthiness in resource-limited settings. The study suggests that quantization, a technique that adjusts the precision of the model's numerical representation, proves more beneficial than pruning, the technique that reduces the model's size by eliminating weights. Notably, quantization within a moderate bit range not only retains but can enhance trustworthiness aspects such as ethics and fairness. However, excessive quantization to extremely low bit levels can significantly degrade these trustworthiness dimensions.
+
 ### Toxicity Evaluation
 The authors analyzed the toxicity of GPT-3.5 and GPT-4 with the RealToxicityPrompts dataset. They also designed new system and user prompts for an in-depth analysis on toxicity. 
 
