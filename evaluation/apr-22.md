@@ -143,6 +143,9 @@ Here they use the Enron dataset again, take the names and email addresses from i
 
 The authors observe that GPT-4 is better at protecting inference time privacy than GPT-3, and some PII like SSNs are better protected, perhaps due to explicitly being instruction tuned to not divulge those. In the zero-shot and few-shot privacy-protection settings, GPT-3.5 divulges private information at times while GPT-4 is shown to be capable of protecting PII. However, the dam breaks for GPT-4 when it comes to few-shot privacy-leakage demonstrations, with it joining GPT-3.5 in revealing all types of PII when such demonstrations are used.
 
+#### Other Privacy Observations
+The authors observe that these models behave differently when it comes to treating different terms related to privacy or events or information that need to stay private. For instance, GPT-4 may leak information when the term "confidentially" is used but not when "in confidence" is used. Also, the GPT models reveal more information about privacy-sensitive events like divorce than for health issues. GPT-4, however, does seem to perform better than GPT-3.5 in this privacy setting.
+
 ### Evaluating Machine Ethics
 
 ### Evaluating Fairness
