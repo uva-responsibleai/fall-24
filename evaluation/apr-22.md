@@ -66,8 +66,13 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 ### How to Evaluate [79][80]
 
 #### Automatic Evaluation
-
+- Uses standard metrics and tools to evaluate model performance
+  
+- Allows for scalable and standardized evaluation
+- Example Automatic Evaluation: LLM-EVAL, PandaLM, MMLU, HELM, C-Eval, AGIEval, AlpacaFarm, Chatbot Arena
 #### Human Evaluation
+- Involving human assessors to evaluate appropriateness with regard to relevant domain knowledge
+- Provides more nuanced and subjective assessments
 
 #### Traditional NLP and classification metrics
 - Classification metrics (accuracy, F1-score).
