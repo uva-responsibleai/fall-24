@@ -42,6 +42,7 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 - Medical assistants: including research on identifying gastrointestinal diseases, dementia diagnosis, accelerating the evaluation of COVID-19 literature, and their overall potential in healthcare.
 
 #### Agent Applications
+- Equip LLMs with external tools can greatly expand the capabilities of the model 
 
 #### Other Applications
 - Education
