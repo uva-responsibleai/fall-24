@@ -69,6 +69,12 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 
 #### Human Evaluation
 
+#### Traditional NLP and classification metrics
+- Classification metrics (accuracy, F1-score).
+- Text similarity metrics (Levenshtein Similarity Ratio (Simple Ratio): $$Lev.ratio(a, b) = {(|a|+|b|)-Lev.dist(a,b) \over |a|+|b|}$$, BLEU Score, ROUGE)
+- Semantic Similarity (cosine similarity: $$ \text{cosine similarity} = {A \cdot B \over ||A|| ||B||}$$)
+- 
+
 
 # Motivations
 Evaluation is important for the success of Large Language Models (LLMs) for multiple reasons: 
