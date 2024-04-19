@@ -85,6 +85,11 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 - This process can be as simple as having a human verify output and assign it a pass/fail mark.
 - Also can be incorporated into the LLM-based system using reinforcement learning from human feedback (RLHF).
 
+#### LLM-based Evaluation
+- Step 1. Generating output predictions from a given test set.
+- Step 2. Prompt the model to focus on assessing the quality of output-given reference text and sufficient context (for example, criteria for evaluation).
+- Step 3. Feed the prompt into the model and analyze results.
+
 
 # Motivations
 Evaluation is important for the success of Large Language Models (LLMs) for multiple reasons: 
