@@ -71,9 +71,19 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 
 #### Traditional NLP and classification metrics
 - Classification metrics (accuracy, F1-score).
-- Text similarity metrics (Levenshtein Similarity Ratio (Simple Ratio): $$Lev.ratio(a, b) = {(|a|+|b|)-Lev.dist(a,b) \over |a|+|b|}$$, BLEU Score, ROUGE)
-- Semantic Similarity (cosine similarity: $$ \text{cosine similarity} = \frac{A \cdot B}{||A|| \cdot ||B||} $$)
-- 
+- Text similarity metrics (Levenshtein Similarity Ratio (Simple Ratio), BLEU Score, ROUGE)
+- Semantic Similarity (cosine similarity)
+- Functional Correctness
+
+#### Rule-based Metrics
+- Syntax correctness: This metric measures whether the generated code conforms to the syntax rules of the programming language being used.
+- Format check: Another metric that can be used to evaluate NL2Code models is the format of the generated code.
+- Language check: A language check metric evaluates whether the generated text or code is written understandably and consistent with the user's input.
+- Keyword presence: This metric measures whether the generated text includes the keywords or key phrases that were used in the natural language input.
+
+#### Human feedback
+- This process can be as simple as having a human verify output and assign it a pass/fail mark.
+- Also can be incorporated into the LLM-based system using reinforcement learning from human feedback (RLHF).
 
 
 # Motivations
