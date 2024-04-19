@@ -11,6 +11,8 @@ In foundation models, there are two classes of evaluation:
 
 ![Screenshot 2024-04-18 at 8 18 07 PM](https://github.com/wenqian-ye/fall-24/assets/32115593/e51d4a7e-2a9f-4bf0-a384-ba7f1f96a6c8)
 
+We expand this topic into the following three parts: What to Evaluate, Where to Evaluate, and How to Evaluate.
+
 ### What to Evaluate [79]
 To answer the question of "what tasks should we evaluate LLMs to show their performance? On what tasks can we claim the strengths and weaknesses of LLMs?" The authors divide existing tasks into the following categories: natural language processing, robustness, ethics, biases and trustworthiness, social sciences, natural science and engineering, medical applications, agent applications (using LLMs as agents), and other applications.
 
