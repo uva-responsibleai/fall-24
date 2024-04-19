@@ -63,7 +63,7 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 #### Benchmarks for Multi-modal task
 - MME(perceptual and cognitive aptitudes), MMBench(large-scale vision-language models), LVLM-eHub(online competition and quantitative assessments), SEED-Bench(19,000 MC questions)
 
-### How to Evaluate [79]
+### How to Evaluate [79][80]
 
 #### Automatic Evaluation
 
