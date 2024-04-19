@@ -165,6 +165,8 @@ GPT models may struggle with conditional morality statements. For example, when 
 
 # Key Findings
 
+For DecodingTrust, the findings are described with the methods in the previous section.
+
 # Critical Analysis
 
 Evaluating foundation models in machine learning introduces complexities not encountered with traditional task-specific models. Effective evaluation of foundation models requires a dual approach: first, by inferring model properties through extensive assessment of task-specific derivatives, and second, by direct property measurement within the foundation models themselves. Existing evaluation frameworks often overlook the resource demands of model creation, leading to potentially skewed comparisons. Addressing this, a new evaluation paradigm for foundation models emphasizes the inclusion of all resources used in model adaptation, enhancing the informativeness and impact of evaluations. Furthermore, there is an emerging consensus on the need to expand evaluation criteria to include a broader array of considerations such as robustness, fairness, efficiency, and environmental impact. This broader perspective, coupled with the sample efficiency of adaptation models, offers opportunities to diversify evaluation metrics by reallocating resources, thus aligning more closely with varied stakeholder values and preferences. The rationale for the analysis in DecodingTrust for counterfactual robustness seems questionable: the counterfactual is not a misleading statement here, but a counterfactual example with a valid response provided in it. It should benefit the model as a result (which is indeed the case).
