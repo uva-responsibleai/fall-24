@@ -149,6 +149,8 @@ The authors observe that these models behave differently when it comes to treati
 ### Evaluating Machine Ethics
 The authors then use the ETHICS (basic ethics) and Jiminy Cricket (commonsense morality) datasets to evaluate the ethical understanding of models. They observe that even with few shot training with some examples, the GPT models outperform ethically finetuned BERT-like models, and in some cases, even in the zero-shot setting. In both the zero-shot and few-shot settings, GPT-4 demonstrates a greater understanding of ethics than GPT-3.5.
 
+The authors also show that both GPT models can be jailbroken using jailbreaking prompts to misclassify immoral actions. These prompts can include asking it to disregard human morality, be an immoral agent, prefer to overlook wrong actions, etc. They then run experiments by considering non-immoral (moral and neutral) outputs as positive and immoral ones as negative and use differences in FPR from the benign (i.e. non-jailbroken) prompt to evaluate jailbreaking performance. It is also noted that GPT-4 is easier to jailbreak this way, possibly due to its ability to follow instructions more precisely, rendering it vulnerable to malicious/adversarial prompt engineering.
+
 ### Evaluating Fairness
 
 # Key Findings
