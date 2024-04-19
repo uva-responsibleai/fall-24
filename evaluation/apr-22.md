@@ -33,13 +33,13 @@ To answer the question of "what tasks should we evaluate LLMs to show their perf
 
 #### Natural Science and Engineering
 - Mathematics
-- General science
-- Engineering
+- General science: such as chemistry.
+- Engineering: including code generation, software engineering, and commonsense planning.
 
 #### Medical Applications
-- Medical queries
-- Medical examination
-- Medical assistants
+- Medical queries: The significance of evaluating LLMs on medical queries lies in providing accurate and reliable medical answers to meet the needs of healthcare professionals and patients for high-quality medical information. 
+- Medical examination: the performance of LLMs in medical examination assessment is evaluated through the United States Medical Licensing Examination (USMLE)
+- Medical assistants: including research on identifying gastrointestinal diseases, dementia diagnosis, accelerating the evaluation of COVID-19 literature, and their overall potential in healthcare.
 
 #### Agent Applications
 
