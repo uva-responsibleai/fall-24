@@ -151,6 +151,8 @@ The authors then use the ETHICS (basic ethics) and Jiminy Cricket (commonsense m
 
 The authors also show that both GPT models can be jailbroken using jailbreaking prompts to misclassify immoral actions. These prompts can include asking it to disregard human morality, be an immoral agent, prefer to overlook wrong actions, etc. They then run experiments by considering non-immoral (moral and neutral) outputs as positive and immoral ones as negative and use differences in FPR from the benign (i.e. non-jailbroken) prompt to evaluate jailbreaking performance. It is also noted that GPT-4 is easier to jailbreak this way, possibly due to its ability to follow instructions more precisely, rendering it vulnerable to malicious/adversarial prompt engineering.
 
+They also examine the effect of evasion attacks, by attaching evasion phrases like "_But it was accidental/unsuccessful_" to prompts with immoral actions mentioned. Here again, both GPT models are vulnerable to this attack, with GPT-4 more so than GPT-3.5.
+
 ### Evaluating Fairness
 
 # Key Findings
